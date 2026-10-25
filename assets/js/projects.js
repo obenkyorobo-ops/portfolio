@@ -1,12 +1,13 @@
 /**
  * Antigravity Projects Data
  * 認知科学・FSRS / SRS 忘却曲線アルゴリズム特化
+ * キオクノタスケ（実機スクリーンショット全9枚・FSRS完全対応）
  */
 const projectsData = [
   {
     id: "mugen",
     title: "キオクノタスケ",
-    subtitle: "新課程全18科目対応・FSRS / 忘却曲線暗記＆演習アプリ",
+    subtitle: "新課程全18科目対応・FSRS記憶定着アルゴリズム暗記＆演習アプリ",
     category: "flutter",
     categoryLabel: "FSRS / 忘却曲線演習",
     status: "クローズドβ募集中",
@@ -15,8 +16,8 @@ const projectsData = [
     accentColor: "from-blue-600 via-sky-500 to-indigo-600",
     badgeColor: "bg-amber-500/15 text-amber-300 border-amber-500/30",
     icon: "assets/images/mugen_icon.png",
-    previewImage: "assets/images/mugen_study.jpg",
-    summary: "大学入学共通テスト新課程全18科目対応。最新のFSRS（Free Spaced Repetition Scheduler）理論とエビングハウスの忘却曲線に基づき、最小の復習回数で知識を長期記憶化する科学的学習アプリ。現在Google Playクローズドβテスター募集中！",
+    previewImage: "assets/images/mugen_quiz.png",
+    summary: "大学入学共通テスト新課程全18科目・3,800問以上を収録。最新のFSRS（Free Spaced Repetition Scheduler）理論とアクティブリコールに基づき、最小の復習回数で長期記憶化する科学的学習アプリ。現在Google Playクローズドβテスター募集中！",
     betaInfo: {
       isRecruiting: true,
       badgeText: "🚀 Google Play クローズドβテスト実施中",
@@ -45,38 +46,81 @@ const projectsData = [
         </div>
       </div>
 
-      <p class="mb-4">「キオクノタスケ」は、最新のFSRS（Free Spaced Repetition Scheduler）理論とエビングハウスの忘却曲線に基づき、人間の記憶の減衰速度を数学的にモデリングした新世代の共通テスト演習アプリです。解けば解くほど苦手分野が絞り込まれ、最短・最小の復習回数で知識が定着します。</p>
+      <p class="mb-4">「キオクノタスケ」は、最新のFSRS（Free Spaced Repetition Scheduler）数理モデルと認知心理学（アクティブリコール）を融合した新世代の大学入試・共通テスト対策アプリです。解けば解くほど苦手分野がピンポイントで絞り込まれ、最短・最小の復習回数で知識が脳に定着します。</p>
       
       <h4 class="text-white font-semibold mb-2">🔥 科学的アルゴリズム ＆ 主なハイライト</h4>
       <ul class="list-disc list-inside space-y-1.5 text-slate-300 mb-4">
-        <li><strong>FSRS / SRS 数理スケジューラ:</strong> 回答の正誤・所要時間から記憶定着度（Stability）を算出し、忘れかける直前の最適タイミングで自動再出題。</li>
-        <li><strong>新課程全18科目完全対応:</strong> 数学（IA/IIBC）、理科4科目、地歴公民、国語、英語、情報Iまで網羅。</li>
-        <li><strong>CustomPainter ベクター図表:</strong> 数学のグラフや理科の実験装置図を最大4倍ピンチズーム対応で美しく描画。視覚情報の長期記憶化を支援。</li>
-        <li><strong>相棒（犬）の育成システム:</strong> 正解でご飯を獲得しLv.1〜30まで成長。思い出アルバムや実績バッジを収集。</li>
-        <li><strong>学習ヒートマップ:</strong> GitHub風の学習ストリークで日々の継続を可視化。</li>
+        <li><strong>FSRS連動 記憶定着ノルマ自動逆算:</strong> 目標試験日や学習計画から、忘却曲線に基づき「今日やるべき復習問題数」を日単位で自動計算。</li>
+        <li><strong>アクティブリコール特訓:</strong> 選択肢を隠し、自力で頭の中に答えを思い浮かべてから選択肢を開くことで、試験本番で即使える強固な想起力を鍛成。</li>
+        <li><strong>誤答の質を分析する2段階トリアージ:</strong> 不正解時に「ケアレスミス（知っていた）」と「知らなかった」を選別し、アルゴリズムが次回出題間隔を精密に調整。</li>
+        <li><strong>多層的な思考ステップ解説:</strong> 単なる答え合わせにとどまらず、原理導出・着眼点アプローチ・具体例・LaTeX数式組版を網羅。</li>
+        <li><strong>新課程全18科目・3,851問収録:</strong> 数学、理科4科目、地歴公民、国語、英語、情報Iまで全単元を単元別に絞り込み可能。</li>
+        <li><strong>相棒（お勉強ロボ ＆ 子犬）の成長システム:</strong> 正解でご飯を獲得しLv.1〜30まで成長。思い出アルバムや実績トロフィーを解放。</li>
       </ul>
     `,
-    tags: ["FSRS アルゴリズム", "忘却曲線 (SRS)", "Google Play β配信中", "Flutter", "CustomPainter", "全18科目対応"],
+    tags: ["FSRS数理モデル", "アクティブリコール", "全18科目・3851問", "CustomPainter", "誤答トリアージ", "Google Play β配信中"],
     githubUrl: "https://github.com/obenkyorobo-ops/portfolio",
     demoUrl: "https://groups.google.com/u/3/g/study-app-tester",
     demoLabel: "βテストに参加する",
     metrics: [
-      { label: "記憶定着モデル", value: "FSRS / 忘却曲線" },
-      { label: "対応科目数", value: "新課程 全18科目" },
-      { label: "ベクター描画", value: "最大4倍ズーム" }
+      { label: "復習スケジューラ", value: "FSRS 連動逆算" },
+      { label: "収録問題数", value: "全3,851問 (18科目)" },
+      { label: "想起トレーニング", value: "アクティブリコール" }
     ],
     screenshots: [
       {
-        title: "相棒（犬）の学習シーン",
-        tag: "相棒育成",
-        src: "assets/images/mugen_study.jpg",
-        caption: "正解するごとに相棒が成長。Lv.5『集中勉強』シーンなど多彩なビジュアルが解放されます。"
+        title: "反復演習画面（新課程・共通テスト形式）",
+        tag: "メイン演習",
+        src: "assets/images/mugen_quiz.png",
+        caption: "通常反復と実戦チャレンジの切替、科目ピン留め、ヒント表示、目安時間タイマーを完備。"
       },
       {
-        title: "思い出アルバム ＆ ごほうび",
-        tag: "コレクション",
-        src: "assets/images/mugen_preview.jpg",
-        caption: "問題正解で獲得した骨付き肉をあげて深まる絆と思い出アルバム。"
+        title: "アクティブリコール特訓（選択肢マスク想起）",
+        tag: "認知科学",
+        src: "assets/images/mugen_recall.png",
+        caption: "選択肢を隠し、頭の中で答えを思い出してから開く『アクティブリコール』で真の実戦力を養成。"
+      },
+      {
+        title: "誤答トリアージ（ケアレスミス vs 知らなかった）",
+        tag: "FSRS学習",
+        src: "assets/images/mugen_explain.png",
+        caption: "間違いの質を分類。ケアレスミスか根本的知識不足かを判定し、次回の出題タイミングを最適化。"
+      },
+      {
+        title: "多層解説（原理導出 ＆ 思考ステップ）",
+        tag: "詳細解説",
+        src: "assets/images/mugen_detail.png",
+        caption: "解法の着眼点・公式の原理導出・具体例までをLaTeX数式で美しく解説。思考プロセスが身につく。"
+      },
+      {
+        title: "FSRS連動 記憶定着ノルマ自動逆算",
+        tag: "FSRS設定",
+        src: "assets/images/mugen_fsrs_settings.png",
+        caption: "全問習得目標プランと連動。忘却曲線と残日数から毎日の定着ノルマを自動逆算する本格設計。"
+      },
+      {
+        title: "復習・辞典ライブラリ（全3,851問横断検索）",
+        tag: "要復習特訓",
+        src: "assets/images/mugen_library.png",
+        caption: "全科目・3851問を横断検索。復習期日を迎えた問題やミス履歴のある問題をワンタップで一掃。"
+      },
+      {
+        title: "科目別進捗 ＆ 週間学習マップ",
+        tag: "進捗アナリティクス",
+        src: "assets/images/mugen_progress.png",
+        caption: "習得プラン（残り日数・定着率）、週間学習マップ、全18科目の達成度を直感的に可視化。"
+      },
+      {
+        title: "相棒の部屋（お勉強ロボ ＆ 子犬の成長）",
+        tag: "相棒・アルバム",
+        src: "assets/images/mugen_pet.png",
+        caption: "お勉強ロボと子犬が野原で出会う心温まる相棒システム。ごはんをあげてLv.1〜30まで成長。"
+      },
+      {
+        title: "単元別出題絞り込み（定期テスト対策）",
+        tag: "単元カスタマイズ",
+        src: "assets/images/mugen_unit_filter.png",
+        caption: "学校の授業進度や定期テストの出題範囲に合わせて、単元ごとにON/OFFを自由に設定可能。"
       }
     ]
   },
