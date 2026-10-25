@@ -1,5 +1,13 @@
 /* Custom Styles & Visual Effects */
 
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
 @layer utilities {
   .bg-grid-pattern {
     background-size: 40px 40px;
