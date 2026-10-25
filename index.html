@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お勉強ロボ | 公式アプリポートフォリオ</title>
+  <meta name="description" content="屋号「お勉強ロボ」が開発するFlutter学習アプリ・AI単語帳の公式ポートフォリオサイト。『キオクノタスケ』『ボク友英単語』『ゲミニータン』をはじめとするプロダクト一覧。">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/brand_logo.jpg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans JP"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              900: '#0c4a6e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0B0F19] text-slate-100 min-h-screen font-sans selection:bg-sky-500 selection:text-white relative bg-grid-pattern overflow-x-hidden">
+
+  <!-- Ambient Glow Background -->
+  <div class="fixed inset-0 pointer-events-none glow-mesh -z-10"></div>
+
+  <!-- Header / Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl overflow-hidden border border-amber-500/30 shadow-lg shadow-amber-500/10 group-hover:scale-105 transition-transform bg-slate-900 flex-shrink-0">
+          <img src="assets/images/brand_logo.jpg" alt="お勉強ロボ" class="w-full h-full object-cover" />
+        </div>
+        <div>
+          <span class="font-extrabold text-base tracking-tight text-white block group-hover:text-amber-400 transition-colors">お勉強ロボ</span>
+          <span class="text-[10px] text-amber-400/90 font-mono tracking-wider uppercase block -mt-0.5">Study Apps Studio</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
+        <a href="#features" class="hover:text-sky-400 transition-colors">Architecture</a>
+        <a href="#techstack" class="hover:text-sky-400 transition-colors">Tech Stack</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button onclick="openProjectModal('mugen')" class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold text-xs flex items-center gap-1.5 shadow-lg shadow-amber-500/20 transition transform hover:scale-105">
+          <span class="w-2 h-2 rounded-full bg-slate-950 animate-ping"></span>
+          <span>βテスト参加</span>
+        </button>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-xs font-semibold border border-slate-700/80 text-white flex items-center gap-1.5 transition shadow-sm">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span class="hidden sm:inline">GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto">
+      
+      <!-- Brand Avatar Badge -->
+      <div class="inline-flex items-center gap-3 p-1.5 pr-4 rounded-full bg-slate-900/80 border border-amber-500/30 text-xs font-semibold mb-8 shadow-xl shadow-amber-500/5 backdrop-blur-md">
+        <img src="assets/images/brand_logo.jpg" alt="お勉強ロボ" class="w-8 h-8 rounded-full object-cover ring-2 ring-amber-500/50" />
+        <span class="text-amber-400 font-bold">お勉強ロボ</span>
+        <span class="text-slate-500">|</span>
+        <span class="text-slate-300 font-normal">Antigravity × Education AI</span>
+      </div>
+
+      <!-- Main Heading -->
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
+        学びを、もっと確かなものに。<br>
+        <span class="bg-gradient-to-r from-amber-300 via-sky-300 to-indigo-300 bg-clip-text text-transparent">お勉強ロボ 公式アプリ集</span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-300 font-normal leading-relaxed mb-10">
+        ひたむきに机に向かい続けるロボットのように、学習者の成長にずっと寄り添うアプリを。AIエージェント「Antigravity」と共に創り上げた忘却曲線（SRS）暗記ツールやGemini搭載単語帳をお届けします。
+      </p>
+
+      <!-- Key Stats Row -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-2xl glass-card max-w-2xl mx-auto mb-10">
+        <div class="p-3 text-center">
+          <div class="text-2xl sm:text-3xl font-extrabold text-amber-400">Beta</div>
+          <div class="text-xs text-slate-400 mt-1 font-medium">テスター募集中</div>
+        </div>
+        <div class="p-3 text-center border-l border-slate-800">
+          <div class="text-2xl sm:text-3xl font-extrabold text-sky-400">18</div>
+          <div class="text-xs text-slate-400 mt-1 font-medium">共テ対応科目</div>
+        </div>
+        <div class="p-3 text-center border-l border-slate-800">
+          <div class="text-2xl sm:text-3xl font-extrabold text-indigo-400">Gemini</div>
+          <div class="text-xs text-slate-400 mt-1 font-medium">AI単語コーチ</div>
+        </div>
+        <div class="p-3 text-center border-l border-slate-800">
+          <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">Mobile</div>
+          <div class="text-xs text-slate-400 mt-1 font-medium">クロスプラットフォーム</div>
+        </div>
+      </div>
+
+      <!-- Featured Closed Beta Card -->
+      <div class="max-w-3xl mx-auto p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-amber-950/40 via-slate-900 to-sky-950/40 border-2 border-amber-500/40 shadow-2xl shadow-amber-500/10 text-left relative overflow-hidden backdrop-blur-md">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4 pb-4 border-b border-white/10">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/mugen_icon.png" alt="キオクノタスケ" class="w-12 h-12 rounded-2xl shadow-lg border border-amber-500/30 object-cover" />
+            <div>
+              <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-bold text-[10px] uppercase tracking-wider mb-0.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>
+                Google Play クローズドβテスト実施中
+              </div>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-white">キオクノタスケ</h3>
+            </div>
+          </div>
+          <span class="text-xs text-slate-400 font-medium bg-slate-950/80 px-3 py-1 rounded-full border border-slate-800">連絡不要・出入り自由</span>
+        </div>
+
+        <p class="text-sm text-slate-300 mb-6 leading-relaxed">
+          大学入学共通テスト全18科目対応！忘却曲線（SRS）に沿って基礎問題を解いて記憶定着を図る学習アプリです。現在、正式リリースに向けて<strong>クローズドテスターを大募集</strong>しています。高校生・受験生はもちろん、大人の学び直しや開発者の相互テストも大歓迎です！
+        </p>
+
+        <!-- 2-Step Guide -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800">
+            <div class="flex items-center gap-2 text-xs font-bold text-amber-400 mb-1">
+              <span class="w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center text-[11px]">1</span>
+              <span>テスター用Googleグループ参加</span>
+            </div>
+            <p class="text-[11px] text-slate-400 leading-snug mb-2">グループに参加することで、Playストアのテスト版へのアクセス権が付与されます。</p>
+            <a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="text-xs text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1 underline">
+              <span>Googleグループを開く</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800">
+            <div class="flex items-center gap-2 text-xs font-bold text-amber-400 mb-1">
+              <span class="w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center text-[11px]">2</span>
+              <span>Google Playからインストール</span>
+            </div>
+            <p class="text-[11px] text-slate-400 leading-snug mb-2">グループ参加と同じGoogleアカウントで開くと、テスト版がDL可能になります。</p>
+            <a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.exam_prep" target="_blank" rel="noopener noreferrer" class="text-xs text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1 underline">
+              <span>Google Playで開く</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mutual Testing Contact Box -->
+        <div class="p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 via-slate-900 to-sky-500/10 border border-amber-500/30 mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-amber-300 mb-1">
+              <span class="text-base">🤝</span>
+              <span>【開発者様へ】相互テスト大歓迎です！</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Google Playの20人・14日間要件に向けて、相互テストのご協力・ご相談を随時受け付けています。貴アプリのテストも喜んで毎日実施いたします！
+            </p>
+          </div>
+          <div class="flex items-center gap-2 flex-shrink-0 w-full sm:w-auto">
+            <a href="https://x.com/ObenkyoRobo" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs border border-slate-700 flex items-center justify-center gap-2 transition shadow-sm">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <span>X (@ObenkyoRobo) で連絡</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+          <button onclick="openProjectModal('mugen')" class="text-xs text-slate-400 hover:text-white font-medium flex items-center gap-1 transition">
+            <span>機能・スクショ詳細を見る</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+          <a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-extrabold text-xs flex items-center gap-2 shadow-lg shadow-amber-500/25 transition transform hover:scale-105">
+            <span>今すぐテスターに参加する（無料）</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+      <div>
+        <div class="text-xs font-mono uppercase tracking-widest text-sky-400 font-bold mb-2">Portfolio Showcase</div>
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">制作アプリ一覧</h2>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap gap-2 p-1.5 rounded-xl bg-slate-900/80 border border-slate-800">
+        <button data-filter="all" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-sky-500/20 text-sky-400 border border-sky-500/40 transition">
+          すべて (All)
+        </button>
+        <button data-filter="flutter" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition">
+          Flutter / Mobile
+        </button>
+        <button data-filter="ai" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition">
+          AI & Gemini
+        </button>
+      </div>
+    </div>
+
+    <!-- Dynamic Projects Grid (rendered by projects.js & main.js) -->
+    <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Injected by JavaScript -->
+    </div>
+  </section>
+
+  <!-- Highlights / Architecture Section -->
+  <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="text-xs font-mono uppercase tracking-widest text-sky-400 font-bold mb-2">Engineering Philosophy</div>
+      <h2 class="text-3xl font-extrabold text-white tracking-tight">Antigravity × Flutter による設計思想</h2>
+      <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+        自律型AIエージェント「Antigravity」を活用し、教育工学・認知心理学に基づいたアルゴリズムを忠実にアプリへ落とし込んでいます。
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Feature 1 -->
+      <div class="glass-card rounded-2xl p-6">
+        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-5">
+          <i data-lucide="repeat" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">忘却曲線（SRS）エンジン</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          エビングハウスの忘却曲線に基づき、ユーザーの正誤履歴と回答所要時間から次回出題タイミングを動的に計算。最短時間で記憶を定着させます。
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="glass-card rounded-2xl p-6">
+        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-5">
+          <i data-lucide="pen-tool" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">CustomPainter 高精細ベクター</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          数学のグラフや物理の回路図・実験装置をビットマップ画像ではなくFlutterのCanvasに直接描画。最大4倍ズームでも一切劣化しない鮮明さを誇ります。
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="glass-card rounded-2xl p-6">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-5">
+          <i data-lucide="bot" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">AIペアプログラミング</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Antigravityエージェントと密に連携し、アーキテクチャ設計からLaTeXパーサー、複雑な状態管理までを高信頼かつ短期間で実装しています。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section id="techstack" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="text-xs font-mono uppercase tracking-widest text-sky-400 font-bold mb-2">Technologies</div>
+      <h2 class="text-3xl font-extrabold text-white tracking-tight">活用している技術スタック</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Mobile -->
+      <div class="glass-card rounded-2xl p-6">
+        <div class="text-xs font-mono text-sky-400 font-bold uppercase mb-4">Mobile & Frontend</div>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>Flutter & Dart</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>CustomPainter (Canvas)</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>flutter_math_fork (LaTeX)</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>Provider State Management</li>
+        </ul>
+      </div>
+
+      <!-- Python & AI -->
+      <div class="glass-card rounded-2xl p-6">
+        <div class="text-xs font-mono text-purple-400 font-bold uppercase mb-4">Python & Automation</div>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>Python 3</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>Matplotlib & Mathtext</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>Tweepy (X API v2 & v1.1)</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>Image Generation Pipelines</li>
+        </ul>
+      </div>
+
+      <!-- Cloud & Storage -->
+      <div class="glass-card rounded-2xl p-6">
+        <div class="text-xs font-mono text-amber-400 font-bold uppercase mb-4">Cloud & Storage</div>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Firebase (Auth & Firestore)</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>SQLite & SharedPreferences</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>GitHub Pages & Actions</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>GitHub Actions (CI/CD)</li>
+        </ul>
+      </div>
+
+      <!-- AI Development -->
+      <div class="glass-card rounded-2xl p-6">
+        <div class="text-xs font-mono text-emerald-400 font-bold uppercase mb-4">AI Development</div>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Google Antigravity</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Gemini 3.8 Flash / Pro</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Subagent Orchestration</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Automated Code Review</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision Section -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden bg-gradient-to-r from-slate-900/90 to-amber-950/20 border border-amber-500/20">
+      <div class="max-w-2xl relative z-10">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-400 mb-2 block">Obenkyou Robo Philosophy</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">「本気で伸びる」体験を、すべての学習者へ。</h2>
+        <p class="text-sm text-slate-300 leading-relaxed mb-6">
+          お勉強ロボでは、表面的な暗記アプリではなく、脳の記憶定着メカニズム（忘却曲線 SRS）や最新の生成AIを活用し、学習者が確実に実力を伸ばせるプロダクトを追求しています。各アプリの正式リリースや最新アップデート情報を順次公開していきます。
+        </p>
+        <div class="flex flex-wrap gap-4 text-xs font-mono text-slate-300">
+          <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> 忘却曲線（SRS）記憶定着</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Gemini AI 対話型コーチ</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> 大学受験・高校学習特化設計</span>
+        </div>
+      </div>
+      <div class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+        <i data-lucide="sparkles" class="w-80 h-80 text-amber-400"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-slate-900 bg-[#070A11] text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="assets/images/brand_logo.jpg" alt="お勉強ロボ" class="w-6 h-6 rounded-full object-cover" />
+        <p>© 2026 お勉強ロボ (Obenkyou Robo). All rights reserved.</p>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="#projects" class="hover:text-slate-400 transition">Projects</a>
+        <a href="#features" class="hover:text-slate-400 transition">Architecture</a>
+        <a href="https://x.com/ObenkyoRobo" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span>X (@ObenkyoRobo)</span>
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-slate-400 transition">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal -->
+  <div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden-modal" onclick="if(event.target === this) closeProjectModal()">
+    <div id="projectModalContent" class="glass-card bg-[#0F172A] border border-slate-700/80 rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto relative shadow-2xl">
+      <div id="modalBody">
+        <!-- Injected by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/projects.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
