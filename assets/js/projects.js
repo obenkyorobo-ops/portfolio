@@ -1,16 +1,14 @@
 /**
  * Antigravity Projects Data
- * キオクノタスケ（クローズドβテスター募集中）を最優先フィーチャー
- * ゲミニータン（3D AIパートナー ＆ Gemini Live）
- * ボク友英単語（実機スクリーンショット5枚対応）
+ * 認知科学・FSRS / SRS 忘却曲線アルゴリズム特化
  */
 const projectsData = [
   {
     id: "mugen",
     title: "キオクノタスケ",
-    subtitle: "新課程全18科目対応・忘却曲線（SRS）暗記＆演習アプリ",
+    subtitle: "新課程全18科目対応・FSRS / 忘却曲線暗記＆演習アプリ",
     category: "flutter",
-    categoryLabel: "Flutter / SRS Learning",
+    categoryLabel: "FSRS / 忘却曲線演習",
     status: "クローズドβ募集中",
     statusType: "beta",
     featured: true,
@@ -18,7 +16,7 @@ const projectsData = [
     badgeColor: "bg-amber-500/15 text-amber-300 border-amber-500/30",
     icon: "assets/images/mugen_icon.png",
     previewImage: "assets/images/mugen_study.jpg",
-    summary: "大学入学共通テストおよび高校学習に対応した新課程全18科目網羅の忘却曲線学習アプリ。現在、Google Playクローズドβテスターを大募集中です！",
+    summary: "大学入学共通テスト新課程全18科目対応。最新のFSRS（Free Spaced Repetition Scheduler）理論とエビングハウスの忘却曲線に基づき、最小の復習回数で知識を長期記憶化する科学的学習アプリ。現在Google Playクローズドβテスター募集中！",
     betaInfo: {
       isRecruiting: true,
       badgeText: "🚀 Google Play クローズドβテスト実施中",
@@ -47,24 +45,25 @@ const projectsData = [
         </div>
       </div>
 
-      <p class="mb-4">「キオクノタスケ」は、大学入学共通テストおよび高校学習に対応した新課程全18科目網羅の忘却曲線学習アプリです。解けば解くほど苦手分野が絞り込まれ、最短ルートで知識が定着します。</p>
-      <h4 class="text-white font-semibold mb-2">🔥 主なハイライト</h4>
+      <p class="mb-4">「キオクノタスケ」は、最新のFSRS（Free Spaced Repetition Scheduler）理論とエビングハウスの忘却曲線に基づき、人間の記憶の減衰速度を数学的にモデリングした新世代の共通テスト演習アプリです。解けば解くほど苦手分野が絞り込まれ、最短・最小の復習回数で知識が定着します。</p>
+      
+      <h4 class="text-white font-semibold mb-2">🔥 科学的アルゴリズム ＆ 主なハイライト</h4>
       <ul class="list-disc list-inside space-y-1.5 text-slate-300 mb-4">
-        <li><strong>忘却曲線に基づく自動反復（SRS）:</strong> 間違えた問題や復習期日を迎えた問題を最適なタイミングで自動出題。</li>
+        <li><strong>FSRS / SRS 数理スケジューラ:</strong> 回答の正誤・所要時間から記憶定着度（Stability）を算出し、忘れかける直前の最適タイミングで自動再出題。</li>
         <li><strong>新課程全18科目完全対応:</strong> 数学（IA/IIBC）、理科4科目、地歴公民、国語、英語、情報Iまで網羅。</li>
-        <li><strong>CustomPainter ベクター図表:</strong> 数学のグラフや理科の実験装置図を最大4倍ピンチズーム対応で美しく描画。</li>
+        <li><strong>CustomPainter ベクター図表:</strong> 数学のグラフや理科の実験装置図を最大4倍ピンチズーム対応で美しく描画。視覚情報の長期記憶化を支援。</li>
         <li><strong>相棒（犬）の育成システム:</strong> 正解でご飯を獲得しLv.1〜30まで成長。思い出アルバムや実績バッジを収集。</li>
         <li><strong>学習ヒートマップ:</strong> GitHub風の学習ストリークで日々の継続を可視化。</li>
       </ul>
     `,
-    tags: ["Google Play β版配信中", "Flutter", "Dart", "CustomPainter", "SRS Algorithm", "18科目対応"],
-    githubUrl: "https://github.com/",
+    tags: ["FSRS アルゴリズム", "忘却曲線 (SRS)", "Google Play β配信中", "Flutter", "CustomPainter", "全18科目対応"],
+    githubUrl: "https://github.com/obenkyorobo-ops/portfolio",
     demoUrl: "https://groups.google.com/u/3/g/study-app-tester",
     demoLabel: "βテストに参加する",
     metrics: [
-      { label: "βテスト状況", value: "参加者 募集中！" },
+      { label: "記憶定着モデル", value: "FSRS / 忘却曲線" },
       { label: "対応科目数", value: "新課程 全18科目" },
-      { label: "復習アルゴリズム", value: "忘却曲線 (SRS)" }
+      { label: "ベクター描画", value: "最大4倍ズーム" }
     ],
     screenshots: [
       {
@@ -84,35 +83,34 @@ const projectsData = [
   {
     id: "tagetomoai",
     title: "ボク友英単語",
-    subtitle: "ターゲット1900＆1000対応・忘却曲線×四択×スペル特訓の英単語学習パートナー",
+    subtitle: "ターゲット1900＆1000対応・FSRS忘却曲線×四択×スペル特訓の英単語パートナー",
     category: "flutter",
-    categoryLabel: "Flutter / Vocabulary",
+    categoryLabel: "FSRS / 語彙定着サイクル",
     status: "開発中",
     featured: false,
     accentColor: "from-amber-500 to-orange-600",
     badgeColor: "bg-amber-500/15 text-amber-300 border-amber-500/30",
     icon: "assets/images/tagetomo_icon.png",
     previewImage: "assets/images/tagetomo_home.png",
-    summary: "ターゲット1900・英熟語1000・獣医英単語・共テ単語を完全網羅。SRS忘却曲線カード、四択テスト、キーボード手打ちスペル特訓、AIコアイメージ解説で確固たる語彙力を養成する実戦アプリ。",
+    summary: "ターゲット1900・英熟語1000・獣医英単語・共テ単語を網羅。FSRS数理モデルに基づく忘却曲線カード、四択テスト、キーボード手打ちスペル特訓の3段階特訓サイクルで強固な語彙力を養成。",
     description: `
-      <p class="mb-4">「ボク友英単語」は、ターゲット1900や英熟語1000、獣医英単語など多彩な語彙を、認知科学に基づく3段階の特訓サイクル（カード ➜ 四択 ➜ スペル手打ち特訓）で完璧に定着させる本格派英単語学習アプリです。</p>
+      <p class="mb-4">「ボク友英単語」は、ターゲット1900や英熟語1000、獣医英単語など多彩な語彙を、認知科学に基づく3段階の特訓サイクル（カード ➜ 四択 ➜ スペル手打ち特訓）で確実に定着させる本格派英単語学習アプリです。</p>
       
-      <h4 class="text-white font-semibold mb-2">🔥 主な特訓モード ＆ 機能ハイライト</h4>
+      <h4 class="text-white font-semibold mb-2">🔥 3段階の記憶定着サイクル</h4>
       <ul class="list-disc list-inside space-y-1.5 text-slate-300 mb-4">
-        <li><strong>① 全ノルマ統合フラッシュカード（SRS）:</strong> Ankiライクな4段階判定（忘れた / 難しい / 覚えた / 簡単）とネイティブTTS音声で、忘却曲線に沿って効率的に反復。</li>
+        <li><strong>① 全ノルマ統合フラッシュカード（FSRS / SRS）:</strong> Ankiライクな4段階判定（忘れた / 難しい / 覚えた / 簡単）とネイティブTTS音声で、忘却曲線に沿って効率的に反復。</li>
         <li><strong>② 四択テスト（多義語・使い分け注記付き）:</strong> 似た単語の使い分け（例: terrestrialの陸生 vs aquaticの水生など）を即座に見分ける実践力を鍛錬。</li>
         <li><strong>③ キーボード手打ちスペル特訓:</strong> 四択で定着した単語をキーボードで直接タイピング。1文字ヒント機能を備え、書ける語彙へ昇華。</li>
-        <li><strong>✨ AIコアイメージ解説連携:</strong> 単語カードから直接Geminiのコアイメージ解説へアクセスし、多義語の根本感覚を攻略。</li>
-        <li><strong>日々の定着ノルマ進捗 ＆ 連続学習（🔥）:</strong> 今日やるべき復習語数を自動計算し、継続学習を後押し。</li>
+        <li><strong>日々の定着ノルマ進捗 ＆ 連続学習（🔥）:</strong> 今日やるべき復習語数をFSRSモデルが自動計算し、毎日の継続学習を強力に後押し。</li>
       </ul>
     `,
-    tags: ["ターゲット1900", "英熟語1000", "獣医英単語", "SRS忘却曲線", "スペル特訓", "TTS音声", "AI解説"],
-    githubUrl: "https://github.com/",
+    tags: ["FSRS 忘却曲線", "ターゲット1900", "英熟語1000", "3段階特訓", "スペル手打ち", "TTS音声"],
+    githubUrl: "https://github.com/obenkyorobo-ops/portfolio",
     demoUrl: "#",
     metrics: [
       { label: "学習サイクル", value: "カード ➜ 四択 ➜ スペル特訓" },
-      { label: "収録語彙", value: "単語1900 / 熟語1000 / 獣医" },
-      { label: "定着アルゴリズム", value: "SRS 忘却曲線" }
+      { label: "反復アルゴリズム", value: "FSRS / SRS数理モデル" },
+      { label: "収録語彙", value: "単語1900 / 熟語1000 / 獣医" }
     ],
     screenshots: [
       {
@@ -122,10 +120,10 @@ const projectsData = [
         caption: "まとめて特訓・ターゲット1900・英熟語1000が並び、定着率（85%）や本日のノルマ進捗を一目で把握。"
       },
       {
-        title: "全ノルマ統合カード（SRS忘却曲線 ＆ AI解説）",
+        title: "全ノルマ統合カード（SRS忘却曲線）",
         tag: "フラッシュカード",
         src: "assets/images/tagetomo_card.png",
-        caption: "使い分け注記・多義語に加え、『AIコアイメージ解説を見る』ボタンを完備。忘れた/難しい/覚えた/簡単で記憶を管理。"
+        caption: "使い分け注記・多義語に加え、忘れた/難しい/覚えた/簡単の4段階判定で記憶の減衰を精密管理。"
       },
       {
         title: "四択テスト（多義語チェック ＆ 使い分け注記）",
@@ -150,41 +148,41 @@ const projectsData = [
   {
     id: "geminitan",
     title: "ゲミニータン",
-    subtitle: "3Dアバター × Gemini Live双方向対話・伴走型AI学習パートナー",
+    subtitle: "3Dアバター × ポモドーロ集中タイマー・学習習慣化パートナー",
     category: "ai",
-    categoryLabel: "AI & 3D Avatar / Gemini Live",
+    categoryLabel: "3D Partner / 習慣化タイマー",
     status: "開発中",
     featured: false,
     accentColor: "from-sky-400 via-indigo-500 to-purple-600",
     badgeColor: "bg-indigo-500/15 text-indigo-300 border-indigo-500/30",
     icon: "assets/images/geminitan_icon.png",
     previewImage: "assets/images/geminitan_main.png",
-    summary: "Gemini Live APIによる双方向音声対話、ポモドーロ集中タイマー、毎朝のモーニング・レディオを搭載。3Dアバター『ゲミニータン』と相棒ロボ『オビタ』が毎日の学習に寄り添うAIパートナー。",
+    summary: "ポモドーロ集中タイマー（🍅）連動のスタディモード、毎朝のモーニング・レディオを搭載。3Dアバター『ゲミニータン』と相棒ロボ『オビタ』が毎日の学習リズムと継続を支える伴走型パートナー。",
     description: `
-      <p class="mb-4">「ゲミニータン」は、Google Geminiの最先端音声・思考知能（Gemini Live）をフル活用した、3Dインタラクティブ・学習パートナーアプリです。机に向かうあなたを、可愛い3Dアバター「ゲミニータン」と浮遊型相棒ロボット「オビタ」が全力で応援＆サポートします。</p>
+      <p class="mb-4">「ゲミニータン」は、毎日の学習リズムとモチベーションを科学的に持続させるための3Dインタラクティブ・学習パートナーアプリです。机に向かうあなたを、可愛い3Dアバター「ゲミニータン」と浮遊型相棒ロボット「オビタ」が全力で応援＆サポートします。</p>
       
       <h4 class="text-white font-semibold mb-2">✨ 主な機能ハイライト</h4>
       <ul class="list-disc list-inside space-y-1.5 text-slate-300 mb-4">
-        <li><strong>常時会話（Live）モード:</strong> Gemini Live APIを搭載し、超低遅延で自然な音声会話が可能。「呼んだ？ここにいるよ〜！」「耳をすまして聞いてるよ」とリアルタイムに受け答え。</li>
-        <li><strong>メガネ姿のスタディモード（STUDY MODE）:</strong> 学習開始と同時にメガネを装着し「がんばって！」のボードを掲示。ポモドーロ集中タイマー（🍅）と連動してペース配分を管理。</li>
-        <li><strong>ゲミニータン・モーニング・レディオ:</strong> 毎朝その日の記念日、学習応援メッセージ、最新ニュースをラジオDJ風に読み上げ配信。</li>
-        <li><strong>相棒ロボ「オビタ」＆ ふれあいシステム:</strong> ショートケーキをあげると相棒オビタの目がハート💕になったり、喜んだりする温かいコミュニケーション。</li>
+        <li><strong>メガネ姿のスタディモード（STUDY MODE）:</strong> 学習開始と同時にメガネを装着し「がんばって！」のボードを掲示。ポモドーロ集中タイマー（🍅）と連動して25分集中＋5分休憩のサイクルを徹底管理。</li>
+        <li><strong>ゲミニータン・モーニング・レディオ:</strong> 毎朝その日の記念日、学習応援メッセージ、最新ニュースを読み上げ配信し、一日を前向きにスタート。</li>
+        <li><strong>相棒ロボ「オビタ」の応援＆ふれあい:</strong> 「ピピッ！その調子でいこう！」と勉強を見守り、ショートケーキをあげると目がハート💕になる楽しいふれあい機能。</li>
+        <li><strong>常時会話モード:</strong> リアルタイム対話に対応し、「呼んだ？ここにいるよ〜！」「耳をすまして聞いてるよ」と勉強の合間に癒しを提供。</li>
       </ul>
     `,
-    tags: ["Gemini Live API", "3D Avatar", "Voice Interaction", "Pomodoro Timer", "AI Companion"],
-    githubUrl: "https://github.com/",
+    tags: ["3D Avatar", "ポモドーロタイマー", "モーニング・レディオ", "学習習慣化", "Gemini Live"],
+    githubUrl: "https://github.com/obenkyorobo-ops/portfolio",
     demoUrl: "#",
     metrics: [
-      { label: "AI対話エンジン", value: "Gemini Live API" },
+      { label: "習慣化システム", value: "ポモドーロ 25分集中" },
       { label: "相棒キャラクター", value: "ゲミニータン ＆ オビタ" },
-      { label: "学習機能", value: "スタディモード ＆ ラジオ" }
+      { label: "継続サポート", value: "スタディモード ＆ ラジオ" }
     ],
     screenshots: [
       {
-        title: "常時会話（Live）モード ＆ リアルタイム対話",
+        title: "常時会話モード ＆ リアルタイム対話",
         tag: "メイン画面",
         src: "assets/images/geminitan_main.png",
-        caption: "Gemini Live APIによる双方向音声対話。マイクツールバー完備で思考中のキラキラ演出。"
+        caption: "マイクツールバー完備で思考中のキラキラ演出。勉強の合間の受け答え。"
       },
       {
         title: "スタディモード（メガネ ＆ STUDY MODEボード）",
