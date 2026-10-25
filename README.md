@@ -53,7 +53,7 @@ git init
 git add .
 git commit -m "feat: portfolio release with real screenshots for Bokutomo AI"
 git branch -M main
-git remote add origin https://github.com/<あなたのユーザー名>/portfolio.git
+git remote add origin https://github.com/obenkyorobo-ops/portfolio.git
 git push -u origin main
 ```
 
@@ -61,4 +61,4 @@ git push -u origin main
 1. GitHub リポジトリの **Settings** > **Pages** を開きます。
 2. **Build and deployment** > **Source** で **GitHub Actions** を選択します。
 3. すでに `.github/workflows/deploy.yml` が同梱されているため、数秒で自動ビルド＆デプロイが完了します！
-4. 公開URL（`https://<あなたのユーザー名>.github.io/portfolio/`）で世界中に高速配信されます。
+4. 公開URL（`https://obenkyorobo-ops.github.io/portfolio/`）で世界中に高速配信されます。
