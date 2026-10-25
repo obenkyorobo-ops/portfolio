@@ -127,34 +127,44 @@ const projectsData = [
   {
     id: "tagetomoai",
     title: "ボク友英単語",
-    subtitle: "ターゲット1900＆1000対応・FSRS忘却曲線×四択×スペル特訓の英単語パートナー",
+    subtitle: "個人学習用プロトタイプ・FSRS忘却曲線×四択×スペル手打ち特訓",
     category: "flutter",
     categoryLabel: "FSRS / 語彙定着サイクル",
-    status: "開発中",
+    status: "個人利用・研究用",
     featured: false,
     accentColor: "from-amber-500 to-orange-600",
-    badgeColor: "bg-amber-500/15 text-amber-300 border-amber-500/30",
+    badgeColor: "bg-slate-800 text-slate-400 border-slate-700",
     icon: "assets/images/tagetomo_icon.png",
     previewImage: "assets/images/tagetomo_home.png",
-    summary: "ターゲット1900・英熟語1000・獣医英単語・共テ単語を網羅。FSRS数理モデルに基づく忘却曲線カード、四択テスト、キーボード手打ちスペル特訓の3段階特訓サイクルで強固な語彙力を養成。",
+    summary: "開発者自身の学習効率化およびFSRS反復アルゴリズムの動作検証用に制作したプライベート英単語アプリ。カード、四択、キーボード手打ちスペル特訓の3段階サイクルを実装（※個人利用のため一般配布予定なし）。",
     description: `
-      <p class="mb-4">「ボク友英単語」は、ターゲット1900や英熟語1000、獣医英単語など多彩な語彙を、認知科学に基づく3段階の特訓サイクル（カード ➜ 四択 ➜ スペル手打ち特訓）で確実に定着させる本格派英単語学習アプリです。</p>
+      <div class="p-3.5 rounded-xl bg-slate-900/90 border border-amber-500/30 text-xs text-slate-300 mb-5 leading-relaxed">
+        <div class="flex items-center gap-1.5 text-amber-400 font-bold mb-1">
+          <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+          <span>開発上の位置づけ（個人利用・研究用プロトタイプ）</span>
+        </div>
+        <p class="text-slate-300">
+          本アプリは、開発者自身の学習効率化およびFSRS記憶定着アルゴリズムの動作検証を目的として制作した<strong>非公開のプライベートツール</strong>です。市販の書籍や既存サービスとの提携・公認関係はありません。一般配布の予定はなく、将来一般向けプロダクトとして展開する場合は、独自の単語選定・データ構成およびオリジナル名称へ完全に刷新してリリース予定です。
+        </p>
+      </div>
+
+      <p class="mb-4">「ボク友英単語」は、認知科学に基づく3段階の特訓サイクル（カード ➜ 四択 ➜ スペル手打ち特訓）により、最小の反復回数で単語を定着させるアルゴリズム検証用アプリです。</p>
       
       <h4 class="text-white font-semibold mb-2">🔥 3段階の記憶定着サイクル</h4>
       <ul class="list-disc list-inside space-y-1.5 text-slate-300 mb-4">
-        <li><strong>① 全ノルマ統合フラッシュカード（FSRS / SRS）:</strong> Ankiライクな4段階判定（忘れた / 難しい / 覚えた / 簡単）とネイティブTTS音声で、忘却曲線に沿って効率的に反復。</li>
+        <li><strong>① 全ノルマ統合フラッシュカード（FSRS / SRS）:</strong> 4段階判定（忘れた / 難しい / 覚えた / 簡単）とネイティブTTS音声で、忘却曲線に沿って効率的に反復。</li>
         <li><strong>② 四択テスト（多義語・使い分け注記付き）:</strong> 似た単語の使い分け（例: terrestrialの陸生 vs aquaticの水生など）を即座に見分ける実践力を鍛錬。</li>
         <li><strong>③ キーボード手打ちスペル特訓:</strong> 四択で定着した単語をキーボードで直接タイピング。1文字ヒント機能を備え、書ける語彙へ昇華。</li>
         <li><strong>日々の定着ノルマ進捗 ＆ 連続学習（🔥）:</strong> 今日やるべき復習語数をFSRSモデルが自動計算し、毎日の継続学習を強力に後押し。</li>
       </ul>
     `,
-    tags: ["FSRS 忘却曲線", "ターゲット1900", "英熟語1000", "3段階特訓", "スペル手打ち", "TTS音声"],
+    tags: ["FSRS 忘却曲線", "個人用プロトタイプ", "3段階特訓", "スペル手打ち", "TTS音声", "非公開ツール"],
     githubUrl: "https://github.com/obenkyorobo-ops/portfolio",
     demoUrl: "#",
     metrics: [
-      { label: "学習サイクル", value: "カード ➜ 四択 ➜ スペル特訓" },
+      { label: "公開区分", value: "個人利用 (非公開)" },
       { label: "反復アルゴリズム", value: "FSRS / SRS数理モデル" },
-      { label: "収録語彙", value: "単語1900 / 熟語1000 / 獣医" }
+      { label: "学習サイクル", value: "カード ➜ 四択 ➜ スペル特訓" }
     ],
     screenshots: [
       {
