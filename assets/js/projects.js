@@ -125,77 +125,87 @@ const projectsData = [
     ]
   },
   {
-    id: "tagetomoai",
-    title: "ボク友英単語",
-    subtitle: "個人学習用プロトタイプ・FSRS忘却曲線×四択×スペル手打ち特訓",
+    id: "install_vocab",
+    title: "インストール英単語",
+    subtitle: "脳科学×FSRS忘却曲線・目標日数からノルマ自動逆算＆3段階特訓アプリ",
     category: "flutter",
     categoryLabel: "FSRS / 語彙定着サイクル",
-    status: "個人利用・研究用",
+    status: "開発・テスト運用中",
+    statusType: "active",
     featured: false,
-    accentColor: "from-amber-500 to-orange-600",
-    badgeColor: "bg-slate-800 text-slate-400 border-slate-700",
-    icon: "assets/images/tagetomo_icon.png",
-    previewImage: "assets/images/tagetomo_home.png",
-    summary: "開発者自身の学習効率化およびFSRS反復アルゴリズムの動作検証用に制作したプライベート英単語アプリ。カード、四択、キーボード手打ちスペル特訓の3段階サイクルを実装（※個人利用のため一般配布予定なし）。",
+    accentColor: "from-amber-500 via-orange-500 to-teal-600",
+    badgeColor: "bg-teal-500/15 text-teal-300 border-teal-500/30",
+    icon: "assets/images/install_icon.png",
+    previewImage: "assets/images/install_home.png",
+    summary: "目標完成日数（30〜120日）から忘却曲線（FSRS）に基づいて毎日の学習・復習ノルマを自動逆算。カード（FSRS 4段階判定・AIコアイメージ解説）➜ 四択（多義語・同義語）➜ キーボード手打ちスペル特訓の3層サイクルで、大学受験・中学・医獣専門英語を脳へ確実に定着させる英単語学習アプリ。",
     description: `
-      <div class="p-3.5 rounded-xl bg-slate-900/90 border border-amber-500/30 text-xs text-slate-300 mb-5 leading-relaxed">
-        <div class="flex items-center gap-1.5 text-amber-400 font-bold mb-1">
-          <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-          <span>開発上の位置づけ（個人利用・研究用プロトタイプ）</span>
+      <div class="p-3.5 rounded-xl bg-slate-900/90 border border-teal-500/30 text-xs text-slate-300 mb-5 leading-relaxed">
+        <div class="flex items-center gap-1.5 text-teal-400 font-bold mb-1">
+          <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span>脳科学とFSRSアルゴリズムによる語彙インストールシステム</span>
         </div>
         <p class="text-slate-300">
-          本アプリは、開発者自身の学習効率化およびFSRS記憶定着アルゴリズムの動作検証を目的として制作した<strong>非公開のプライベートツール</strong>です。市販の書籍や既存サービスとの提携・公認関係はありません。一般配布の予定はなく、将来一般向けプロダクトとして展開する場合は、独自の単語選定・データ構成およびオリジナル名称へ完全に刷新してリリース予定です。
+          「インストール英単語」は、最新のFSRS（Free Spaced Repetition Scheduler）記憶定着モデルと認知心理学に基づき、最小の反復回数で確固たる英単語力を脳に「インストール」するために設計された語彙演習アプリです。目標日数（30〜120日・直接指定）から日々のノルマを自動逆算し、カード・四択・手打ちスペル特訓の3段階で確実に定着させます。
         </p>
       </div>
 
-      <p class="mb-4">「ボク友英単語」は、認知科学に基づく3段階の特訓サイクル（カード ➜ 四択 ➜ スペル手打ち特訓）により、最小の反復回数で単語を定着させるアルゴリズム検証用アプリです。</p>
+      <p class="mb-4">「知っているけれど本番で出てこない」「多義語の使い分けが曖昧」「スペルが書けない」という語彙学習の3大課題を、3段階の特訓サイクルと高度な出題モードで徹底的に解決します。</p>
       
-      <h4 class="text-white font-semibold mb-2">🔥 3段階の記憶定着サイクル</h4>
+      <h4 class="text-white font-semibold mb-2">🔥 主な機能 ＆ 科学的アルゴリズム</h4>
       <ul class="list-disc list-inside space-y-1.5 text-slate-300 mb-4">
-        <li><strong>① 全ノルマ統合フラッシュカード（FSRS / SRS）:</strong> 4段階判定（忘れた / 難しい / 覚えた / 簡単）とネイティブTTS音声で、忘却曲線に沿って効率的に反復。</li>
-        <li><strong>② 四択テスト（多義語・使い分け注記付き）:</strong> 似た単語の使い分け（例: terrestrialの陸生 vs aquaticの水生など）を即座に見分ける実践力を鍛錬。</li>
-        <li><strong>③ キーボード手打ちスペル特訓:</strong> 四択で定着した単語をキーボードで直接タイピング。1文字ヒント機能を備え、書ける語彙へ昇華。</li>
-        <li><strong>日々の定着ノルマ進捗 ＆ 連続学習（🔥）:</strong> 今日やるべき復習語数をFSRSモデルが自動計算し、毎日の継続学習を強力に後押し。</li>
+        <li><strong>FSRS連動 目標期日からの定着ノルマ自動逆算:</strong> 30日/45日/60日/90日/120日（または直接指定）の学習計画と連動。忘却曲線モデルが残日数と未学習数から「1日の新規目安（例: 約36語/日）」と「本日の定着ノルマ（例: 390問）」を精密に自動算出。</li>
+        <li><strong>① まとめて特訓 カード（FSRS 4段階判定 ＆ AIコアイメージ解説）:</strong> 「忘れた / 難しい / 覚えた / 簡単」の4段階判定とネイティブ音声再生を完備。主要意味と他の意味を分類表示し、「✨ AIコアイメージ解説」ボタンで単語の本質的なニュアンスや成り立ちを深く理解。</li>
+        <li><strong>② 四択テスト（多義語識別 ＆ 同義語4択モード）:</strong> 似た単語の使い分けを瞬時に見分ける即応力を養成。「和訳分割トレーニング（多義語・複数和訳を個別出題）」や「同義語4択モード（英英形式）」への切り替えも可能。</li>
+        <li><strong>③ 全ノルマ統合 キーボード手打ちスペル特訓:</strong> 下線プレースホルダー、文字数表示、1文字ヒント、答え表示、ネイティブ音声読み上げを搭載。実際に手でタイピングすることで、「読める」から「書ける・使える」語彙へ昇華。</li>
+        <li><strong>柔軟な出題モード（英和 / 和英 / 混在 推奨）:</strong> インプット・アウトプット・実践的な混在モードを学習フェーズに合わせて自在に切り替え。</li>
+        <li><strong>中学〜大学受験〜医学・獣医学専門英語まで網羅:</strong> 大学受験英単語（2,119語）、大学受験英熟語（1,003熟語）、中学英単語（553語）、中学英熟語（90熟語）、医学・獣医学専門英語（221語）など、目的に応じて出題対象を柔軟に選択可能。</li>
+        <li><strong>端末内二重自動バックアップ機能:</strong> 学習データを端末内に二重自動バックアップし、アプリアップデート後も安全に学習履歴を引き継ぎ可能。</li>
       </ul>
     `,
-    tags: ["FSRS 忘却曲線", "個人用プロトタイプ", "3段階特訓", "スペル手打ち", "TTS音声", "非公開ツール"],
+    tags: ["FSRS数理モデル", "目標日数逆算", "AIコアイメージ", "スペル手打ちタイピング", "3段階特訓サイクル", "医獣専門英語対応"],
     githubUrl: "https://github.com/obenkyorobo-ops/portfolio",
     demoUrl: "#",
     metrics: [
-      { label: "公開区分", value: "個人利用 (非公開)" },
-      { label: "反復アルゴリズム", value: "FSRS / SRS数理モデル" },
+      { label: "復習スケジューラ", value: "FSRS 自動ノルマ逆算" },
+      { label: "収録語彙・熟語", value: "全3,980語以上 (5体系)" },
       { label: "学習サイクル", value: "カード ➜ 四択 ➜ スペル特訓" }
     ],
     screenshots: [
       {
-        title: "ホーム画面 ＆ 本日の定着ノルマ進捗",
-        tag: "メイン画面",
-        src: "assets/images/tagetomo_home.png",
-        caption: "まとめて特訓・ターゲット1900・英熟語1000が並び、定着率（85%）や本日のノルマ進捗を一目で把握。"
+        title: "ホーム画面（定着ノルマ ＆ 特訓ダッシュボード）",
+        tag: "ダッシュボード",
+        src: "assets/images/install_home.png",
+        caption: "目標完成日数（残り50日）、本日の定着ノルマ（2/390問）、連続学習ストリーク（🔥）、出題モード切替（英和/和英/混在）と3大特訓を直感的に集約。"
       },
       {
-        title: "全ノルマ統合カード（SRS忘却曲線）",
+        title: "まとめて特訓 カード（FSRS 4段階 ＆ AIコアイメージ）",
         tag: "フラッシュカード",
-        src: "assets/images/tagetomo_card.png",
-        caption: "使い分け注記・多義語に加え、忘れた/難しい/覚えた/簡単の4段階判定で記憶の減衰を精密管理。"
+        src: "assets/images/install_card.png",
+        caption: "「忘れた/難しい/覚えた/簡単」のFSRS判定、主要意味・多義語の整理、ネイティブ音声、AIコアイメージ解説ボタンを完備。"
       },
       {
-        title: "四択テスト（多義語チェック ＆ 使い分け注記）",
+        title: "四択テスト（多義語・専門用語の即応力養成）",
         tag: "四択演習",
-        src: "assets/images/tagetomo_quiz.png",
-        caption: "発音記号、使い分け注記、対比される単語との多義語チェックを画面上で確認しながら実戦解答。"
+        src: "assets/images/install_quiz.png",
+        caption: "医学・獣医学専門英語などの高度な語彙も収録。紛らわしい類似選択肢の中から瞬時に正解を見抜く実践的識別力を鍛錬。"
       },
       {
-        title: "キーボード手打ち スペル特訓（1文字ヒント付）",
+        title: "全ノルマ統合 スペル特訓（キーボード手打ちタイピング）",
         tag: "スペル特訓",
-        src: "assets/images/tagetomo_spell.png",
-        caption: "四択で定着後に解放される実戦的タイピング特訓。1文字ヒントや文字数表示で着実にスペルを習得。"
+        src: "assets/images/install_spell.png",
+        caption: "文字数表示と1文字ヒントを備えた本格的な手打ち入力。アウトプットを通じて「本当に書ける語彙」へと定着。"
       },
       {
-        title: "英熟語1000 スペル特訓画面",
-        tag: "熟語特訓",
-        src: "assets/images/tagetomo_idiom.png",
-        caption: "『〜に従事している、忙しく〜をしている』など、入試頻出熟語を手打ちで徹底暗記。"
+        title: "出題対象選択（中学・大学受験・医獣専門英語）",
+        tag: "語彙ライブラリ",
+        src: "assets/images/install_target.png",
+        caption: "大学受験英単語(2119語)・英熟語(1003熟語)、中学単語・熟語、医学・獣医学専門英語まで、出題対象を柔軟にスイッチ切替。"
+      },
+      {
+        title: "学習目標設定 ＆ 端末内二重自動バックアップ",
+        tag: "目標・データ保護",
+        src: "assets/images/install_settings.png",
+        caption: "完成目標日数（30〜120日/直接指定）から1日の新規語数を自動逆算。端末内二重自動バックアップで学習履歴を確実に保護。"
       }
     ]
   },
