@@ -310,12 +310,19 @@ function openProjectModal(projectId) {
       </button>
       <div class="flex items-center gap-2">
         ${project.betaInfo ? `
-          <a href="https://x.com/ObenkyoRobo" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-300 text-xs font-bold border border-amber-500/30 flex items-center gap-1.5 transition">
+          <a href="https://x.com/ObenkyoRobo" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-300 text-xs font-bold border border-amber-500/30 flex items-center gap-1.5 transition">
             <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            <span>相互テスト連絡 (X)</span>
+            <span class="hidden sm:inline">相互テスト連絡 (X)</span>
+            <span class="sm:hidden">相互テスト</span>
           </a>
-          <a href="${project.betaInfo.groupUrl}" target="_blank" rel="noopener noreferrer" class="px-5 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 text-xs font-extrabold flex items-center gap-1.5 shadow-lg shadow-amber-500/20 transition">
-            <span>βテストに参加</span>
+          ${project.betaInfo.playStoreUrl ? `
+            <a href="${project.betaInfo.playStoreUrl}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-sky-600/80 hover:bg-sky-500 text-white text-xs font-bold flex items-center gap-1.5 border border-sky-400/30 transition shadow">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              <span>Playストア</span>
+            </a>
+          ` : ''}
+          <a href="${project.betaInfo.groupUrl}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 text-xs font-extrabold flex items-center gap-1.5 shadow-lg shadow-amber-500/20 transition">
+            <span>Googleグループ</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           </a>
         ` : `

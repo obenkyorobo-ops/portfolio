@@ -130,26 +130,43 @@ const projectsData = [
     subtitle: "脳科学×FSRS忘却曲線・目標日数からノルマ自動逆算＆3段階特訓アプリ",
     category: "flutter",
     categoryLabel: "FSRS / 語彙定着サイクル",
-    status: "開発・テスト運用中",
-    statusType: "active",
-    featured: false,
-    accentColor: "from-amber-500 via-orange-500 to-teal-600",
-    badgeColor: "bg-teal-500/15 text-teal-300 border-teal-500/30",
+    status: "クローズドβ募集中",
+    statusType: "beta",
+    featured: true,
+    accentColor: "from-teal-600 via-emerald-500 to-cyan-600",
+    badgeColor: "bg-amber-500/15 text-amber-300 border-amber-500/30",
     icon: "assets/images/install_icon.png",
     previewImage: "assets/images/install_home.png",
-    summary: "目標完成日数（30〜120日）から忘却曲線（FSRS）に基づいて毎日の学習・復習ノルマを自動逆算。カード（FSRS 4段階判定・AIコアイメージ解説）➜ 四択（多義語・同義語）➜ キーボード手打ちスペル特訓の3層サイクルで、大学受験・中学・医獣専門英語を脳へ確実に定着させる英単語学習アプリ。",
+    summary: "目標完成日数（30〜120日）から忘却曲線（FSRS）に基づいて毎日の学習・復習ノルマを自動逆算。カード（FSRS 4段階判定・AIコアイメージ解説）➜ 四択（多義語・同義語）➜ キーボード手打ちスペル特訓の3層サイクルで、大学受験・中学・医獣専門英語を脳へ確実に定着させる英単語学習アプリ。Google Playクローズドβテスター募集中！",
+    betaInfo: {
+      isRecruiting: true,
+      badgeText: "🚀 Google Play クローズドβテスト実施中",
+      groupUrl: "https://groups.google.com/u/3/g/study-app-tester",
+      playStoreUrl: "https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab",
+      note: "連絡不要・出入り自由！キオクノタスケと同じ共通Googleグループにご参加いただくだけで、両方のアプリをお手元のスマホ（Android）ですぐにお試しいただけます。"
+    },
     description: `
-      <div class="p-3.5 rounded-xl bg-slate-900/90 border border-teal-500/30 text-xs text-slate-300 mb-5 leading-relaxed">
-        <div class="flex items-center gap-1.5 text-teal-400 font-bold mb-1">
-          <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          <span>脳科学とFSRSアルゴリズムによる語彙インストールシステム</span>
+      <div class="p-4 rounded-xl bg-gradient-to-r from-emerald-950/60 via-slate-900 to-teal-950/60 border border-emerald-500/40 mb-6">
+        <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm mb-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>📢 クローズドβテスター募集中（グループ共通・連絡不要）</span>
         </div>
-        <p class="text-slate-300">
-          「インストール英単語」は、最新のFSRS（Free Spaced Repetition Scheduler）記憶定着モデルと認知心理学に基づき、最小の反復回数で確固たる英単語力を脳に「インストール」するために設計された語彙演習アプリです。目標日数（30〜120日・直接指定）から日々のノルマを自動逆算し、カード・四択・手打ちスペル特訓の3段階で確実に定着させます。
+        <p class="text-xs text-slate-200 leading-relaxed mb-3">
+          現在、Google Playでの正式リリースに向けてクローズドβテストを実施しています。<strong>『キオクノタスケ』と同じGoogleグループに参加するだけで、追加手続きなしで両方のテスト版がインストール可能</strong>になります！高校生・受験生はもちろん、開発者の相互テストも大歓迎です。
         </p>
+        <div class="space-y-2 bg-slate-950/80 p-3 rounded-lg border border-slate-800 text-xs">
+          <div class="flex items-start gap-2">
+            <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">1</span>
+            <span class="text-slate-300"><strong>共通Googleグループに参加</strong>（キオクノタスケと共通）<br><a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline hover:text-sky-300">https://groups.google.com/u/3/g/study-app-tester</a></span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">2</span>
+            <span class="text-slate-300"><strong>Google Playからテスト版をインストール</strong><br><a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline hover:text-sky-300">https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab</a><br><span class="text-[10px] text-slate-400">※グループ参加と同じGoogleアカウントで開いてください。</span></span>
+          </div>
+        </div>
       </div>
 
-      <p class="mb-4">「知っているけれど本番で出てこない」「多義語の使い分けが曖昧」「スペルが書けない」という語彙学習の3大課題を、3段階の特訓サイクルと高度な出題モードで徹底的に解決します。</p>
+      <p class="mb-4">「インストール英単語」は、最新のFSRS（Free Spaced Repetition Scheduler）記憶定着モデルと認知心理学に基づき、最小の反復回数で確固たる英単語力を脳に「インストール」するために設計された語彙演習アプリです。「知っているけれど本番で出てこない」「多義語の使い分けが曖昧」「スペルが書けない」という語彙学習の3大課題を、3段階の特訓サイクルと高度な出題モードで徹底的に解決します。</p>
       
       <h4 class="text-white font-semibold mb-2">🔥 主な機能 ＆ 科学的アルゴリズム</h4>
       <ul class="list-disc list-inside space-y-1.5 text-slate-300 mb-4">
@@ -162,9 +179,10 @@ const projectsData = [
         <li><strong>端末内二重自動バックアップ機能:</strong> 学習データを端末内に二重自動バックアップし、アプリアップデート後も安全に学習履歴を引き継ぎ可能。</li>
       </ul>
     `,
-    tags: ["FSRS数理モデル", "目標日数逆算", "AIコアイメージ", "スペル手打ちタイピング", "3段階特訓サイクル", "医獣専門英語対応"],
+    tags: ["FSRS数理モデル", "目標日数逆算", "AIコアイメージ", "スペル手打ちタイピング", "3段階特訓サイクル", "Google Play β配信中"],
     githubUrl: "https://github.com/obenkyorobo-ops/portfolio",
-    demoUrl: "#",
+    demoUrl: "https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab",
+    demoLabel: "Playストア テスト版",
     metrics: [
       { label: "復習スケジューラ", value: "FSRS 自動ノルマ逆算" },
       { label: "収録語彙・熟語", value: "全3,980語以上 (5体系)" },

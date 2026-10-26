@@ -63,16 +63,20 @@
       </a>
 
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#beta" class="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-amber-300/90 font-semibold">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+          <span>Closed β</span>
+        </a>
         <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
         <a href="#features" class="hover:text-sky-400 transition-colors">Architecture</a>
         <a href="#techstack" class="hover:text-sky-400 transition-colors">Tech Stack</a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <button onclick="openProjectModal('mugen')" class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold text-xs flex items-center gap-1.5 shadow-lg shadow-amber-500/20 transition transform hover:scale-105">
+        <a href="#beta" class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold text-xs flex items-center gap-1.5 shadow-lg shadow-amber-500/20 transition transform hover:scale-105">
           <span class="w-2 h-2 rounded-full bg-slate-950 animate-ping"></span>
           <span>βテスト参加</span>
-        </button>
+        </a>
         <a href="https://github.com/obenkyorobo-ops/portfolio" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-xs font-semibold border border-slate-700/80 text-white flex items-center gap-1.5 transition shadow-sm">
           <i data-lucide="github" class="w-4 h-4"></i>
           <span class="hidden sm:inline">GitHub</span>
@@ -125,55 +129,122 @@
         </div>
       </div>
 
-      <!-- Featured Closed Beta Card -->
-      <div class="max-w-3xl mx-auto p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-amber-950/40 via-slate-900 to-sky-950/40 border-2 border-amber-500/40 shadow-2xl shadow-amber-500/10 text-left relative overflow-hidden backdrop-blur-md">
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4 pb-4 border-b border-white/10">
-          <div class="flex items-center gap-3">
-            <img src="assets/images/mugen_icon.png" alt="キオクノタスケ" class="w-12 h-12 rounded-2xl shadow-lg border border-amber-500/30 object-cover" />
-            <div>
-              <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-bold text-[10px] uppercase tracking-wider mb-0.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>
-                Google Play クローズドβテスト実施中
-              </div>
-              <h3 class="text-xl sm:text-2xl font-extrabold text-white">キオクノタスケ</h3>
+      <!-- Featured Closed Beta Twin Showcase Section -->
+      <div id="beta" class="max-w-4xl mx-auto p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-amber-950/40 via-slate-900 to-teal-950/40 border-2 border-amber-500/40 shadow-2xl shadow-amber-500/10 text-left relative overflow-hidden backdrop-blur-md">
+        
+        <!-- Header Banner -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-white/10">
+          <div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 font-bold text-xs uppercase tracking-wider mb-2 border border-amber-500/30">
+              <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+              Google Play クローズドβテスト 2大アプリ同時募集中
             </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+              お勉強ロボ 2大フラッグシップ
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">
+              新課程・共通テスト演習 ＆ 脳科学・語彙インストール特訓
+            </p>
           </div>
-          <span class="text-xs text-slate-400 font-medium bg-slate-950/80 px-3 py-1 rounded-full border border-slate-800">連絡不要・出入り自由</span>
+          <span class="text-xs text-amber-300 font-semibold bg-amber-500/10 px-3.5 py-1.5 rounded-full border border-amber-500/30 flex items-center gap-1 flex-shrink-0">
+            <svg class="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            連絡不要・出入り自由
+          </span>
         </div>
 
-        <p class="text-sm text-slate-300 mb-6 leading-relaxed">
-          大学入学共通テスト新課程全18科目・3,851問対応！最新のFSRS理論とアクティブリコール（選択肢マスク想起）で記憶を定着させる本格学習アプリです。現在、正式リリースに向けて<strong>Google Playクローズドβテスターを大募集中</strong>！高校生・受験生はもちろん、開発者の相互テストも大歓迎です！
-        </p>
-
-        <!-- 2-Step Guide -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800">
-            <div class="flex items-center gap-2 text-xs font-bold text-amber-400 mb-1">
-              <span class="w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center text-[11px]">1</span>
-              <span>テスター用Googleグループ参加</span>
+        <!-- Single Step 1: Shared Group Banner (Super Highlighted!) -->
+        <div class="p-4 rounded-2xl bg-gradient-to-r from-amber-500/15 via-slate-900/90 to-emerald-500/15 border-2 border-amber-400/50 mb-6 relative">
+          <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded bg-amber-400 text-slate-950 font-extrabold text-xs">STEP 1（共通）</span>
+                <span class="text-sm font-bold text-white">テスター用Googleグループに参加</span>
+              </div>
+              <p class="text-xs text-amber-200/90 leading-relaxed">
+                <strong>グループは両アプリ共通です！</strong> このグループに1回参加するだけで、<strong>『キオクノタスケ』と『インストール英単語』の両方のテスト版がまとめてインストール可能</strong>になります。
+              </p>
             </div>
-            <p class="text-[11px] text-slate-400 leading-snug mb-2">グループに参加することで、Playストアのテスト版へのアクセス権が付与されます。</p>
-            <a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="text-xs text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1 underline">
+            <a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-extrabold text-xs flex items-center gap-1.5 shadow-lg shadow-amber-500/20 transition transform hover:scale-105 whitespace-nowrap">
               <span>Googleグループを開く</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
           </div>
+        </div>
 
-          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800">
-            <div class="flex items-center gap-2 text-xs font-bold text-amber-400 mb-1">
-              <span class="w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center text-[11px]">2</span>
-              <span>Google Playからインストール</span>
+        <!-- Step 2: Twin Cards for App Installs -->
+        <div class="mb-6">
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-sky-400 font-bold text-[10px]">STEP 2</span>
+            <span>お好きなアプリ（または両方）をGoogle Playからインストール</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <!-- App 1: Kioku no Tasuke -->
+            <div class="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-amber-500/50 transition flex flex-col justify-between group">
+              <div>
+                <div class="flex items-center gap-3 mb-3">
+                  <img src="assets/images/mugen_icon.png" alt="キオクノタスケ" class="w-12 h-12 rounded-xl border border-amber-500/30 object-cover shadow" />
+                  <div>
+                    <div class="text-[10px] text-amber-400 font-bold uppercase tracking-wider">共テ全18科目 ＆ 忘却曲線</div>
+                    <h4 class="text-lg font-extrabold text-white group-hover:text-amber-300 transition-colors">キオクノタスケ</h4>
+                  </div>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                  新課程全18科目・3,851問収録。最新FSRS理論とアクティブリコール（選択肢マスク想起）で記憶を定着させる本格演習アプリ。相棒の子犬が成長する育成要素も完備。
+                </p>
+                <div class="flex flex-wrap gap-1 mb-4">
+                  <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-900 text-slate-300 border border-slate-800">全18科目対応</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-900 text-slate-300 border border-slate-800">アクティブリコール</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-900 text-slate-300 border border-slate-800">FSRS自動逆算</span>
+                </div>
+              </div>
+              <div class="space-y-2 pt-2 border-t border-slate-900">
+                <a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.exam_prep" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-1.5 shadow transition">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                  <span>キオクノタスケ をインストール</span>
+                </a>
+                <button onclick="openProjectModal('mugen')" class="w-full py-1.5 text-center text-xs text-slate-400 hover:text-white transition">
+                  機能・スクショ詳細を見る ➜
+                </button>
+              </div>
             </div>
-            <p class="text-[11px] text-slate-400 leading-snug mb-2">グループ参加と同じGoogleアカウントで開くと、テスト版がDL可能になります。</p>
-            <a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.exam_prep" target="_blank" rel="noopener noreferrer" class="text-xs text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1 underline">
-              <span>Google Playで開く</span>
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-            </a>
+
+            <!-- App 2: Install Vocab -->
+            <div class="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-teal-500/50 transition flex flex-col justify-between group">
+              <div>
+                <div class="flex items-center gap-3 mb-3">
+                  <img src="assets/images/install_icon.png" alt="インストール英単語" class="w-12 h-12 rounded-xl border border-teal-500/30 object-cover shadow" />
+                  <div>
+                    <div class="text-[10px] text-teal-400 font-bold uppercase tracking-wider">語彙 ＆ タイピング</div>
+                    <h4 class="text-lg font-extrabold text-white group-hover:text-teal-300 transition-colors">インストール英単語</h4>
+                  </div>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                  目標完成日数（30〜120日）から日々のノルマを自動逆算。カード（FSRS 4段階・AIコアイメージ）➜ 四択 ➜ キーボード手打ち特訓の3層サイクルで、大学受験・医獣専門英語を脳へ定着。
+                </p>
+                <div class="flex flex-wrap gap-1 mb-4">
+                  <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-900 text-slate-300 border border-slate-800">目標日数逆算</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-900 text-slate-300 border border-slate-800">AIコアイメージ</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-900 text-slate-300 border border-slate-800">手打ちスペル特訓</span>
+                </div>
+              </div>
+              <div class="space-y-2 pt-2 border-t border-slate-900">
+                <a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-400 hover:to-cyan-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-1.5 shadow transition">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                  <span>インストール英単語 をインストール</span>
+                </a>
+                <button onclick="openProjectModal('install_vocab')" class="w-full py-1.5 text-center text-xs text-slate-400 hover:text-white transition">
+                  機能・スクショ詳細を見る ➜
+                </button>
+              </div>
+            </div>
+
           </div>
         </div>
 
         <!-- Mutual Testing Contact Box -->
-        <div class="p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 via-slate-900 to-sky-500/10 border border-amber-500/30 mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 via-slate-900 to-sky-500/10 border border-amber-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <div class="flex items-center gap-2 text-xs font-bold text-amber-300 mb-1">
               <span class="text-base">🤝</span>
@@ -191,16 +262,6 @@
           </div>
         </div>
 
-        <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
-          <button onclick="openProjectModal('mugen')" class="text-xs text-slate-400 hover:text-white font-medium flex items-center gap-1 transition">
-            <span>機能・スクショ詳細を見る</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </button>
-          <a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-extrabold text-xs flex items-center gap-2 shadow-lg shadow-amber-500/25 transition transform hover:scale-105">
-            <span>今すぐテスターに参加する（無料）</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-        </div>
       </div>
     </div>
   </section>
@@ -384,7 +445,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="assets/js/projects.js?v=20261026"></script>
-  <script src="assets/js/main.js?v=20261026"></script>
+  <script src="assets/js/projects.js?v=20261026_twin"></script>
+  <script src="assets/js/main.js?v=20261026_twin"></script>
 </body>
 </html>
