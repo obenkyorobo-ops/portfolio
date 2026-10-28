@@ -14,6 +14,7 @@
    - 正解でごはんを獲得し成長する相棒（犬）とのふれあい・思い出アルバム・実績バッジ機能
    - GitHub風の学習ヒートマップ ＆ 連続学習ストリーク
    - **Googleグループ参加 URL**: https://groups.google.com/u/3/g/study-app-tester
+   - **Webテスト参加（承認）URL**: https://play.google.com/apps/testing/jp.obenkyorobo.exam_prep
    - **Playストア テスト版 URL**: https://play.google.com/store/apps/details?id=jp.obenkyorobo.exam_prep
    - **相互テスト連絡先 (X)**: [@ObenkyoRobo](https://x.com/ObenkyoRobo)
 
@@ -28,6 +29,7 @@
    - 大学受験英単語（2,119語）、大学受験英熟語（1,003熟語）、中学英単語（553語）、中学英熟語（90熟語）、医学・獣医学専門英語（221語）の全5体系を柔軟にスイッチ可能
    - 端末内二重自動バックアップによる学習履歴保護機能
    - **Googleグループ参加 URL**: https://groups.google.com/u/3/g/study-app-tester （※キオクノタスケと共通）
+   - **Webテスト参加（承認）URL**: https://play.google.com/apps/testing/jp.obenkyorobo.install_vocab
    - **Playストア テスト版 URL**: https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab
    - **相互テスト連絡先 (X)**: [@ObenkyoRobo](https://x.com/ObenkyoRobo)
 

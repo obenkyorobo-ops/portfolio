@@ -22,8 +22,9 @@ const projectsData = [
       isRecruiting: true,
       badgeText: "🚀 Google Play クローズドβテスト実施中",
       groupUrl: "https://groups.google.com/u/3/g/study-app-tester",
+      testingUrl: "https://play.google.com/apps/testing/jp.obenkyorobo.exam_prep",
       playStoreUrl: "https://play.google.com/store/apps/details?id=jp.obenkyorobo.exam_prep",
-      note: "連絡不要・出入り自由！相互テストも大歓迎です。Googleグループにご参加いただくだけで、すぐにお手元のスマホ（Android）でお試しいただけます。"
+      note: "連絡不要・出入り自由！相互テストも大歓迎です。Googleグループ参加後、Web参加リンクで『テスターになる』を承認するとPlayストアからDLできます。"
     },
     description: `
       <div class="p-4 rounded-xl bg-gradient-to-r from-amber-950/60 via-slate-900 to-sky-950/60 border border-amber-500/40 mb-6">
@@ -34,13 +35,17 @@ const projectsData = [
         <p class="text-xs text-slate-200 leading-relaxed mb-3">
           現在、Google Playでの正式リリースに向けてクローズドβテストを実施しています。高校生・受験生はもちろん、資格試験や大人の学び直し、開発者の相互テストも大歓迎です！
         </p>
-        <div class="space-y-2 bg-slate-950/80 p-3 rounded-lg border border-slate-800 text-xs">
+        <div class="space-y-2.5 bg-slate-950/80 p-3 rounded-lg border border-slate-800 text-xs">
           <div class="flex items-start gap-2">
             <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">1</span>
-            <span class="text-slate-300"><strong>テスター用Googleグループに参加</strong><br><a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline hover:text-sky-300">https://groups.google.com/u/3/g/study-app-tester</a></span>
+            <span class="text-slate-300"><strong>テスター用Googleグループに参加</strong>（キオクノタスケ・英単語共通）<br><a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline hover:text-sky-300">https://groups.google.com/u/3/g/study-app-tester</a></span>
           </div>
           <div class="flex items-start gap-2">
             <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">2</span>
+            <span class="text-slate-300"><strong>Webでテスト参加（オプトイン）を承認</strong><br><a href="https://play.google.com/apps/testing/jp.obenkyorobo.exam_prep" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline hover:text-amber-300 font-semibold">https://play.google.com/apps/testing/jp.obenkyorobo.exam_prep</a><br><span class="text-[10px] text-slate-400">※開いた画面で「テスターになる」をタップしてください。</span></span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">3</span>
             <span class="text-slate-300"><strong>Google Playからテスト版をインストール</strong><br><a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.exam_prep" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline hover:text-sky-300">https://play.google.com/store/apps/details?id=jp.obenkyorobo.exam_prep</a><br><span class="text-[10px] text-slate-400">※グループ参加と同じGoogleアカウントで開いてください。</span></span>
           </div>
         </div>
@@ -142,8 +147,9 @@ const projectsData = [
       isRecruiting: true,
       badgeText: "🚀 Google Play クローズドβテスト実施中",
       groupUrl: "https://groups.google.com/u/3/g/study-app-tester",
+      testingUrl: "https://play.google.com/apps/testing/jp.obenkyorobo.install_vocab",
       playStoreUrl: "https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab",
-      note: "連絡不要・出入り自由！キオクノタスケと同じ共通Googleグループにご参加いただくだけで、両方のアプリをお手元のスマホ（Android）ですぐにお試しいただけます。"
+      note: "連絡不要・出入り自由！キオクノタスケと同じ共通Googleグループにご参加後、Web参加リンクで『テスターになる』を承認することですぐにインストール可能です。"
     },
     description: `
       <div class="p-4 rounded-xl bg-gradient-to-r from-emerald-950/60 via-slate-900 to-teal-950/60 border border-emerald-500/40 mb-6">
@@ -154,13 +160,17 @@ const projectsData = [
         <p class="text-xs text-slate-200 leading-relaxed mb-3">
           現在、Google Playでの正式リリースに向けてクローズドβテストを実施しています。<strong>『キオクノタスケ』と同じGoogleグループに参加するだけで、追加手続きなしで両方のテスト版がインストール可能</strong>になります！高校生・受験生はもちろん、開発者の相互テストも大歓迎です。
         </p>
-        <div class="space-y-2 bg-slate-950/80 p-3 rounded-lg border border-slate-800 text-xs">
+        <div class="space-y-2.5 bg-slate-950/80 p-3 rounded-lg border border-slate-800 text-xs">
           <div class="flex items-start gap-2">
             <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">1</span>
-            <span class="text-slate-300"><strong>共通Googleグループに参加</strong>（キオクノタスケと共通）<br><a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline hover:text-sky-300">https://groups.google.com/u/3/g/study-app-tester</a></span>
+            <span class="text-slate-300"><strong>共通Googleグループに参加</strong>（キオクノタスケ・英単語共通）<br><a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline hover:text-sky-300">https://groups.google.com/u/3/g/study-app-tester</a></span>
           </div>
           <div class="flex items-start gap-2">
             <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">2</span>
+            <span class="text-slate-300"><strong>Webでテスト参加（オプトイン）を承認</strong><br><a href="https://play.google.com/apps/testing/jp.obenkyorobo.install_vocab" target="_blank" rel="noopener noreferrer" class="text-teal-400 underline hover:text-teal-300 font-semibold">https://play.google.com/apps/testing/jp.obenkyorobo.install_vocab</a><br><span class="text-[10px] text-slate-400">※開いた画面で「テスターになる」をタップしてください。</span></span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">3</span>
             <span class="text-slate-300"><strong>Google Playからテスト版をインストール</strong><br><a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline hover:text-sky-300">https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab</a><br><span class="text-[10px] text-slate-400">※グループ参加と同じGoogleアカウントで開いてください。</span></span>
           </div>
         </div>

@@ -153,15 +153,15 @@
         </div>
 
         <!-- Single Step 1: Shared Group Banner (Super Highlighted!) -->
-        <div class="p-4 rounded-2xl bg-gradient-to-r from-amber-500/15 via-slate-900/90 to-emerald-500/15 border-2 border-amber-400/50 mb-6 relative">
+        <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-amber-500/15 via-slate-900/90 to-emerald-500/15 border-2 border-amber-400/50 mb-6 relative">
           <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <div class="space-y-1">
+            <div class="space-y-1.5">
               <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded bg-amber-400 text-slate-950 font-extrabold text-xs">STEP 1（共通）</span>
-                <span class="text-sm font-bold text-white">テスター用Googleグループに参加</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-amber-400 text-slate-950 font-extrabold text-xs">STEP 1（共通）</span>
+                <span class="text-sm sm:text-base font-bold text-white">テスター用Googleグループに参加</span>
               </div>
               <p class="text-xs text-amber-200/90 leading-relaxed">
-                <strong>グループは両アプリ共通です！</strong> このグループに1回参加するだけで、<strong>『キオクノタスケ』と『インストール英単語』の両方のテスト版がまとめてインストール可能</strong>になります。
+                <strong>グループは両アプリ共通です！</strong> このグループに1回参加するだけで、<strong>『キオクノタスケ』と『インストール英単語』の両方のテスト権限が付与</strong>されます（連絡不要・出入り自由）。
               </p>
             </div>
             <a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-extrabold text-xs flex items-center gap-1.5 shadow-lg shadow-amber-500/20 transition transform hover:scale-105 whitespace-nowrap">
@@ -171,11 +171,20 @@
           </div>
         </div>
 
+        <!-- Google Play Testing Mechanism Notice -->
+        <div class="p-3.5 rounded-xl bg-slate-900/90 border border-sky-500/30 text-xs text-slate-300 mb-6 flex items-start gap-2.5">
+          <svg class="w-4 h-4 text-sky-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <div class="leading-relaxed text-[11px] sm:text-xs">
+            <strong class="text-sky-300 font-bold">【重要】Google Playクローズドテストのインストール手順</strong><br>
+            Google Playのセキュリティ上、直接ストアを開くと「アイテムが見つかりません」と表示されます。必ず下記カードの<strong>「① Webでテスト参加を承認」を開いて「テスターになる」をタップ</strong>した後に、<strong>「② Google Playで開く」</strong>へ進んでください（グループ参加と同じGoogleアカウントで開いてください）。
+          </div>
+        </div>
+
         <!-- Step 2: Twin Cards for App Installs -->
         <div class="mb-6">
           <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
-            <span class="px-2 py-0.5 rounded bg-slate-800 text-sky-400 font-bold text-[10px]">STEP 2</span>
-            <span>お好きなアプリ（または両方）をGoogle Playからインストール</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-slate-800 text-sky-400 font-bold text-[10px]">STEP 2</span>
+            <span>アプリを選択してテスト参加を承認 ＆ インストール</span>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -199,12 +208,18 @@
                   <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-900 text-slate-300 border border-slate-800">FSRS自動逆算</span>
                 </div>
               </div>
-              <div class="space-y-2 pt-2 border-t border-slate-900">
-                <a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.exam_prep" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-1.5 shadow transition">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                  <span>キオクノタスケ をインストール</span>
+              <div class="space-y-2 pt-3 border-t border-slate-900">
+                <!-- 1. Web Opt-in Button (Primary) -->
+                <a href="https://play.google.com/apps/testing/jp.obenkyorobo.exam_prep" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-1.5 shadow transition transform hover:scale-[1.02]">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span>① Webでテスト参加を承認（推奨）</span>
                 </a>
-                <button onclick="openProjectModal('mugen')" class="w-full py-1.5 text-center text-xs text-slate-400 hover:text-white transition">
+                <!-- 2. Store Direct Button (Secondary) -->
+                <a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.exam_prep" target="_blank" rel="noopener noreferrer" class="w-full py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white font-semibold text-xs border border-slate-700/80 flex items-center justify-center gap-1.5 transition">
+                  <svg class="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                  <span>② Google Play で開く（承認後）</span>
+                </a>
+                <button onclick="openProjectModal('mugen')" class="w-full py-1 text-center text-[11px] text-slate-400 hover:text-white transition">
                   機能・スクショ詳細を見る ➜
                 </button>
               </div>
@@ -229,12 +244,18 @@
                   <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-900 text-slate-300 border border-slate-800">手打ちスペル特訓</span>
                 </div>
               </div>
-              <div class="space-y-2 pt-2 border-t border-slate-900">
-                <a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-400 hover:to-cyan-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-1.5 shadow transition">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                  <span>インストール英単語 をインストール</span>
+              <div class="space-y-2 pt-3 border-t border-slate-900">
+                <!-- 1. Web Opt-in Button (Primary) -->
+                <a href="https://play.google.com/apps/testing/jp.obenkyorobo.install_vocab" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-400 hover:to-cyan-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-1.5 shadow transition transform hover:scale-[1.02]">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span>① Webでテスト参加を承認（推奨）</span>
                 </a>
-                <button onclick="openProjectModal('install_vocab')" class="w-full py-1.5 text-center text-xs text-slate-400 hover:text-white transition">
+                <!-- 2. Store Direct Button (Secondary) -->
+                <a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab" target="_blank" rel="noopener noreferrer" class="w-full py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white font-semibold text-xs border border-slate-700/80 flex items-center justify-center gap-1.5 transition">
+                  <svg class="w-3.5 h-3.5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                  <span>② Google Play で開く（承認後）</span>
+                </a>
+                <button onclick="openProjectModal('install_vocab')" class="w-full py-1 text-center text-[11px] text-slate-400 hover:text-white transition">
                   機能・スクショ詳細を見る ➜
                 </button>
               </div>
@@ -445,7 +466,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="assets/js/projects.js?v=20261026_twin"></script>
-  <script src="assets/js/main.js?v=20261026_twin"></script>
+  <script src="assets/js/projects.js?v=20261028_optin"></script>
+  <script src="assets/js/main.js?v=20261028_optin"></script>
 </body>
 </html>
