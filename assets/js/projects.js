@@ -5,6 +5,89 @@
  */
 const projectsData = [
   {
+    id: "hikikomoswitch",
+    title: "HikikomoSwitch",
+    subtitle: "「回線を止めれば、PCつけっぱなしでも絶対に侵入されない」— 画面端に潜む半透明ポート＆回線ロックダウンスイッチャー",
+    category: "security",
+    categoryLabel: "Windows / 鉄壁回線スイッチャー",
+    status: "Windows版 公開中 (無料DL)",
+    statusType: "release",
+    featured: true,
+    accentColor: "from-emerald-600 via-teal-500 to-sky-600",
+    badgeColor: "bg-emerald-500/15 text-emerald-300 border-emerald-500/30",
+    icon: "assets/images/hikikomo_icon.png",
+    previewImage: "assets/images/hikikomo_main.png",
+    installerUrl: "assets/downloads/HikikomoSwitch_Setup.exe",
+    portableUrl: "assets/downloads/HikikomoSwitch_Portable.zip",
+    summary: "「回線を止めれば安全なのだ」を極めたWindows用常駐セキュリティ＆ポート管理ツール。普段は画面の端に細い光として引きこもり、マウスを近づけると半透明ピルがにょっと出現。ワンクリックで全通信の完全ロックダウン（物理的にLANを抜いたと同等の侵入不能状態）や、アプリ・ポート単位の通信オン/オフを自在に切り替えられます。",
+    description: `
+      <div class="p-4 rounded-xl bg-gradient-to-r from-emerald-950/70 via-slate-900 to-sky-950/70 border border-emerald-500/40 mb-6">
+        <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+          <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>🛡️ Windows 10 / 11 対応（追加ランタイム不要・完全無料）</span>
+          </div>
+          <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-mono">v1.0.0 Official Release</span>
+        </div>
+        <p class="text-xs text-slate-200 leading-relaxed mb-4">
+          「席を離れるときや夜間、PCをつけっぱなしにしておくのが不安」「怪しい通信をしている裏アプリや特定ポートだけを黙らせたい」——そんな悩みを一番シンプルかつ根本的に解決するコンセプトは、<strong>『回線を止めれば絶対に安全なのだ』</strong>という事実です。
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="assets/downloads/HikikomoSwitch_Setup.exe" download class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-xs flex items-center gap-2 shadow-lg shadow-emerald-500/20 transition transform hover:scale-105">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            <span>インストーラー版をダウンロード (HikikomoSwitch_Setup.exe)</span>
+          </a>
+          <a href="assets/downloads/HikikomoSwitch_Portable.zip" download class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-700 flex items-center gap-2 transition">
+            <span>ポータブル版 (.zip)</span>
+          </a>
+        </div>
+      </div>
+
+      <h4 class="text-white font-semibold mb-2">🔒 コンセプト：「回線を止めれば、PCつけっぱなしでも絶対に侵入されない」</h4>
+      <p class="mb-4 text-slate-300 text-xs sm:text-sm leading-relaxed">
+        複雑なセキュリティ設定がなくても、物理的に外との扉を閉ざしてしまえば外部からの不正アクセス・リモート侵入・情報漏洩は100%起こり得ません。<strong>HikikomoSwitch（ヒキコモスイッチ）</strong>は、PCの作業状態はそのまま維持しつつ、ワンクリックでPCを外界から「完全な引きこもり状態（ロックダウン）」にできる常駐スイッチャーです。
+      </p>
+
+      <h4 class="text-white font-semibold mb-2">✨ 主な機能 ＆ 鉄壁の防衛アーキテクチャ</h4>
+      <ul class="list-disc list-inside space-y-1.5 text-slate-300 mb-4 text-xs sm:text-sm">
+        <li><strong>画面端から「にょっと」現れる半透明スリムピル:</strong> 普段は画面端の細いインジケーター（緑＝通常 / 赤＝引きこもり中）として控えめに待機。マウスを近づけた瞬間だけスライド出現し、9ドット（3×3）のグリップを掴んで上下左右の好きな辺・位置へ自由に配置できます。</li>
+        <li><strong>3重の完全ロックダウン（回線マスタースイッチ）:</strong>
+          <ol class="list-decimal list-inside ml-4 mt-1 space-y-1 text-slate-300 text-xs">
+            <li>Windows ファイアウォールの全プロファイルに <code>blockinboundalways,blockoutbound</code> を適用し、既存の「許可ルール」すら無視して全着信・全送信を完全拒否。</li>
+            <li>TCP/UDP だけでなく ICMP（Ping応答）を含む全プロトコル（<code>protocol=any</code>）を遮断し、ネットワーク上からPCの存在を隠蔽。</li>
+            <li>スイッチを切った瞬間に確立済みの外部TCPセッション（<code>ESTABLISHED</code>）を Win32 API <code>SetTcpEntry</code> で即時強制切断（ローカル <code>127.0.0.1</code> は維持するため作業中のアプリはフリーズしません）。</li>
+          </ol>
+        </li>
+        <li><strong>アプリ別グループ表示 ＆ 個別ポートのトグル遮断:</strong> 同じアプリが使う複数ポートを自動で1行に集約。クリックでアコーディオン展開し、アプリ全体の一括遮断も、特定ポート（<code>TCP :443</code> 等）だけのピンポイント遮断もトグル1つで即反映。</li>
+        <li><strong>通信中 / 待機中ポートの可視化 ＆ リアルタイム速度グラフ:</strong> 実際にデータを送受信している「通信中ポート」と「待機中（LISTEN/UDP）ポート」を明確に識別。全体送受信チャートとアプリ別のミニ波形グラフ（スパークライン）を毎秒リアルタイム描画します。</li>
+        <li><strong>一度の管理者実行でずっと使える「常時管理者＆自動起動」:</strong> 初回または設定時に管理者権限を記憶させれば、次回起動時やPC再起動時もUAC確認なしで自動的に管理者権限のまま常駐します（フッターのスイッチでいつでもOFF可能）。</li>
+      </ul>
+    `,
+    tags: ["Windows 10/11", "完全ロックダウン", "ポート別通信遮断", "リアルタイム通信グラフ", "WPF半透明UI", "無料インストーラー配布"],
+    githubUrl: "https://github.com/obenkyorobo-ops/portfolio",
+    demoUrl: "assets/downloads/HikikomoSwitch_Setup.exe",
+    demoLabel: "インストーラー DL",
+    metrics: [
+      { label: "対応OS", value: "Windows 10 / 11 (64bit)" },
+      { label: "防衛レベル", value: "全プロトコル遮断＋即時切断" },
+      { label: "常駐スタイル", value: "画面端スライド半透明ピル" }
+    ],
+    screenshots: [
+      {
+        title: "アプリ別ポート＆リアルタイム通信管理ウィンドウ",
+        tag: "メイン一覧＆グラフ",
+        src: "assets/images/hikikomo_main.png",
+        caption: "回線全体のリアルタイム送受信グラフ、アプリごとのミニ波形グラフ、通信中/待機中ポートの内訳を半透明ダークUIに集約。アプリ行クリックで使用ポート一覧を展開し、個別にトグルでオン/オフ可能。"
+      },
+      {
+        title: "画面端からにょっと現れる半透明スリムピル",
+        tag: "常駐エッジドック",
+        src: "assets/images/hikikomo_pill.png",
+        caption: "マウスを画面端に近づけるとスライド出現。上の9ドットグリップで画面の上下左右どこへでも移動でき、中央の地球儀ボタンで回線ロックダウン、下のボタンで一覧ウィンドウを即座に開閉。"
+      }
+    ]
+  },
+  {
     id: "mugen",
     title: "キオクノタスケ",
     subtitle: "新課程全18科目対応・FSRS記憶定着アルゴリズム暗記＆演習アプリ",

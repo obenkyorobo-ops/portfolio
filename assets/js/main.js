@@ -59,8 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
     filtered.forEach((project, index) => {
       const card = document.createElement("div");
       const isBeta = project.statusType === "beta";
+      const isRelease = project.statusType === "release";
       card.className = `glass-card rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden ${
-        isBeta ? 'border-2 border-amber-500/40 shadow-xl shadow-amber-500/10' : ''
+        isRelease ? 'border-2 border-emerald-500/50 shadow-xl shadow-emerald-500/10' : isBeta ? 'border-2 border-amber-500/40 shadow-xl shadow-amber-500/10' : ''
       }`;
       card.style.animationDelay = `${index * 80}ms`;
 
@@ -128,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ${tagsHtml}
           </div>
 
-          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between gap-2">
             <button 
               type="button" 
               onclick="openProjectModal('${project.id}')"
@@ -137,7 +138,12 @@ document.addEventListener("DOMContentLoaded", () => {
               <span>スクショ・仕様を見る</span>
               <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </button>
-            <span class="text-xs font-mono text-amber-400/80 font-medium">お勉強ロボ</span>
+            ${project.installerUrl ? `
+              <a href="${project.installerUrl}" download class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-xs flex items-center gap-1 shadow-md shadow-emerald-500/20 transition transform hover:scale-105">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                <span>無料DL (.exe)</span>
+              </a>
+            ` : `<span class="text-xs font-mono text-amber-400/80 font-medium">お勉強ロボ</span>`}
           </div>
         </div>
       `;
@@ -330,6 +336,14 @@ function openProjectModal(projectId) {
           <a href="${project.betaInfo.groupUrl}" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium border border-slate-700/60 flex items-center gap-1.5 transition">
             <span>グループ</span>
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+        ` : project.installerUrl ? `
+          <a href="${project.portableUrl}" download class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 flex items-center gap-1.5 transition">
+            <span>ポータブル版 (.zip)</span>
+          </a>
+          <a href="${project.installerUrl}" download class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 text-xs sm:text-sm font-extrabold flex items-center gap-2 shadow-lg shadow-emerald-500/20 transition transform hover:scale-105">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            <span>インストーラーをダウンロード (.exe)</span>
           </a>
         ` : `
           <a href="https://github.com/obenkyorobo-ops/portfolio" target="_blank" rel="noopener noreferrer" class="px-5 py-2 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white text-sm font-semibold flex items-center gap-2 shadow-lg shadow-sky-500/20 transition">
