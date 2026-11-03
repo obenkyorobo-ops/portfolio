@@ -17,7 +17,8 @@ const projectsData = [
     badgeColor: "bg-emerald-500/15 text-emerald-300 border-emerald-500/30",
     icon: "assets/images/hikikomo_icon.png",
     previewImage: "assets/images/hikikomo_main.png",
-    installerUrl: "assets/downloads/HikikomoSwitch_Setup.exe",
+    installerUrl: "assets/downloads/HikikomoSwitch_Installer.zip",
+    rawExeUrl: "assets/downloads/HikikomoSwitch_Setup.exe",
     portableUrl: "assets/downloads/HikikomoSwitch_Portable.zip",
     summary: "「回線を止めれば安全なのだ」を極めたWindows用常駐セキュリティ＆ポート管理ツール。普段は画面の端に細い光として引きこもり、マウスを近づけると半透明ピルがにょっと出現。ワンクリックで全通信の完全ロックダウン（物理的にLANを抜いたと同等の侵入不能状態）や、アプリ・ポート単位の通信オン/オフを自在に切り替えられます。",
     description: `
@@ -29,15 +30,22 @@ const projectsData = [
           </div>
           <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-mono">v1.0.0 Official Release</span>
         </div>
-        <p class="text-xs text-slate-200 leading-relaxed mb-4">
+        <p class="text-xs text-slate-200 leading-relaxed mb-3">
           「席を離れるときや夜間、PCをつけっぱなしにしておくのが不安」「怪しい通信をしている裏アプリや特定ポートだけを黙らせたい」——そんな悩みを一番シンプルかつ根本的に解決するコンセプトは、<strong>『回線を止めれば絶対に安全なのだ』</strong>という事実です。
         </p>
-        <div class="flex flex-wrap gap-3">
-          <a href="assets/downloads/HikikomoSwitch_Setup.exe" download class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-xs flex items-center gap-2 shadow-lg shadow-emerald-500/20 transition transform hover:scale-105">
+        <div class="p-2.5 rounded-lg bg-slate-950/80 border border-emerald-500/30 text-[11px] text-slate-300 mb-3">
+          💡 <strong>SmartScreen（青い保護画面）を回避する方法：</strong><br>
+          下の<strong>「推奨インストーラーパック (.zip)」</strong>を解凍し、中の <code>1_インストール開始 (SmartScreen回避).bat</code> を実行すると保護画面なしでそのまま起動します（単体 <code>.exe</code> を直接開いた場合は<strong>［詳細情報］➜［実行］</strong>をクリックしてください）。
+        </div>
+        <div class="flex flex-wrap gap-2.5">
+          <a href="assets/downloads/HikikomoSwitch_Installer.zip" download class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-xs flex items-center gap-2 shadow-lg shadow-emerald-500/20 transition transform hover:scale-105">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-            <span>インストーラー版をダウンロード (HikikomoSwitch_Setup.exe)</span>
+            <span>推奨インストーラーパック (.zip)</span>
           </a>
-          <a href="assets/downloads/HikikomoSwitch_Portable.zip" download class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-700 flex items-center gap-2 transition">
+          <a href="assets/downloads/HikikomoSwitch_Setup.exe" download class="px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-300 font-semibold text-xs border border-emerald-500/40 flex items-center gap-1.5 transition">
+            <span>単体インストーラー (.exe)</span>
+          </a>
+          <a href="assets/downloads/HikikomoSwitch_Portable.zip" download class="px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-700 flex items-center gap-1.5 transition">
             <span>ポータブル版 (.zip)</span>
           </a>
         </div>

@@ -310,13 +310,25 @@
           </div>
         </div>
         <div class="flex flex-wrap items-center gap-2.5 w-full md:w-auto">
-          <a href="assets/downloads/HikikomoSwitch_Setup.exe" download class="flex-1 md:flex-none px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25 transition transform hover:scale-105 whitespace-nowrap">
+          <a href="assets/downloads/HikikomoSwitch_Installer.zip" download class="flex-1 md:flex-none px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25 transition transform hover:scale-105 whitespace-nowrap">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-            <span>インストーラー無料DL (.exe)</span>
+            <span>推奨インストーラーパック (.zip)</span>
+          </a>
+          <a href="assets/downloads/HikikomoSwitch_Setup.exe" download class="px-3.5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-emerald-300 hover:text-white font-semibold text-xs border border-emerald-500/40 flex items-center justify-center gap-1.5 transition whitespace-nowrap">
+            <span>単体インストーラー (.exe)</span>
           </a>
           <a href="assets/downloads/HikikomoSwitch_Portable.zip" download class="px-3.5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white font-semibold text-xs border border-slate-700/80 flex items-center justify-center gap-1.5 transition whitespace-nowrap">
             <span>ポータブル版 (.zip)</span>
           </a>
+        </div>
+      </div>
+
+      <!-- SmartScreen Friendly Guide Banner -->
+      <div class="p-3 rounded-xl bg-slate-950/90 border border-emerald-500/30 text-[11px] sm:text-xs text-slate-300 mb-6 flex items-start gap-2.5">
+        <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <div class="leading-relaxed">
+          <strong class="text-emerald-300 font-bold">💡 青い保護画面（SmartScreen）を出さずにスムーズにインストールするコツ：</strong><br>
+          <strong>「推奨インストーラーパック (.zip)」</strong>を解凍し、中の <code>1_インストール開始 (SmartScreen回避).bat</code> をダブルクリックすると保護画面を自動スキップして起動します。単体 <code>.exe</code> を直接開いて「WindowsによってPCが保護されました」と表示された場合は、左上の<strong>［詳細情報］をクリック ➜［実行］ボタン</strong>でインストールできます。
         </div>
       </div>
 
@@ -560,7 +572,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="assets/js/projects.js?v=20261103_hikikomo"></script>
-  <script src="assets/js/main.js?v=20261103_hikikomo"></script>
+  <script src="assets/js/projects.js?v=20261103_hikikomo_v2"></script>
+  <script src="assets/js/main.js?v=20261103_hikikomo_v2"></script>
 </body>
 </html>

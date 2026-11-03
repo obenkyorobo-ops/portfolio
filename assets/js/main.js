@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ${project.installerUrl ? `
               <a href="${project.installerUrl}" download class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-xs flex items-center gap-1 shadow-md shadow-emerald-500/20 transition transform hover:scale-105">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                <span>無料DL (.exe)</span>
+                <span>無料DL</span>
               </a>
             ` : `<span class="text-xs font-mono text-amber-400/80 font-medium">お勉強ロボ</span>`}
           </div>
@@ -338,12 +338,15 @@ function openProjectModal(projectId) {
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           </a>
         ` : project.installerUrl ? `
-          <a href="${project.portableUrl}" download class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 flex items-center gap-1.5 transition">
-            <span>ポータブル版 (.zip)</span>
+          <a href="${project.portableUrl}" download class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 flex items-center gap-1.5 transition">
+            <span>ポータブル (.zip)</span>
+          </a>
+          <a href="${project.rawExeUrl || project.installerUrl}" download class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-300 text-xs font-semibold border border-emerald-500/40 flex items-center gap-1.5 transition">
+            <span>単体 (.exe)</span>
           </a>
           <a href="${project.installerUrl}" download class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 text-xs sm:text-sm font-extrabold flex items-center gap-2 shadow-lg shadow-emerald-500/20 transition transform hover:scale-105">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-            <span>インストーラーをダウンロード (.exe)</span>
+            <span>推奨インストーラー (.zip)</span>
           </a>
         ` : `
           <a href="https://github.com/obenkyorobo-ops/portfolio" target="_blank" rel="noopener noreferrer" class="px-5 py-2 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white text-sm font-semibold flex items-center gap-2 shadow-lg shadow-sky-500/20 transition">
