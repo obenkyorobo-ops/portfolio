@@ -10,35 +10,34 @@ p {
 
 @layer utilities {
   .bg-grid-pattern {
-    background-size: 40px 40px;
-    background-image: 
-      linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-image: radial-gradient(rgba(148, 163, 184, 0.3) 1px, transparent 1px);
   }
 
   .glow-mesh {
-    background: radial-gradient(circle at 50% -20%, rgba(56, 189, 248, 0.18), transparent 70%),
-                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15), transparent 60%),
-                radial-gradient(circle at 90% 40%, rgba(168, 85, 247, 0.12), transparent 50%);
+    background: radial-gradient(circle at 50% -10%, rgba(245, 158, 11, 0.09), transparent 60%),
+                radial-gradient(circle at 10% 25%, rgba(14, 165, 233, 0.08), transparent 50%),
+                radial-gradient(circle at 90% 45%, rgba(99, 102, 241, 0.06), transparent 50%);
   }
 
   .glass-card {
-    background: rgba(15, 23, 42, 0.65);
+    background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
   }
 
   .glass-card:hover {
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 35px -5px rgba(0, 0, 0, 0.4), 0 0 20px 2px rgba(56, 189, 248, 0.15);
+    border-color: rgba(203, 213, 225, 1);
+    box-shadow: 0 12px 30px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
   }
 
   .glass-nav {
-    background: rgba(11, 15, 25, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.9);
   }
 }
 
@@ -82,14 +81,14 @@ p {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0b0f19;
+  background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #94a3b8;
 }
 
 /* Pulse animation for live badge */
