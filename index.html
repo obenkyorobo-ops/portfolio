@@ -63,16 +63,16 @@
       </a>
 
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <a href="#hikikomo" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-emerald-300 font-semibold">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-          <span>HikikomoSwitch (Win)</span>
-        </a>
         <a href="#beta" class="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-amber-300/90 font-semibold">
           <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
           <span>Closed β</span>
         </a>
+        <a href="#features" class="hover:text-amber-400 transition-colors">Algorithm & Science</a>
+        <a href="#hikikomo" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-emerald-300 font-semibold">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>HikikomoSwitch (Win)</span>
+        </a>
         <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
-        <a href="#features" class="hover:text-sky-400 transition-colors">Architecture</a>
         <a href="#techstack" class="hover:text-sky-400 transition-colors">Tech Stack</a>
       </nav>
 
@@ -299,8 +299,54 @@
     </div>
   </section>
 
+  <!-- Highlights / Algorithm & Science Section (Cognitive Science & FSRS) -->
+  <section id="features" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold mb-2">Algorithm & Science</div>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">認知科学 × FSRS数理モデルの力</h2>
+      <p class="text-sm sm:text-base text-slate-300 mt-3 leading-relaxed">
+        無駄な暗記・過剰な復習を徹底排除。記憶の減衰速度を数学的にモデリングし、忘れかけた最適な瞬間に再出題して長期記憶化します。
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Feature 1 -->
+      <div class="glass-card rounded-2xl p-6 sm:p-7">
+        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-5">
+          <i data-lucide="repeat" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">FSRS / SRS 記憶定着エンジン</h3>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          最新のFSRS理論に基づき、個人の定着度から次回インターバルを動的計算。最小の復習回数で長期記憶化を実現します。
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="glass-card rounded-2xl p-6 sm:p-7">
+        <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 mb-5">
+          <i data-lucide="pen-tool" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">CustomPainter 高精細ベクター</h3>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          数学のグラフや理科の実験装置図をベクターCanvasで精密描画。高精細な視覚情報を鮮明に記憶へ焼き付けます。
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="glass-card rounded-2xl p-6 sm:p-7">
+        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-5">
+          <i data-lucide="flame" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">反復の習慣化 ＆ 伴走工学</h3>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          ストリーク（連続学習日数）、相棒（犬）の成長アルバム、ポモドーロ集中タイマー連動で、日々の反復演習を楽しく継続させます。
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- Featured Windows Desktop App: HikikomoSwitch Section -->
-  <section id="hikikomo" class="pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <section id="hikikomo" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
     <div class="max-w-5xl mx-auto p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-emerald-950/50 via-slate-900/95 to-sky-950/50 border-2 border-emerald-500/40 shadow-2xl shadow-emerald-500/10 text-left relative overflow-hidden backdrop-blur-md">
       
       <!-- Top Header -->
@@ -407,7 +453,7 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
       <div>
         <div class="text-xs font-mono uppercase tracking-widest text-sky-400 font-bold mb-2">Portfolio Showcase</div>
@@ -434,52 +480,6 @@
     <!-- Dynamic Projects Grid (rendered by projects.js & main.js) -->
     <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Injected by JavaScript -->
-    </div>
-  </section>
-
-  <!-- Highlights / Architecture Section -->
-  <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <div class="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold mb-2">Algorithm & Science</div>
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">認知科学 × FSRS数理モデルの力</h2>
-      <p class="text-sm sm:text-base text-slate-300 mt-3 leading-relaxed">
-        無駄な暗記・過剰な復習を徹底排除。記憶の減衰速度を数学的にモデリングし、忘れかけた最適な瞬間に再出題して長期記憶化します。
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Feature 1 -->
-      <div class="glass-card rounded-2xl p-6 sm:p-7">
-        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-5">
-          <i data-lucide="repeat" class="w-6 h-6"></i>
-        </div>
-        <h3 class="text-lg font-bold text-white mb-2">FSRS / SRS 記憶定着エンジン</h3>
-        <p class="text-sm text-slate-300 leading-relaxed">
-          最新のFSRS理論に基づき、個人の定着度から次回インターバルを動的計算。最小の復習回数で長期記憶化を実現します。
-        </p>
-      </div>
-
-      <!-- Feature 2 -->
-      <div class="glass-card rounded-2xl p-6 sm:p-7">
-        <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 mb-5">
-          <i data-lucide="pen-tool" class="w-6 h-6"></i>
-        </div>
-        <h3 class="text-lg font-bold text-white mb-2">CustomPainter 高精細ベクター</h3>
-        <p class="text-sm text-slate-300 leading-relaxed">
-          数学のグラフや理科の実験装置図をベクターCanvasで精密描画。高精細な視覚情報を鮮明に記憶へ焼き付けます。
-        </p>
-      </div>
-
-      <!-- Feature 3 -->
-      <div class="glass-card rounded-2xl p-6 sm:p-7">
-        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-5">
-          <i data-lucide="flame" class="w-6 h-6"></i>
-        </div>
-        <h3 class="text-lg font-bold text-white mb-2">反復の習慣化 ＆ 伴走工学</h3>
-        <p class="text-sm text-slate-300 leading-relaxed">
-          ストリーク（連続学習日数）、相棒（犬）の成長アルバム、ポモドーロ集中タイマー連動で、日々の反復演習を楽しく継続させます。
-        </p>
-      </div>
     </div>
   </section>
 
@@ -566,8 +566,10 @@
         <p>© 2026 お勉強ロボ (Obenkyou Robo). All rights reserved.</p>
       </div>
       <div class="flex items-center gap-6">
+        <a href="#beta" class="hover:text-slate-400 transition">Closed β</a>
+        <a href="#features" class="hover:text-slate-400 transition">Algorithm & Science</a>
+        <a href="#hikikomo" class="hover:text-slate-400 transition">HikikomoSwitch</a>
         <a href="#projects" class="hover:text-slate-400 transition">Projects</a>
-        <a href="#features" class="hover:text-slate-400 transition">Architecture</a>
         <a href="privacy.html" class="hover:text-amber-400 transition">Privacy Policy</a>
         <a href="https://x.com/ObenkyoRobo" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition flex items-center gap-1.5">
           <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -588,7 +590,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="assets/js/projects.js?v=20261105_clean_layout"></script>
-  <script src="assets/js/main.js?v=20261105_clean_layout"></script>
+  <script src="assets/js/projects.js?v=20261105_reorder"></script>
+  <script src="assets/js/main.js?v=20261105_reorder"></script>
 </body>
 </html>
