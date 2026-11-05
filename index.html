@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
+<html lang="ja" class="scroll-smooth dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>お勉強ロボ | 忘却曲線（SRS / FSRS）特化アプリ公式ポートフォリオ</title>
   <meta name="description" content="認知科学と忘却曲線（SRS / FSRS）数理モデルに基づき、最短の復習回数で記憶を定着させる『キオクノタスケ』『インストール英単語』『ゲミニータン』の公式ポートフォリオサイト。">
   
+  <!-- Immediate Theme Initializer (Plan A: Slate Dark as default, avoids FOUC) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="assets/images/brand_logo.jpg">
 
@@ -44,7 +56,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-[#F8FAFC] text-slate-800 min-h-screen font-sans selection:bg-amber-500 selection:text-white relative bg-grid-pattern overflow-x-hidden">
+<body class="bg-[#F8FAFC] dark:bg-[#0B1120] text-slate-800 dark:text-slate-100 min-h-screen font-sans selection:bg-amber-500 selection:text-white relative bg-grid-pattern overflow-x-hidden transition-colors duration-200">
 
   <!-- Ambient Glow Background -->
   <div class="fixed inset-0 pointer-events-none glow-mesh -z-10"></div>
@@ -57,31 +69,47 @@
           <img src="assets/images/brand_logo.jpg" alt="お勉強ロボ" class="w-full h-full object-cover" />
         </div>
         <div>
-          <span class="font-extrabold text-base tracking-tight text-slate-900 block group-hover:text-amber-600 transition-colors">お勉強ロボ</span>
-          <span class="text-[10px] text-amber-600 font-mono tracking-wider uppercase block -mt-0.5">Study Apps Studio</span>
+          <span class="font-extrabold text-base tracking-tight text-slate-900 dark:text-white block group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">お勉強ロボ</span>
+          <span class="text-[10px] text-amber-600 dark:text-amber-400 font-mono tracking-wider uppercase block -mt-0.5">Study Apps Studio</span>
         </div>
       </a>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-        <a href="#beta" class="hover:text-amber-600 transition-colors flex items-center gap-1.5 text-amber-700 font-semibold px-2.5 py-1 rounded-full bg-amber-50 border border-amber-200">
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="#beta" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors flex items-center gap-1.5 text-amber-700 dark:text-amber-400 font-semibold px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800">
           <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
           <span>Closed β</span>
         </a>
-        <a href="#features" class="hover:text-amber-600 transition-colors">Algorithm & Science</a>
-        <a href="#hikikomo" class="hover:text-emerald-600 transition-colors flex items-center gap-1.5 text-emerald-700 font-semibold px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200">
+        <a href="#features" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Algorithm & Science</a>
+        <a href="#hikikomo" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-emerald-700 dark:text-emerald-400 font-semibold px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800">
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
           <span>HikikomoSwitch (Win)</span>
         </a>
-        <a href="#projects" class="hover:text-sky-600 transition-colors">Projects</a>
-        <a href="#techstack" class="hover:text-sky-600 transition-colors">Tech Stack</a>
+        <a href="#projects" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Projects</a>
+        <a href="#techstack" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Tech Stack</a>
       </nav>
 
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <!-- Theme Toggle Button (Light / Slate Dark Switcher) -->
+        <button 
+          id="themeToggleBtn" 
+          type="button" 
+          aria-label="テーマ切り替え (ダーク/ライト)" 
+          title="テーマ切り替え"
+          class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition shadow-sm flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-amber-500/40"
+        >
+          <span class="dark:hidden flex items-center justify-center">
+            <i data-lucide="moon" class="w-4 h-4 text-slate-700"></i>
+          </span>
+          <span class="hidden dark:flex items-center justify-center">
+            <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+          </span>
+        </button>
+
         <a href="#beta" class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold text-xs flex items-center gap-1.5 shadow-md shadow-amber-500/20 transition transform hover:scale-105">
           <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
           <span>βテスト参加</span>
         </a>
-        <a href="https://github.com/obenkyorobo-ops/portfolio" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl bg-white hover:bg-slate-50 text-xs font-semibold border border-slate-200 text-slate-700 flex items-center gap-1.5 transition shadow-sm">
+        <a href="https://github.com/obenkyorobo-ops/portfolio" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-xs font-semibold border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 flex items-center gap-1.5 transition shadow-sm">
           <i data-lucide="github" class="w-4 h-4"></i>
           <span class="hidden sm:inline">GitHub</span>
         </a>
@@ -94,75 +122,75 @@
     <div class="text-center max-w-3xl mx-auto">
       
       <!-- Brand Avatar Badge -->
-      <div class="inline-flex items-center gap-3 p-1.5 pr-4 rounded-full bg-white/90 border border-amber-200 text-xs sm:text-sm font-semibold mb-6 shadow-sm backdrop-blur-md">
+      <div class="inline-flex items-center gap-3 p-1.5 pr-4 rounded-full bg-white/90 dark:bg-slate-900/90 border border-amber-200 dark:border-amber-700/60 text-xs sm:text-sm font-semibold mb-6 shadow-sm backdrop-blur-md">
         <img src="assets/images/brand_logo.jpg" alt="お勉強ロボ" class="w-8 h-8 rounded-full object-cover ring-2 ring-amber-400" />
-        <span class="text-amber-700 font-bold">お勉強ロボ</span>
-        <span class="text-slate-300">|</span>
-        <span class="text-slate-600 font-normal">SRS / FSRS 忘却曲線アルゴリズム特化</span>
+        <span class="text-amber-700 dark:text-amber-400 font-bold">お勉強ロボ</span>
+        <span class="text-slate-300 dark:text-slate-600">|</span>
+        <span class="text-slate-600 dark:text-slate-300 font-normal">SRS / FSRS 忘却曲線アルゴリズム特化</span>
       </div>
 
       <!-- Main Heading -->
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight mb-5" style="text-wrap: balance;">
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100 leading-tight mb-5" style="text-wrap: balance;">
         <span class="inline-block">科学が導く</span><span class="inline-block whitespace-nowrap">最短の記憶定着</span><br>
-        <span class="inline-block bg-gradient-to-r from-amber-600 via-sky-600 to-indigo-600 bg-clip-text text-transparent mt-1">お勉強ロボ 公式アプリ集</span>
+        <span class="inline-block bg-gradient-to-r from-amber-600 via-sky-600 to-indigo-600 dark:from-amber-400 dark:via-sky-400 dark:to-indigo-400 bg-clip-text text-transparent mt-1">お勉強ロボ 公式アプリ集</span>
       </h1>
 
-      <p class="text-base sm:text-lg text-slate-600 font-normal leading-relaxed mb-8 max-w-2xl mx-auto" style="text-wrap: pretty;">
+      <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-normal leading-relaxed mb-8 max-w-2xl mx-auto" style="text-wrap: pretty;">
         エビングハウスの忘却曲線や最新のFSRS数理モデルを追求し、最小の復習回数で確固たる記憶定着を届ける学習支援プロダクトを開発しています。
       </p>
 
       <!-- Key Stats Row -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-3 sm:p-4 rounded-2xl bg-white border border-slate-200 shadow-sm max-w-2xl mx-auto mb-12">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-3 sm:p-4 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm max-w-2xl mx-auto mb-12">
         <div class="p-2.5 text-center">
-          <div class="text-2xl sm:text-3xl font-extrabold text-amber-600">FSRS</div>
-          <div class="text-xs text-slate-500 mt-1 font-medium">忘却曲線数理モデル</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-amber-600 dark:text-amber-400">FSRS</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">忘却曲線数理モデル</div>
         </div>
-        <div class="p-2.5 text-center border-l border-slate-200">
-          <div class="text-2xl sm:text-3xl font-extrabold text-sky-600">18</div>
-          <div class="text-xs text-slate-500 mt-1 font-medium">共テ全科目対応</div>
+        <div class="p-2.5 text-center border-l border-slate-200 dark:border-slate-800">
+          <div class="text-2xl sm:text-3xl font-extrabold text-sky-600 dark:text-sky-400">18</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">共テ全科目対応</div>
         </div>
-        <div class="p-2.5 text-center border-l border-slate-200">
-          <div class="text-2xl sm:text-3xl font-extrabold text-indigo-600">SRS</div>
-          <div class="text-xs text-slate-500 mt-1 font-medium">最適インターバル反復</div>
+        <div class="p-2.5 text-center border-l border-slate-200 dark:border-slate-800">
+          <div class="text-2xl sm:text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">SRS</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">最適インターバル反復</div>
         </div>
-        <div class="p-2.5 text-center border-l border-slate-200">
-          <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600">Multi</div>
-          <div class="text-xs text-slate-500 mt-1 font-medium">Android / Windows</div>
+        <div class="p-2.5 text-center border-l border-slate-200 dark:border-slate-800">
+          <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">Multi</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">Android / Windows</div>
         </div>
       </div>
 
       <!-- Featured Closed Beta Twin Showcase Section -->
-      <div id="beta" class="max-w-4xl mx-auto p-6 sm:p-8 rounded-3xl bg-white border-2 border-amber-300 shadow-xl shadow-amber-500/5 text-left relative overflow-hidden">
+      <div id="beta" class="max-w-4xl mx-auto p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900/90 border-2 border-amber-300 dark:border-amber-500/40 shadow-xl shadow-amber-500/5 text-left relative overflow-hidden">
         
         <!-- Header Banner -->
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 pb-5 border-b border-slate-100">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 pb-5 border-b border-slate-100 dark:border-slate-800">
           <div>
-            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-amber-800 font-bold text-xs uppercase tracking-wider mb-2 border border-amber-300">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 font-bold text-xs uppercase tracking-wider mb-2 border border-amber-300 dark:border-amber-800">
               <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
               Google Play クローズドβテスト実施中
             </div>
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100">
               2大フラッグシップアプリ
             </h3>
-            <p class="text-sm text-slate-600 mt-1">
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
               新課程・共テ演習 ＆ 語彙インストール特訓
             </p>
           </div>
-          <span class="text-xs sm:text-sm text-amber-800 font-semibold bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-200 flex items-center gap-1.5 flex-shrink-0">
-            <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          <span class="text-xs sm:text-sm text-amber-800 dark:text-amber-300 font-semibold bg-amber-50 dark:bg-amber-950/60 px-3.5 py-1.5 rounded-full border border-amber-200 dark:border-amber-800 flex items-center gap-1.5 flex-shrink-0">
+            <svg class="w-4 h-4 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
             出入り自由・連絡不要
           </span>
         </div>
 
         <!-- 2-Step Simple Onboarding Flow -->
-        <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-amber-50 via-white to-orange-50 border border-amber-200 mb-6">
+        <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-amber-50 via-white to-orange-50 dark:from-amber-950/40 dark:via-slate-900 dark:to-orange-950/40 border border-amber-200 dark:border-amber-700/60 mb-6">
           <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div class="space-y-1">
               <div class="flex items-center gap-2">
                 <span class="px-2.5 py-0.5 rounded-full bg-amber-500 text-white font-extrabold text-xs">STEP 1（共通）</span>
-                <span class="text-sm sm:text-base font-bold text-slate-900">Googleグループに参加</span>
+                <span class="text-sm sm:text-base font-bold text-slate-900 dark:text-slate-100">Googleグループに参加</span>
               </div>
-              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 グループは両アプリ共通です。1度参加するだけで、両方のテスト権限が付与されます。
               </p>
             </div>
@@ -174,35 +202,35 @@
         </div>
 
         <!-- How to Install Notice (Clean & Compact) -->
-        <div class="p-3 sm:p-3.5 rounded-xl bg-sky-50 border border-sky-200 text-xs sm:text-sm text-slate-700 mb-6 flex items-center gap-2.5">
-          <svg class="w-5 h-5 text-sky-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <div class="p-3 sm:p-3.5 rounded-xl bg-sky-50 dark:bg-sky-950/40 border border-sky-200 dark:border-sky-800/80 text-xs sm:text-sm text-slate-700 dark:text-slate-300 mb-6 flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-sky-600 dark:text-sky-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           <p class="leading-relaxed">
-            <span class="text-sky-800 font-bold">インストールの流れ：</span>
+            <span class="text-sky-800 dark:text-sky-300 font-bold">インストールの流れ：</span>
             グループ参加後、各アプリの<strong>「① Webでテスト承認」</strong>を開いて承認 ➜<strong>「② Google Play」</strong>からダウンロードできます。
           </p>
         </div>
 
         <!-- Step 2: Twin Cards for App Installs -->
         <div class="mb-6">
-          <div class="text-xs sm:text-sm font-bold text-slate-600 uppercase tracking-wider mb-3 flex items-center gap-2">
-            <span class="px-2 py-0.5 rounded-full bg-slate-100 text-sky-700 font-bold text-xs border border-slate-200">STEP 2</span>
+          <div class="text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider mb-3 flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-sky-700 dark:text-sky-400 font-bold text-xs border border-slate-200 dark:border-slate-700">STEP 2</span>
             <span>アプリを選択してインストール</span>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             
             <!-- App 1: Kioku no Tasuke -->
-            <div class="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/90 hover:border-amber-400 hover:shadow-md transition flex flex-col justify-between group">
+            <div class="p-5 rounded-2xl bg-slate-50/80 dark:bg-slate-950/60 border border-slate-200/90 dark:border-slate-800 hover:border-amber-400 dark:hover:border-amber-500/80 hover:shadow-md transition flex flex-col justify-between group">
               <div>
                 <div class="flex items-center gap-3 mb-3">
                   <img src="assets/images/mugen_icon.png" alt="キオクノタスケ" class="w-12 h-12 rounded-xl border border-amber-300 object-cover shadow-sm" />
                   <div>
-                    <div class="text-xs text-amber-700 font-bold">共通テスト全18科目</div>
-                    <h4 class="text-lg sm:text-xl font-extrabold text-slate-900 group-hover:text-amber-600 transition-colors">キオクノタスケ</h4>
+                    <div class="text-xs text-amber-700 dark:text-amber-400 font-bold">共通テスト全18科目</div>
+                    <h4 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-slate-100 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">キオクノタスケ</h4>
                   </div>
                 </div>
                 
-                <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600 mb-5 leading-normal">
+                <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-5 leading-normal">
                   <li class="flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0"></span>
                     <span>新課程全18科目・3,851問収録</span>
@@ -218,33 +246,33 @@
                 </ul>
               </div>
 
-              <div class="space-y-2 pt-3 border-t border-slate-200">
+              <div class="space-y-2 pt-3 border-t border-slate-200 dark:border-slate-800">
                 <a href="https://play.google.com/apps/testing/jp.obenkyorobo.exam_prep" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-amber-500/20 transition transform hover:scale-[1.02]">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                   <span>① Webでテスト承認（推奨）</span>
                 </a>
-                <a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.exam_prep" target="_blank" rel="noopener noreferrer" class="w-full py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-700 hover:text-slate-900 font-semibold text-xs border border-slate-300 flex items-center justify-center gap-1.5 transition shadow-sm">
-                  <svg class="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                <a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.exam_prep" target="_blank" rel="noopener noreferrer" class="w-full py-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white font-semibold text-xs border border-slate-300 dark:border-slate-700 flex items-center justify-center gap-1.5 transition shadow-sm">
+                  <svg class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                   <span>② Google Play で開く</span>
                 </a>
-                <button onclick="openProjectModal('mugen')" class="w-full pt-1 text-center text-xs text-slate-500 hover:text-slate-800 transition">
+                <button onclick="openProjectModal('mugen')" class="w-full pt-1 text-center text-xs text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition">
                   機能・スクショ詳細を見る ➜
                 </button>
               </div>
             </div>
 
             <!-- App 2: Install Vocab -->
-            <div class="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/90 hover:border-teal-400 hover:shadow-md transition flex flex-col justify-between group">
+            <div class="p-5 rounded-2xl bg-slate-50/80 dark:bg-slate-950/60 border border-slate-200/90 dark:border-slate-800 hover:border-teal-400 dark:hover:border-teal-500/80 hover:shadow-md transition flex flex-col justify-between group">
               <div>
                 <div class="flex items-center gap-3 mb-3">
                   <img src="assets/images/install_icon.png" alt="インストール英単語" class="w-12 h-12 rounded-xl border border-teal-300 object-cover shadow-sm" />
                   <div>
-                    <div class="text-xs text-teal-700 font-bold">語彙・FSRS逆算</div>
-                    <h4 class="text-lg sm:text-xl font-extrabold text-slate-900 group-hover:text-teal-600 transition-colors">インストール英単語</h4>
+                    <div class="text-xs text-teal-700 dark:text-teal-400 font-bold">語彙・FSRS逆算</div>
+                    <h4 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-slate-100 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">インストール英単語</h4>
                   </div>
                 </div>
                 
-                <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600 mb-5 leading-normal">
+                <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-5 leading-normal">
                   <li class="flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-teal-500 flex-shrink-0"></span>
                     <span>目標日数（30〜120日）から毎日のノルマ自動逆算</span>
@@ -260,16 +288,16 @@
                 </ul>
               </div>
 
-              <div class="space-y-2 pt-3 border-t border-slate-200">
+              <div class="space-y-2 pt-3 border-t border-slate-200 dark:border-slate-800">
                 <a href="https://play.google.com/apps/testing/jp.obenkyorobo.install_vocab" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-teal-500/20 transition transform hover:scale-[1.02]">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                   <span>① Webでテスト承認（推奨）</span>
                 </a>
-                <a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab" target="_blank" rel="noopener noreferrer" class="w-full py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-700 hover:text-slate-900 font-semibold text-xs border border-slate-300 flex items-center justify-center gap-1.5 transition shadow-sm">
-                  <svg class="w-3.5 h-3.5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                <a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab" target="_blank" rel="noopener noreferrer" class="w-full py-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white font-semibold text-xs border border-slate-300 dark:border-slate-700 flex items-center justify-center gap-1.5 transition shadow-sm">
+                  <svg class="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                   <span>② Google Play で開く</span>
                 </a>
-                <button onclick="openProjectModal('install_vocab')" class="w-full pt-1 text-center text-xs text-slate-500 hover:text-slate-800 transition">
+                <button onclick="openProjectModal('install_vocab')" class="w-full pt-1 text-center text-xs text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition">
                   機能・スクショ詳細を見る ➜
                 </button>
               </div>
@@ -279,17 +307,17 @@
         </div>
 
         <!-- Mutual Testing Contact Box (Compact) -->
-        <div class="p-4 rounded-2xl bg-amber-50/70 border border-amber-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div class="p-4 rounded-2xl bg-amber-50/70 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <div class="space-y-0.5">
-            <div class="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-amber-900">
+            <div class="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-amber-900 dark:text-amber-300">
               <span>🤝</span>
               <span>【開発者様へ】相互テスト大歓迎です</span>
             </div>
-            <p class="text-xs text-slate-600">
+            <p class="text-xs text-slate-600 dark:text-slate-400">
               Google Playの20人要件に向けて、貴アプリのテストも喜んで毎日実施いたします。
             </p>
           </div>
-          <a href="https://x.com/ObenkyoRobo" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-bold text-xs border border-slate-300 flex items-center justify-center gap-2 transition shadow-sm whitespace-nowrap flex-shrink-0">
+          <a href="https://x.com/ObenkyoRobo" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold text-xs border border-slate-300 dark:border-slate-700 flex items-center justify-center gap-2 transition shadow-sm whitespace-nowrap flex-shrink-0">
             <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             <span>X (@ObenkyoRobo) で連絡</span>
           </a>
@@ -300,47 +328,47 @@
   </section>
 
   <!-- Highlights / Algorithm & Science Section (Cognitive Science & FSRS) -->
-  <section id="features" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200">
+  <section id="features" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800">
     <div class="text-center max-w-2xl mx-auto mb-16">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-800 font-bold text-xs uppercase tracking-wider mb-2 border border-amber-200">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 font-bold text-xs uppercase tracking-wider mb-2 border border-amber-200 dark:border-amber-800">
         Algorithm & Science
       </div>
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">認知科学 × FSRS数理モデルの力</h2>
-      <p class="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">認知科学 × FSRS数理モデルの力</h2>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">
         無駄な暗記・過剰な復習を徹底排除。記憶の減衰速度を数学的にモデリングし、忘れかけた最適な瞬間に再出題して長期記憶化します。
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <!-- Feature 1 -->
-      <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover:shadow-md transition">
-        <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 mb-5">
+      <div class="bg-white dark:bg-slate-900/90 rounded-2xl p-6 sm:p-7 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-md transition">
+        <div class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 flex items-center justify-center text-amber-600 dark:text-amber-400 mb-5">
           <i data-lucide="repeat" class="w-6 h-6"></i>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2">FSRS / SRS 記憶定着エンジン</h3>
-        <p class="text-sm text-slate-600 leading-relaxed">
+        <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2">FSRS / SRS 記憶定着エンジン</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
           最新のFSRS理論に基づき、個人の定着度から次回インターバルを動的計算。最小の復習回数で長期記憶化を実現します。
         </p>
       </div>
 
       <!-- Feature 2 -->
-      <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover:shadow-md transition">
-        <div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-600 mb-5">
+      <div class="bg-white dark:bg-slate-900/90 rounded-2xl p-6 sm:p-7 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-md transition">
+        <div class="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-950/60 border border-sky-200 dark:border-sky-800 flex items-center justify-center text-sky-600 dark:text-sky-400 mb-5">
           <i data-lucide="pen-tool" class="w-6 h-6"></i>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2">CustomPainter 高精細ベクター</h3>
-        <p class="text-sm text-slate-600 leading-relaxed">
+        <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2">CustomPainter 高精細ベクター</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
           数学のグラフや理科の実験装置図をベクターCanvasで精密描画。高精細な視覚情報を鮮明に記憶へ焼き付けます。
         </p>
       </div>
 
       <!-- Feature 3 -->
-      <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover:shadow-md transition">
-        <div class="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600 mb-5">
+      <div class="bg-white dark:bg-slate-900/90 rounded-2xl p-6 sm:p-7 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-md transition">
+        <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800 flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-5">
           <i data-lucide="flame" class="w-6 h-6"></i>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2">反復の習慣化 ＆ 伴走工学</h3>
-        <p class="text-sm text-slate-600 leading-relaxed">
+        <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2">反復の習慣化 ＆ 伴走工学</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
           ストリーク（連続学習日数）、相棒（犬）の成長アルバム、ポモドーロ集中タイマー連動で、日々の反復演習を楽しく継続させます。
         </p>
       </div>
@@ -348,20 +376,20 @@
   </section>
 
   <!-- Featured Windows Desktop App: HikikomoSwitch Section -->
-  <section id="hikikomo" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200">
-    <div class="max-w-5xl mx-auto p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-emerald-50/50 via-white to-teal-50/40 border-2 border-emerald-400/60 shadow-xl shadow-emerald-500/5 text-left relative overflow-hidden">
+  <section id="hikikomo" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-5xl mx-auto p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-emerald-50/50 via-white to-teal-50/40 dark:from-emerald-950/40 dark:via-slate-900 dark:to-teal-950/40 border-2 border-emerald-400/60 dark:border-emerald-500/40 shadow-xl shadow-emerald-500/5 text-left relative overflow-hidden">
       
       <!-- Top Header -->
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5 mb-6 pb-6 border-b border-slate-200/80">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5 mb-6 pb-6 border-b border-slate-200/80 dark:border-slate-800">
         <div class="flex items-center gap-4">
-          <img src="assets/images/hikikomo_icon.png" alt="HikikomoSwitch" class="w-14 h-14 rounded-2xl border border-emerald-300 shadow-md flex-shrink-0" />
+          <img src="assets/images/hikikomo_icon.png" alt="HikikomoSwitch" class="w-14 h-14 rounded-2xl border border-emerald-300 dark:border-emerald-700 shadow-md flex-shrink-0" />
           <div>
-            <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs uppercase tracking-wider mb-1.5 border border-emerald-300">
+            <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-bold text-xs uppercase tracking-wider mb-1.5 border border-emerald-300 dark:border-emerald-800">
               <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
               Windows 常駐セキュリティ ＆ ポートスイッチャー
             </div>
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              HikikomoSwitch <span class="text-base sm:text-lg font-semibold text-emerald-700 ml-1">（ヒキコモスイッチ）</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
+              HikikomoSwitch <span class="text-base sm:text-lg font-semibold text-emerald-700 dark:text-emerald-400 ml-1">（ヒキコモスイッチ）</span>
             </h3>
           </div>
         </div>
@@ -371,19 +399,19 @@
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
             <span>無料ダウンロード (.zip / 推奨)</span>
           </a>
-          <div class="flex items-center justify-center gap-3 px-2 text-xs text-slate-500">
-            <a href="assets/downloads/HikikomoSwitch_Setup.exe" download class="hover:text-emerald-700 underline font-medium">単体 .exe</a>
+          <div class="flex items-center justify-center gap-3 px-2 text-xs text-slate-500 dark:text-slate-400">
+            <a href="assets/downloads/HikikomoSwitch_Setup.exe" download class="hover:text-emerald-700 dark:hover:text-emerald-400 underline font-medium">単体 .exe</a>
             <span>|</span>
-            <a href="assets/downloads/HikikomoSwitch_Portable.zip" download class="hover:text-emerald-700 underline font-medium">ポータブル版</a>
+            <a href="assets/downloads/HikikomoSwitch_Portable.zip" download class="hover:text-emerald-700 dark:hover:text-emerald-400 underline font-medium">ポータブル版</a>
           </div>
         </div>
       </div>
 
       <!-- Compact SmartScreen Notice -->
-      <div class="p-3.5 rounded-xl bg-amber-50/90 border border-amber-200 text-xs text-slate-700 mb-6 flex items-center gap-2.5">
-        <svg class="w-4 h-4 text-amber-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      <div class="p-3.5 rounded-xl bg-amber-50/90 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/80 text-xs text-slate-700 dark:text-slate-300 mb-6 flex items-center gap-2.5">
+        <svg class="w-4 h-4 text-amber-600 dark:text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         <p class="leading-relaxed">
-          <span class="text-amber-900 font-bold">SmartScreen警告が出た場合：</span>
+          <span class="text-amber-900 dark:text-amber-300 font-bold">SmartScreen警告が出た場合：</span>
           ［詳細情報］➜［実行］で起動できます（zip内 <code>1_インストール開始.bat</code> で自動スキップ可）。
         </p>
       </div>
@@ -392,43 +420,43 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
         <!-- Left Column: Concept & Features -->
         <div class="lg:col-span-6 space-y-4">
-          <div class="p-4 sm:p-5 rounded-2xl bg-white border border-emerald-200/80 shadow-sm">
-            <h4 class="text-base sm:text-lg font-extrabold text-slate-900 leading-snug mb-2">
+          <div class="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900/90 border border-emerald-200/80 dark:border-emerald-700/60 shadow-sm">
+            <h4 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-slate-100 leading-snug mb-2">
               「回線を止めれば、PCつけっぱなしでも絶対に安全。」
             </h4>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
               離席中や夜間、PCを起動したままにする不安をゼロへ。物理的に回線を遮断し、不正侵入や勝手なバックグラウンド通信を1クリックで完全防止します。
             </p>
           </div>
 
           <!-- 3 Highlights (Clean & Readable) -->
-          <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
             <li class="flex items-start gap-3">
-              <span class="w-5 h-5 rounded-lg bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">1</span>
+              <span class="w-5 h-5 rounded-lg bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-bold flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">1</span>
               <div>
-                <strong class="text-slate-900">画面端の半透明ピル：</strong>
+                <strong class="text-slate-900 dark:text-slate-100">画面端の半透明ピル：</strong>
                 マウス接近時だけ出現。邪魔にならず画面の端へ自由に配置。
               </div>
             </li>
             <li class="flex items-start gap-3">
-              <span class="w-5 h-5 rounded-lg bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">2</span>
+              <span class="w-5 h-5 rounded-lg bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-bold flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">2</span>
               <div>
-                <strong class="text-slate-900">鉄壁の完全ロックダウン：</strong>
+                <strong class="text-slate-900 dark:text-slate-100">鉄壁の完全ロックダウン：</strong>
                 全プロトコル遮断・既存ルールの強制無効化・TCP即時切断を1クリック。
               </div>
             </li>
             <li class="flex items-start gap-3">
-              <span class="w-5 h-5 rounded-lg bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">3</span>
+              <span class="w-5 h-5 rounded-lg bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-bold flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">3</span>
               <div>
-                <strong class="text-slate-900">アプリ別ポート ＆ 速度グラフ：</strong>
+                <strong class="text-slate-900 dark:text-slate-100">アプリ別ポート ＆ 速度グラフ：</strong>
                 通信状況をリアルタイム監視し、アプリ・ポート単位で個別遮断。
               </div>
             </li>
           </ul>
 
-          <div class="pt-2 flex items-center justify-between text-xs text-slate-500 border-t border-slate-200">
+          <div class="pt-2 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800">
             <span>対応OS: Windows 10 / 11 (64bit)</span>
-            <button onclick="openProjectModal('hikikomoswitch')" class="text-emerald-700 hover:text-emerald-800 font-bold underline">
+            <button onclick="openProjectModal('hikikomoswitch')" class="text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 font-bold underline">
               詳細仕様・拡大画像を見る ➜
             </button>
           </div>
@@ -436,15 +464,15 @@
 
         <!-- Right Column: Screenshots Showcase -->
         <div class="lg:col-span-6 grid grid-cols-12 gap-3 items-center">
-          <div class="col-span-8 rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-md cursor-pointer group" onclick="openProjectModal('hikikomoswitch')">
+          <div class="col-span-8 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-950 shadow-md cursor-pointer group" onclick="openProjectModal('hikikomoswitch')">
             <img src="assets/images/hikikomo_main.png" alt="HikikomoSwitch メイン画面" class="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-300" />
-            <div class="p-2.5 bg-white text-xs text-center text-slate-700 font-medium border-t border-slate-200">
+            <div class="p-2.5 bg-white dark:bg-slate-900 text-xs text-center text-slate-700 dark:text-slate-300 font-medium border-t border-slate-200 dark:border-slate-800">
               アプリ別ポート管理 ＆ 速度グラフ
             </div>
           </div>
-          <div class="col-span-4 rounded-2xl overflow-hidden border border-emerald-300 bg-slate-100 shadow-md cursor-pointer group" onclick="openProjectModal('hikikomoswitch')">
+          <div class="col-span-4 rounded-2xl overflow-hidden border border-emerald-300 dark:border-emerald-700 bg-slate-100 dark:bg-slate-950 shadow-md cursor-pointer group" onclick="openProjectModal('hikikomoswitch')">
             <img src="assets/images/hikikomo_pill.png" alt="HikikomoSwitch 半透明ピルドック" class="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-300" />
-            <div class="p-2.5 bg-white text-xs text-center text-emerald-800 font-medium border-t border-slate-200">
+            <div class="p-2.5 bg-white dark:bg-slate-900 text-xs text-center text-emerald-800 dark:text-emerald-300 font-medium border-t border-slate-200 dark:border-slate-800">
               画面端の半透明ピル
             </div>
           </div>
@@ -455,25 +483,25 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200">
+  <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
       <div>
-        <div class="text-xs font-mono uppercase tracking-widest text-sky-600 font-bold mb-2">Portfolio Showcase</div>
-        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">制作アプリ一覧</h2>
+        <div class="text-xs font-mono uppercase tracking-widest text-sky-600 dark:text-sky-400 font-bold mb-2">Portfolio Showcase</div>
+        <h2 class="text-3xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">制作アプリ一覧</h2>
       </div>
 
       <!-- Filter Tabs -->
-      <div class="flex flex-wrap gap-2 p-1.5 rounded-xl bg-slate-100 border border-slate-200">
-        <button data-filter="all" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-white text-sky-700 border border-slate-200 shadow-sm transition">
+      <div class="flex flex-wrap gap-2 p-1.5 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+        <button data-filter="all" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-white dark:bg-slate-900 text-sky-700 dark:text-sky-400 border border-slate-200 dark:border-slate-700 shadow-sm transition">
           すべて (All)
         </button>
-        <button data-filter="security" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold text-slate-600 border border-transparent hover:text-slate-900 transition">
+        <button data-filter="security" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 border border-transparent hover:text-slate-900 dark:hover:text-slate-100 transition">
           Windows セキュリティ
         </button>
-        <button data-filter="flutter" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold text-slate-600 border border-transparent hover:text-slate-900 transition">
+        <button data-filter="flutter" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 border border-transparent hover:text-slate-900 dark:hover:text-slate-100 transition">
           忘却曲線 (SRS / FSRS)
         </button>
-        <button data-filter="ai" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold text-slate-600 border border-transparent hover:text-slate-900 transition">
+        <button data-filter="ai" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 border border-transparent hover:text-slate-900 dark:hover:text-slate-100 transition">
           3D Partner / 集中タイマー
         </button>
       </div>
@@ -486,17 +514,17 @@
   </section>
 
   <!-- Tech Stack Section -->
-  <section id="techstack" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200">
+  <section id="techstack" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800">
     <div class="text-center max-w-2xl mx-auto mb-16">
-      <div class="text-xs font-mono uppercase tracking-widest text-sky-600 font-bold mb-2">Technologies</div>
-      <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">活用している技術スタック</h2>
+      <div class="text-xs font-mono uppercase tracking-widest text-sky-600 dark:text-sky-400 font-bold mb-2">Technologies</div>
+      <h2 class="text-3xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">活用している技術スタック</h2>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Mobile -->
-      <div class="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-md transition">
-        <div class="text-xs font-mono text-sky-600 font-bold uppercase mb-4">Mobile & Frontend</div>
-        <ul class="space-y-3 text-sm text-slate-700">
+      <div class="bg-white dark:bg-slate-900/90 rounded-2xl p-6 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-md transition">
+        <div class="text-xs font-mono text-sky-600 dark:text-sky-400 font-bold uppercase mb-4">Mobile & Frontend</div>
+        <ul class="space-y-3 text-sm text-slate-700 dark:text-slate-300">
           <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>Flutter & Dart</li>
           <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>CustomPainter (Canvas)</li>
           <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>flutter_math_fork (LaTeX)</li>
@@ -505,9 +533,9 @@
       </div>
 
       <!-- Python & AI -->
-      <div class="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-md transition">
-        <div class="text-xs font-mono text-purple-600 font-bold uppercase mb-4">Python & Automation</div>
-        <ul class="space-y-3 text-sm text-slate-700">
+      <div class="bg-white dark:bg-slate-900/90 rounded-2xl p-6 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-md transition">
+        <div class="text-xs font-mono text-purple-600 dark:text-purple-400 font-bold uppercase mb-4">Python & Automation</div>
+        <ul class="space-y-3 text-sm text-slate-700 dark:text-slate-300">
           <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>Python 3</li>
           <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>Matplotlib & Mathtext</li>
           <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>Tweepy (X API v2 & v1.1)</li>
@@ -516,9 +544,9 @@
       </div>
 
       <!-- Cloud & Storage -->
-      <div class="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-md transition">
-        <div class="text-xs font-mono text-amber-600 font-bold uppercase mb-4">Cloud & Storage</div>
-        <ul class="space-y-3 text-sm text-slate-700">
+      <div class="bg-white dark:bg-slate-900/90 rounded-2xl p-6 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-md transition">
+        <div class="text-xs font-mono text-amber-600 dark:text-amber-400 font-bold uppercase mb-4">Cloud & Storage</div>
+        <ul class="space-y-3 text-sm text-slate-700 dark:text-slate-300">
           <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>Firebase (Auth & Firestore)</li>
           <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>SQLite & SharedPreferences</li>
           <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>GitHub Pages & Actions</li>
@@ -527,9 +555,9 @@
       </div>
 
       <!-- Cognitive & Algorithms -->
-      <div class="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-md transition">
-        <div class="text-xs font-mono text-amber-600 font-bold uppercase mb-4">Cognitive & Algorithm</div>
-        <ul class="space-y-3 text-sm text-slate-700">
+      <div class="bg-white dark:bg-slate-900/90 rounded-2xl p-6 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-md transition">
+        <div class="text-xs font-mono text-amber-600 dark:text-amber-400 font-bold uppercase mb-4">Cognitive & Algorithm</div>
+        <ul class="space-y-3 text-sm text-slate-700 dark:text-slate-300">
           <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>FSRS 数理スケジューラ</li>
           <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>エビングハウス忘却曲線モデル</li>
           <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>動的インターバル計算</li>
@@ -540,18 +568,18 @@
   </section>
 
   <!-- Mission & Vision Section -->
-  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200">
-    <div class="rounded-3xl p-8 sm:p-12 relative overflow-hidden bg-gradient-to-r from-amber-50/70 via-white to-sky-50/70 border border-amber-200/80 shadow-sm">
+  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800">
+    <div class="rounded-3xl p-8 sm:p-12 relative overflow-hidden bg-gradient-to-r from-amber-50/70 via-white to-sky-50/70 dark:from-amber-950/30 dark:via-slate-900 dark:to-sky-950/30 border border-amber-200/80 dark:border-amber-700/50 shadow-sm">
       <div class="max-w-2xl relative z-10">
-        <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-800 mb-2 block">Obenkyou Robo Philosophy</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4">「本気で伸びる」体験を、すべての学習者へ。</h2>
-        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-800 dark:text-amber-400 mb-2 block">Obenkyou Robo Philosophy</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100 mb-4">「本気で伸びる」体験を、すべての学習者へ。</h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
           お勉強ロボでは、表面的な暗記アプリではなく、脳の記憶定着メカニズム（忘却曲線 SRS）や最新の生成AIを活用し、学習者が確実に実力を伸ばせるプロダクトを追求しています。各アプリの正式リリースや最新アップデート情報を順次公開していきます。
         </p>
-        <div class="flex flex-wrap gap-4 text-xs font-mono text-slate-700">
-          <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> FSRS / SRS 記憶定着数理モデル</span>
-          <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> 最小の復習回数・最短ルート</span>
-          <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> 大学受験・高校学習特化設計</span>
+        <div class="flex flex-wrap gap-4 text-xs font-mono text-slate-700 dark:text-slate-300">
+          <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-amber-600 dark:text-amber-400"></i> FSRS / SRS 記憶定着数理モデル</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-amber-600 dark:text-amber-400"></i> 最小の復習回数・最短ルート</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-amber-600 dark:text-amber-400"></i> 大学受験・高校学習特化設計</span>
         </div>
       </div>
       <div class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
@@ -561,30 +589,30 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-12 border-t border-slate-200 bg-slate-50 text-center text-xs text-slate-500">
+  <footer class="py-12 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#070b14] text-center text-xs text-slate-500 dark:text-slate-400">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <img src="assets/images/brand_logo.jpg" alt="お勉強ロボ" class="w-6 h-6 rounded-full object-cover" />
         <p>© 2026 お勉強ロボ (Obenkyou Robo). All rights reserved.</p>
       </div>
       <div class="flex items-center gap-6">
-        <a href="#beta" class="hover:text-slate-900 transition">Closed β</a>
-        <a href="#features" class="hover:text-slate-900 transition">Algorithm & Science</a>
-        <a href="#hikikomo" class="hover:text-slate-900 transition">HikikomoSwitch</a>
-        <a href="#projects" class="hover:text-slate-900 transition">Projects</a>
-        <a href="privacy.html" class="hover:text-amber-700 transition font-medium">Privacy Policy</a>
-        <a href="https://x.com/ObenkyoRobo" target="_blank" rel="noopener noreferrer" class="hover:text-sky-600 transition flex items-center gap-1.5">
+        <a href="#beta" class="hover:text-slate-900 dark:hover:text-slate-200 transition">Closed β</a>
+        <a href="#features" class="hover:text-slate-900 dark:hover:text-slate-200 transition">Algorithm & Science</a>
+        <a href="#hikikomo" class="hover:text-slate-900 dark:hover:text-slate-200 transition">HikikomoSwitch</a>
+        <a href="#projects" class="hover:text-slate-900 dark:hover:text-slate-200 transition">Projects</a>
+        <a href="privacy.html" class="hover:text-amber-700 dark:hover:text-amber-400 transition font-medium">Privacy Policy</a>
+        <a href="https://x.com/ObenkyoRobo" target="_blank" rel="noopener noreferrer" class="hover:text-sky-600 dark:hover:text-sky-400 transition flex items-center gap-1.5">
           <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           <span>X (@ObenkyoRobo)</span>
         </a>
-        <a href="https://github.com/obenkyorobo-ops/portfolio" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 transition">GitHub</a>
+        <a href="https://github.com/obenkyorobo-ops/portfolio" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-slate-200 transition">GitHub</a>
       </div>
     </div>
   </footer>
 
   <!-- Project Detail Modal -->
-  <div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm hidden-modal" onclick="if(event.target === this) closeProjectModal()">
-    <div id="projectModalContent" class="bg-white border border-slate-200 rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto relative shadow-2xl text-slate-800">
+  <div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm hidden-modal" onclick="if(event.target === this) closeProjectModal()">
+    <div id="projectModalContent" class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto relative shadow-2xl text-slate-800 dark:text-slate-100">
       <div id="modalBody">
         <!-- Injected by JavaScript -->
       </div>
@@ -592,7 +620,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="assets/js/projects.js?v=20261105_clean_light"></script>
-  <script src="assets/js/main.js?v=20261105_clean_light"></script>
+  <script src="assets/js/projects.js?v=20261105_slate_dark"></script>
+  <script src="assets/js/main.js?v=20261105_slate_dark"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@ const projectsData = [
     statusType: "release",
     featured: true,
     accentColor: "from-emerald-600 via-teal-500 to-sky-600",
-    badgeColor: "bg-emerald-50 text-emerald-800 border-emerald-200",
+    badgeColor: "bg-emerald-50 text-emerald-800 border-emerald-200 dark:bg-emerald-950/60 dark:text-emerald-300 dark:border-emerald-800",
     icon: "assets/images/hikikomo_icon.png",
     previewImage: "assets/images/hikikomo_main.png",
     installerUrl: "assets/downloads/HikikomoSwitch_Installer.zip",
@@ -22,18 +22,18 @@ const projectsData = [
     portableUrl: "assets/downloads/HikikomoSwitch_Portable.zip",
     summary: "「回線を止めれば絶対に安全」を形にしたWindows常駐セキュリティツール。画面端の半透明ピルから、ワンクリックで全通信の完全ロックダウンやアプリ・ポート単位の遮断を実行できます。",
     description: `
-      <div class="p-4 rounded-xl bg-gradient-to-r from-emerald-50 via-white to-teal-50 border border-emerald-300 mb-6 text-slate-800">
+      <div class="p-4 rounded-xl bg-gradient-to-r from-emerald-50 via-white to-teal-50 dark:from-emerald-950/40 dark:via-slate-900 dark:to-teal-950/40 border border-emerald-300 dark:border-emerald-700/60 mb-6 text-slate-800 dark:text-slate-200">
         <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
-          <div class="flex items-center gap-2 text-emerald-700 font-bold text-sm">
+          <div class="flex items-center gap-2 text-emerald-700 dark:text-emerald-400 font-bold text-sm">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
             <span>🛡️ Windows 10 / 11 対応（追加ランタイム不要・完全無料）</span>
           </div>
-          <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 font-mono">v1.0.0 Official Release</span>
+          <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700 font-mono">v1.0.0 Official Release</span>
         </div>
-        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+        <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
           「席を離れるときや夜間、PCをつけっぱなしにしておくのが不安」「怪しい通信をしている裏アプリや特定ポートだけを黙らせたい」——そんな悩みを一番シンプルかつ根本的に解決するコンセプトは、<strong>『回線を止めれば絶対に安全なのだ』</strong>という事実です。
         </p>
-        <div class="p-2.5 rounded-lg bg-amber-50 border border-amber-200 text-[11px] text-slate-700 mb-3">
+        <div class="p-2.5 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-700/50 text-[11px] text-slate-700 dark:text-slate-300 mb-3">
           💡 <strong>SmartScreen（青い保護画面）を回避する方法：</strong><br>
           下の<strong>「推奨インストーラーパック (.zip)」</strong>を解凍し、中の <code>1_インストール開始 (SmartScreen回避).bat</code> を実行すると保護画面なしでそのまま起動します（単体 <code>.exe</code> を直接開いた場合は<strong>［詳細情報］➜［実行］</strong>をクリックしてください）。
         </div>
@@ -42,25 +42,25 @@ const projectsData = [
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
             <span>推奨インストーラーパック (.zip)</span>
           </a>
-          <a href="assets/downloads/HikikomoSwitch_Setup.exe" download class="px-3.5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-emerald-700 font-semibold text-xs border border-slate-300 flex items-center gap-1.5 transition shadow-sm">
+          <a href="assets/downloads/HikikomoSwitch_Setup.exe" download class="px-3.5 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-emerald-700 dark:text-emerald-400 font-semibold text-xs border border-slate-300 dark:border-slate-700 flex items-center gap-1.5 transition shadow-sm">
             <span>単体インストーラー (.exe)</span>
           </a>
-          <a href="assets/downloads/HikikomoSwitch_Portable.zip" download class="px-3.5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-semibold text-xs border border-slate-300 flex items-center gap-1.5 transition shadow-sm">
+          <a href="assets/downloads/HikikomoSwitch_Portable.zip" download class="px-3.5 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 flex items-center gap-1.5 transition shadow-sm">
             <span>ポータブル版 (.zip)</span>
           </a>
         </div>
       </div>
 
-      <h4 class="text-slate-900 font-bold mb-2">🔒 コンセプト：「回線を止めれば、PCつけっぱなしでも絶対に侵入されない」</h4>
-      <p class="mb-4 text-slate-600 text-xs sm:text-sm leading-relaxed">
+      <h4 class="text-slate-900 dark:text-slate-100 font-bold mb-2">🔒 コンセプト：「回線を止めれば、PCつけっぱなしでも絶対に侵入されない」</h4>
+      <p class="mb-4 text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
         複雑なセキュリティ設定がなくても、物理的に外との扉を閉ざしてしまえば外部からの不正アクセス・リモート侵入・情報漏洩は100%起こり得ません。<strong>HikikomoSwitch（ヒキコモスイッチ）</strong>は、PCの作業状態はそのまま維持しつつ、ワンクリックでPCを外界から「完全な引きこもり状態（ロックダウン）」にできる常駐スイッチャーです。
       </p>
 
-      <h4 class="text-slate-900 font-bold mb-2">✨ 主な機能 ＆ 鉄壁の防衛アーキテクチャ</h4>
-      <ul class="list-disc list-inside space-y-1.5 text-slate-600 mb-4 text-xs sm:text-sm">
+      <h4 class="text-slate-900 dark:text-slate-100 font-bold mb-2">✨ 主な機能 ＆ 鉄壁の防衛アーキテクチャ</h4>
+      <ul class="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-300 mb-4 text-xs sm:text-sm">
         <li><strong>画面端から「にょっと」現れる半透明スリムピル:</strong> 普段は画面端の細いインジケーター（緑＝通常 / 赤＝引きこもり中）として控えめに待機。マウスを近づけた瞬間だけスライド出現し、9ドット（3×3）のグリップを掴んで上下左右の好きな辺・位置へ自由に配置できます。</li>
         <li><strong>3重の完全ロックダウン（回線マスタースイッチ）:</strong>
-          <ol class="list-decimal list-inside ml-4 mt-1 space-y-1 text-slate-300 text-xs">
+          <ol class="list-decimal list-inside ml-4 mt-1 space-y-1 text-slate-500 dark:text-slate-400 text-xs">
             <li>Windows ファイアウォールの全プロファイルに <code>blockinboundalways,blockoutbound</code> を適用し、既存の「許可ルール」すら無視して全着信・全送信を完全拒否。</li>
             <li>TCP/UDP だけでなく ICMP（Ping応答）を含む全プロトコル（<code>protocol=any</code>）を遮断し、ネットワーク上からPCの存在を隠蔽。</li>
             <li>スイッチを切った瞬間に確立済みの外部TCPセッション（<code>ESTABLISHED</code>）を Win32 API <code>SetTcpEntry</code> で即時強制切断（ローカル <code>127.0.0.1</code> は維持するため作業中のアプリはフリーズしません）。</li>
@@ -105,7 +105,7 @@ const projectsData = [
     statusType: "beta",
     featured: true,
     accentColor: "from-blue-600 via-sky-500 to-indigo-600",
-    badgeColor: "bg-amber-50 text-amber-800 border-amber-200",
+    badgeColor: "bg-amber-50 text-amber-800 border-amber-200 dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-800",
     icon: "assets/images/mugen_icon.png",
     previewImage: "assets/images/mugen_quiz.png",
     summary: "新課程全18科目・3,800問以上を収録。最新のFSRS忘却曲線理論とアクティブリコール（選択肢マスク想起）で、最小の復習回数で記憶を定着させる大学入試・共通テスト対策アプリ。",
@@ -118,34 +118,34 @@ const projectsData = [
       note: "連絡不要・出入り自由！相互テストも大歓迎です。Googleグループ参加後、Web参加リンクで『テスターになる』を承認するとPlayストアからDLできます。"
     },
     description: `
-      <div class="p-4 rounded-xl bg-gradient-to-r from-amber-50 via-white to-orange-50 border border-amber-200 mb-6 text-slate-800">
-        <div class="flex items-center gap-2 text-amber-800 font-bold text-sm mb-2">
+      <div class="p-4 rounded-xl bg-gradient-to-r from-amber-50 via-white to-orange-50 dark:from-amber-950/40 dark:via-slate-900 dark:to-orange-950/40 border border-amber-200 dark:border-amber-700/60 mb-6 text-slate-800 dark:text-slate-200">
+        <div class="flex items-center gap-2 text-amber-800 dark:text-amber-400 font-bold text-sm mb-2">
           <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-ping"></span>
           <span>📢 クローズドβテスター募集中（参加歓迎・連絡不要）</span>
         </div>
-        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+        <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
           現在、Google Playでの正式リリースに向けてクローズドβテストを実施しています。高校生・受験生はもちろん、資格試験や大人の学び直し、開発者の相互テストも大歓迎です！
         </p>
-        <div class="space-y-2.5 bg-white p-3 rounded-lg border border-slate-200 text-xs text-slate-700">
+        <div class="space-y-2.5 bg-white dark:bg-slate-900 p-3 rounded-lg border border-slate-200 dark:border-slate-700 text-xs text-slate-700 dark:text-slate-300">
           <div class="flex items-start gap-2">
-            <span class="w-5 h-5 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">1</span>
-            <span class="text-slate-600"><strong>テスター用Googleグループに参加</strong>（キオクノタスケ・英単語共通）<br><a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="text-sky-600 underline hover:text-sky-700 font-medium">https://groups.google.com/u/3/g/study-app-tester</a></span>
+            <span class="w-5 h-5 rounded-full bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-300 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">1</span>
+            <span class="text-slate-600 dark:text-slate-300"><strong>テスター用Googleグループに参加</strong>（キオクノタスケ・英単語共通）<br><a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="text-sky-600 dark:text-sky-400 underline hover:text-sky-700 font-medium">https://groups.google.com/u/3/g/study-app-tester</a></span>
           </div>
           <div class="flex items-start gap-2">
-            <span class="w-5 h-5 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">2</span>
-            <span class="text-slate-600"><strong>Webでテスト参加（オプトイン）を承認</strong><br><a href="https://play.google.com/apps/testing/jp.obenkyorobo.exam_prep" target="_blank" rel="noopener noreferrer" class="text-amber-700 underline hover:text-amber-800 font-semibold">https://play.google.com/apps/testing/jp.obenkyorobo.exam_prep</a><br><span class="text-[10px] text-slate-500">※開いた画面で「テスターになる」をタップしてください。</span></span>
+            <span class="w-5 h-5 rounded-full bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-300 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">2</span>
+            <span class="text-slate-600 dark:text-slate-300"><strong>Webでテスト参加（オプトイン）を承認</strong><br><a href="https://play.google.com/apps/testing/jp.obenkyorobo.exam_prep" target="_blank" rel="noopener noreferrer" class="text-amber-700 dark:text-amber-400 underline hover:text-amber-800 font-semibold">https://play.google.com/apps/testing/jp.obenkyorobo.exam_prep</a><br><span class="text-[10px] text-slate-500 dark:text-slate-400">※開いた画面で「テスターになる」をタップしてください。</span></span>
           </div>
           <div class="flex items-start gap-2">
-            <span class="w-5 h-5 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">3</span>
-            <span class="text-slate-600"><strong>Google Playからテスト版をインストール</strong><br><a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.exam_prep" target="_blank" rel="noopener noreferrer" class="text-sky-600 underline hover:text-sky-700 font-medium">https://play.google.com/store/apps/details?id=jp.obenkyorobo.exam_prep</a><br><span class="text-[10px] text-slate-500">※グループ参加と同じGoogleアカウントで開いてください。</span></span>
+            <span class="w-5 h-5 rounded-full bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-300 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">3</span>
+            <span class="text-slate-600 dark:text-slate-300"><strong>Google Playからテスト版をインストール</strong><br><a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.exam_prep" target="_blank" rel="noopener noreferrer" class="text-sky-600 dark:text-sky-400 underline hover:text-sky-700 font-medium">https://play.google.com/store/apps/details?id=jp.obenkyorobo.exam_prep</a><br><span class="text-[10px] text-slate-500 dark:text-slate-400">※グループ参加と同じGoogleアカウントで開いてください。</span></span>
           </div>
         </div>
       </div>
 
-      <p class="mb-4 text-slate-600">「キオクノタスケ」は、最新のFSRS（Free Spaced Repetition Scheduler）数理モデルと認知心理学（アクティブリコール）を融合した新世代の大学入試・共通テスト対策アプリです。解けば解くほど苦手分野がピンポイントで絞り込まれ、最短・最小の復習回数で知識が脳に定着します。</p>
+      <p class="mb-4 text-slate-600 dark:text-slate-300">「キオクノタスケ」は、最新のFSRS（Free Spaced Repetition Scheduler）数理モデルと認知心理学（アクティブリコール）を融合した新世代の大学入試・共通テスト対策アプリです。解けば解くほど苦手分野がピンポイントで絞り込まれ、最短・最小の復習回数で知識が脳に定着します。</p>
       
-      <h4 class="text-slate-900 font-bold mb-2">🔥 科学的アルゴリズム ＆ 主なハイライト</h4>
-      <ul class="list-disc list-inside space-y-1.5 text-slate-600 mb-4">
+      <h4 class="text-slate-900 dark:text-slate-100 font-bold mb-2">🔥 科学的アルゴリズム ＆ 主なハイライト</h4>
+      <ul class="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-300 mb-4">
         <li><strong>FSRS連動 記憶定着ノルマ自動逆算:</strong> 目標試験日や学習計画から、忘却曲線に基づき「今日やるべき復習問題数」を日単位で自動計算。</li>
         <li><strong>アクティブリコール特訓:</strong> 選択肢を隠し、自力で頭の中に答えを思い浮かべてから選択肢を開くことで、試験本番で即使える強固な想起力を鍛成。</li>
         <li><strong>誤答の質を分析する2段階トリアージ:</strong> 不正解時に「ケアレスミス（知っていた）」と「知らなかった」を選別し、アルゴリズムが次回出題間隔を精密に調整。</li>
@@ -230,7 +230,7 @@ const projectsData = [
     statusType: "beta",
     featured: true,
     accentColor: "from-teal-600 via-emerald-500 to-cyan-600",
-    badgeColor: "bg-teal-50 text-teal-800 border-teal-200",
+    badgeColor: "bg-teal-50 text-teal-800 border-teal-200 dark:bg-teal-950/60 dark:text-teal-300 dark:border-teal-800",
     icon: "assets/images/install_icon.png",
     previewImage: "assets/images/install_home.png",
     summary: "目標完成日数から日々のノルマをFSRS忘却曲線で自動逆算。カード・四択・手打ちスペル特訓の3層サイクルとAIコアイメージ解説で、大学受験・医獣専門英語を脳へ確実に定着させます。",
@@ -243,34 +243,34 @@ const projectsData = [
       note: "連絡不要・出入り自由！キオクノタスケと同じ共通Googleグループにご参加後、Web参加リンクで『テスターになる』を承認することですぐにインストール可能です。"
     },
     description: `
-      <div class="p-4 rounded-xl bg-gradient-to-r from-teal-50 via-white to-cyan-50 border border-teal-200 mb-6 text-slate-800">
-        <div class="flex items-center gap-2 text-teal-800 font-bold text-sm mb-2">
+      <div class="p-4 rounded-xl bg-gradient-to-r from-teal-50 via-white to-cyan-50 dark:from-teal-950/40 dark:via-slate-900 dark:to-cyan-950/40 border border-teal-200 dark:border-teal-700/60 mb-6 text-slate-800 dark:text-slate-200">
+        <div class="flex items-center gap-2 text-teal-800 dark:text-teal-400 font-bold text-sm mb-2">
           <span class="w-2.5 h-2.5 rounded-full bg-teal-500 animate-ping"></span>
           <span>📢 クローズドβテスター募集中（グループ共通・連絡不要）</span>
         </div>
-        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+        <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
           現在、Google Playでの正式リリースに向けてクローズドβテストを実施しています。<strong>『キオクノタスケ』と同じGoogleグループに参加するだけで、追加手続きなしで両方のテスト版がインストール可能</strong>になります！高校生・受験生はもちろん、開発者の相互テストも大歓迎です。
         </p>
-        <div class="space-y-2.5 bg-white p-3 rounded-lg border border-slate-200 text-xs text-slate-700">
+        <div class="space-y-2.5 bg-white dark:bg-slate-900 p-3 rounded-lg border border-slate-200 dark:border-slate-700 text-xs text-slate-700 dark:text-slate-300">
           <div class="flex items-start gap-2">
-            <span class="w-5 h-5 rounded-full bg-teal-100 text-teal-800 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">1</span>
-            <span class="text-slate-600"><strong>共通Googleグループに参加</strong>（キオクノタスケ・英単語共通）<br><a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="text-sky-600 underline hover:text-sky-700 font-medium">https://groups.google.com/u/3/g/study-app-tester</a></span>
+            <span class="w-5 h-5 rounded-full bg-teal-100 dark:bg-teal-900/60 text-teal-800 dark:text-teal-300 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">1</span>
+            <span class="text-slate-600 dark:text-slate-300"><strong>共通Googleグループに参加</strong>（キオクノタスケ・英単語共通）<br><a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="text-sky-600 dark:text-sky-400 underline hover:text-sky-700 font-medium">https://groups.google.com/u/3/g/study-app-tester</a></span>
           </div>
           <div class="flex items-start gap-2">
-            <span class="w-5 h-5 rounded-full bg-teal-100 text-teal-800 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">2</span>
-            <span class="text-slate-600"><strong>Webでテスト参加（オプトイン）を承認</strong><br><a href="https://play.google.com/apps/testing/jp.obenkyorobo.install_vocab" target="_blank" rel="noopener noreferrer" class="text-teal-700 underline hover:text-teal-800 font-semibold">https://play.google.com/apps/testing/jp.obenkyorobo.install_vocab</a><br><span class="text-[10px] text-slate-500">※開いた画面で「テスターになる」をタップしてください。</span></span>
+            <span class="w-5 h-5 rounded-full bg-teal-100 dark:bg-teal-900/60 text-teal-800 dark:text-teal-300 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">2</span>
+            <span class="text-slate-600 dark:text-slate-300"><strong>Webでテスト参加（オプトイン）を承認</strong><br><a href="https://play.google.com/apps/testing/jp.obenkyorobo.install_vocab" target="_blank" rel="noopener noreferrer" class="text-teal-700 dark:text-teal-400 underline hover:text-teal-800 font-semibold">https://play.google.com/apps/testing/jp.obenkyorobo.install_vocab</a><br><span class="text-[10px] text-slate-500 dark:text-slate-400">※開いた画面で「テスターになる」をタップしてください。</span></span>
           </div>
           <div class="flex items-start gap-2">
-            <span class="w-5 h-5 rounded-full bg-teal-100 text-teal-800 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">3</span>
-            <span class="text-slate-600"><strong>Google Playからテスト版をインストール</strong><br><a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab" target="_blank" rel="noopener noreferrer" class="text-sky-600 underline hover:text-sky-700 font-medium">https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab</a><br><span class="text-[10px] text-slate-500">※グループ参加と同じGoogleアカウントで開いてください。</span></span>
+            <span class="w-5 h-5 rounded-full bg-teal-100 dark:bg-teal-900/60 text-teal-800 dark:text-teal-300 font-bold flex items-center justify-center flex-shrink-0 text-[11px]">3</span>
+            <span class="text-slate-600 dark:text-slate-300"><strong>Google Playからテスト版をインストール</strong><br><a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab" target="_blank" rel="noopener noreferrer" class="text-sky-600 dark:text-sky-400 underline hover:text-sky-700 font-medium">https://play.google.com/store/apps/details?id=jp.obenkyorobo.install_vocab</a><br><span class="text-[10px] text-slate-500 dark:text-slate-400">※グループ参加と同じGoogleアカウントで開いてください。</span></span>
           </div>
         </div>
       </div>
 
-      <p class="mb-4 text-slate-600">「インストール英単語」は、最新のFSRS（Free Spaced Repetition Scheduler）記憶定着モデルと認知心理学に基づき、最小の反復回数で確固たる英単語力を脳に「インストール」するために設計された語彙演習アプリです。「知っているけれど本番で出てこない」「多義語の使い分けが曖昧」「スペルが書けない」という語彙学習の3大課題を、3段階の特訓サイクルと高度な出題モードで徹底的に解決します。</p>
+      <p class="mb-4 text-slate-600 dark:text-slate-300">「インストール英単語」は、最新のFSRS（Free Spaced Repetition Scheduler）記憶定着モデルと認知心理学に基づき、最小の反復回数で確固たる英単語力を脳に「インストール」するために設計された語彙演習アプリです。「知っているけれど本番で出てこない」「多義語の使い分けが曖昧」「スペルが書けない」という語彙学習の3大課題を、3段階の特訓サイクルと高度な出題モードで徹底的に解決します。</p>
       
-      <h4 class="text-slate-900 font-bold mb-2">🔥 主な機能 ＆ 科学的アルゴリズム</h4>
-      <ul class="list-disc list-inside space-y-1.5 text-slate-600 mb-4">
+      <h4 class="text-slate-900 dark:text-slate-100 font-bold mb-2">🔥 主な機能 ＆ 科学的アルゴリズム</h4>
+      <ul class="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-300 mb-4">
         <li><strong>FSRS連動 目標期日からの定着ノルマ自動逆算:</strong> 30日/45日/60日/90日/120日（または直接指定）の学習計画と連動。忘却曲線モデルが残日数と未学習数から「1日の新規目安（例: 約36語/日）」と「本日の定着ノルマ（例: 390問）」を精密に自動算出。</li>
         <li><strong>① まとめて特訓 カード（FSRS 4段階判定 ＆ AIコアイメージ解説）:</strong> 「忘れた / 難しい / 覚えた / 簡単」の4段階判定とネイティブ音声再生を完備。主要意味と他の意味を分類表示し、「✨ AIコアイメージ解説」ボタンで単語の本質的なニュアンスや成り立ちを深く理解。</li>
         <li><strong>② 四択テスト（多義語識別 ＆ 同義語4択モード）:</strong> 似た単語の使い分けを瞬時に見分ける即応力を養成。「和訳分割トレーニング（多義語・複数和訳を個別出題）」や「同義語4択モード（英英形式）」への切り替えも可能。</li>
@@ -337,15 +337,15 @@ const projectsData = [
     status: "開発中",
     featured: false,
     accentColor: "from-sky-400 via-indigo-500 to-purple-600",
-    badgeColor: "bg-indigo-50 text-indigo-800 border-indigo-200",
+    badgeColor: "bg-indigo-50 text-indigo-800 border-indigo-200 dark:bg-indigo-950/60 dark:text-indigo-300 dark:border-indigo-800",
     icon: "assets/images/geminitan_icon.png",
     previewImage: "assets/images/geminitan_main.png",
     summary: "ポモドーロ集中タイマー（🍅）連動のスタディモード、毎朝のモーニング・レディオを搭載。3Dアバター『ゲミニータン』と相棒ロボ『オビタ』が毎日の学習リズムと継続を支える伴走型パートナー。",
     description: `
-      <p class="mb-4 text-slate-600">「ゲミニータン」は、毎日の学習リズムとモチベーションを科学的に持続させるための3Dインタラクティブ・学習パートナーアプリです。机に向かうあなたを、可愛い3Dアバター「ゲミニータン」と浮遊型相棒ロボット「オビタ」が全力で応援＆サポートします。</p>
+      <p class="mb-4 text-slate-600 dark:text-slate-300">「ゲミニータン」は、毎日の学習リズムとモチベーションを科学的に持続させるための3Dインタラクティブ・学習パートナーアプリです。机に向かうあなたを、可愛い3Dアバター「ゲミニータン」と浮遊型相棒ロボット「オビタ」が全力で応援＆サポートします。</p>
       
-      <h4 class="text-slate-900 font-bold mb-2">✨ 主な機能ハイライト</h4>
-      <ul class="list-disc list-inside space-y-1.5 text-slate-600 mb-4">
+      <h4 class="text-slate-900 dark:text-slate-100 font-bold mb-2">✨ 主な機能ハイライト</h4>
+      <ul class="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-300 mb-4">
         <li><strong>メガネ姿のスタディモード（STUDY MODE）:</strong> 学習開始と同時にメガネを装着し「がんばって！」のボードを掲示。ポモドーロ集中タイマー（🍅）と連動して25分集中＋5分休憩のサイクルを徹底管理。</li>
         <li><strong>ゲミニータン・モーニング・レディオ:</strong> 毎朝その日の記念日、学習応援メッセージ、最新ニュースを読み上げ配信し、一日を前向きにスタート。</li>
         <li><strong>相棒ロボ「オビタ」の応援＆ふれあい:</strong> 「ピピッ！その調子でいこう！」と勉強を見守り、ショートケーキをあげると目がハート💕になる楽しいふれあい機能。</li>
