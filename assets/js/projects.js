@@ -20,7 +20,7 @@ const projectsData = [
     installerUrl: "assets/downloads/HikikomoSwitch_Installer.zip",
     rawExeUrl: "assets/downloads/HikikomoSwitch_Setup.exe",
     portableUrl: "assets/downloads/HikikomoSwitch_Portable.zip",
-    summary: "「回線を止めれば安全なのだ」を極めたWindows用常駐セキュリティ＆ポート管理ツール。普段は画面の端に細い光として引きこもり、マウスを近づけると半透明ピルがにょっと出現。ワンクリックで全通信の完全ロックダウン（物理的にLANを抜いたと同等の侵入不能状態）や、アプリ・ポート単位の通信オン/オフを自在に切り替えられます。",
+    summary: "「回線を止めれば絶対に安全」を形にしたWindows常駐セキュリティツール。画面端の半透明ピルから、ワンクリックで全通信の完全ロックダウンやアプリ・ポート単位の遮断を実行できます。",
     description: `
       <div class="p-4 rounded-xl bg-gradient-to-r from-emerald-950/70 via-slate-900 to-sky-950/70 border border-emerald-500/40 mb-6">
         <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
@@ -108,7 +108,7 @@ const projectsData = [
     badgeColor: "bg-amber-500/15 text-amber-300 border-amber-500/30",
     icon: "assets/images/mugen_icon.png",
     previewImage: "assets/images/mugen_quiz.png",
-    summary: "大学入学共通テスト新課程全18科目・3,800問以上を収録。最新のFSRS（Free Spaced Repetition Scheduler）理論とアクティブリコールに基づき、最小の復習回数で長期記憶化する科学的学習アプリ。現在Google Playクローズドβテスター募集中！",
+    summary: "新課程全18科目・3,800問以上を収録。最新のFSRS忘却曲線理論とアクティブリコール（選択肢マスク想起）で、最小の復習回数で記憶を定着させる大学入試・共通テスト対策アプリ。",
     betaInfo: {
       isRecruiting: true,
       badgeText: "🚀 Google Play クローズドβテスト実施中",
@@ -233,7 +233,7 @@ const projectsData = [
     badgeColor: "bg-amber-500/15 text-amber-300 border-amber-500/30",
     icon: "assets/images/install_icon.png",
     previewImage: "assets/images/install_home.png",
-    summary: "目標完成日数（30〜120日）から忘却曲線（FSRS）に基づいて毎日の学習・復習ノルマを自動逆算。カード（FSRS 4段階判定・AIコアイメージ解説）➜ 四択（多義語・同義語）➜ キーボード手打ちスペル特訓の3層サイクルで、大学受験・中学・医獣専門英語を脳へ確実に定着させる英単語学習アプリ。Google Playクローズドβテスター募集中！",
+    summary: "目標完成日数から日々のノルマをFSRS忘却曲線で自動逆算。カード・四択・手打ちスペル特訓の3層サイクルとAIコアイメージ解説で、大学受験・医獣専門英語を脳へ確実に定着させます。",
     betaInfo: {
       isRecruiting: true,
       badgeText: "🚀 Google Play クローズドβテスト実施中",

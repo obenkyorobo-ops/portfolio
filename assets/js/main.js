@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="w-full h-48 mb-5 rounded-xl overflow-hidden relative bg-slate-900 border border-white/5 cursor-pointer" onclick="openProjectModal('${project.id}')">
             <img src="${project.previewImage}" alt="${project.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-2.5 left-3 text-[11px] font-semibold text-white/90 bg-slate-900/80 px-2 py-0.5 rounded backdrop-blur-sm border border-white/10 flex items-center gap-1">
+            <div class="absolute bottom-2.5 left-3 text-xs font-semibold text-white/90 bg-slate-900/80 px-2 py-0.5 rounded backdrop-blur-sm border border-white/10 flex items-center gap-1">
               <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
               <span>実機スクショ</span>
             </div>
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         headerVisual = `
           <div class="w-full h-48 mb-5 rounded-xl overflow-hidden relative border border-indigo-500/20 cursor-pointer" onclick="openProjectModal('${project.id}')">
             ${getMockupHtml(project.previewMockup)}
-            <div class="absolute bottom-2.5 right-3 text-[11px] font-semibold text-indigo-300 bg-indigo-950/80 px-2 py-0.5 rounded backdrop-blur-sm border border-indigo-500/30 flex items-center gap-1">
+            <div class="absolute bottom-2.5 right-3 text-xs font-semibold text-indigo-300 bg-indigo-950/80 px-2 py-0.5 rounded backdrop-blur-sm border border-indigo-500/30 flex items-center gap-1">
               <span>UIプレビュー</span>
             </div>
           </div>
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ${project.icon ? `<img src="${project.icon}" alt="" class="w-6 h-6 rounded object-cover inline-block" />` : ''}
             ${project.title}
           </h3>
-          <p class="text-sm text-slate-400 line-clamp-2 mb-4 leading-relaxed">
+          <p class="text-sm text-slate-300 line-clamp-2 mb-4 leading-relaxed">
             ${project.summary}
           </p>
         </div>
@@ -217,10 +217,10 @@ function openProjectModal(projectId) {
                   </div>
                   <div class="p-3 bg-slate-900/90 border-t border-slate-800">
                     <div class="flex items-center justify-between mb-1">
-                      <span class="text-xs font-bold text-white">${s.title}</span>
-                      <span class="text-[10px] px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">${s.tag || '画面'}</span>
+                      <span class="text-xs sm:text-sm font-bold text-white">${s.title}</span>
+                      <span class="text-xs px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">${s.tag || '画面'}</span>
                     </div>
-                    <p class="text-[11px] text-slate-400 leading-relaxed">${s.caption || ''}</p>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">${s.caption || ''}</p>
                   </div>
                 </div>
               `;
@@ -233,7 +233,7 @@ function openProjectModal(projectId) {
                         <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
                         Gemini AI Coach Preview
                       </span>
-                      <span class="text-[10px] px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300">Live Mockup</span>
+                      <span class="text-xs px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300">Live Mockup</span>
                     </div>
 
                     <div class="mb-3">
@@ -257,10 +257,10 @@ function openProjectModal(projectId) {
                   </div>
                   <div class="p-3 bg-slate-900/90 border-t border-slate-800">
                     <div class="flex items-center justify-between mb-1">
-                      <span class="text-xs font-bold text-white">${s.title}</span>
-                      <span class="text-[10px] px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">${s.tag || 'AI画面'}</span>
+                      <span class="text-xs sm:text-sm font-bold text-white">${s.title}</span>
+                      <span class="text-xs px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">${s.tag || 'AI画面'}</span>
                     </div>
-                    <p class="text-[11px] text-slate-400 leading-relaxed">${s.caption || ''}</p>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">${s.caption || ''}</p>
                   </div>
                 </div>
               `;
