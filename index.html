@@ -63,40 +63,87 @@
 
   <!-- Header / Navigation -->
   <header class="fixed top-0 left-0 right-0 z-40 glass-nav">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3 group">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group flex-shrink-0">
         <div class="w-10 h-10 rounded-xl overflow-hidden border border-amber-500/20 shadow-md shadow-amber-500/10 group-hover:scale-105 transition-transform bg-white flex-shrink-0">
           <img src="assets/images/brand_logo.jpg" alt="お勉強ロボ" class="w-full h-full object-cover" />
         </div>
-        <div>
-          <span class="font-extrabold text-base tracking-tight text-slate-900 dark:text-white block group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">お勉強ロボ</span>
-          <span class="text-[10px] text-amber-600 dark:text-amber-400 font-mono tracking-wider uppercase block -mt-0.5">Study Apps Studio</span>
+        <div class="flex-shrink-0">
+          <span class="font-extrabold text-base tracking-tight text-slate-900 dark:text-white block group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors whitespace-nowrap">お勉強ロボ</span>
+          <span class="text-[10px] text-amber-600 dark:text-amber-400 font-mono tracking-wider uppercase block -mt-0.5 whitespace-nowrap">Study Apps Studio</span>
         </div>
       </a>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
-        <a href="#beta" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors flex items-center gap-1.5 text-amber-700 dark:text-amber-400 font-semibold px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800">
+      <!-- Desktop Navigation Bar (Organized & Compact) -->
+      <nav class="hidden lg:flex items-center gap-2 xl:gap-4 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <!-- Closed Beta Pill -->
+        <a href="#beta" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors flex items-center gap-1.5 text-amber-700 dark:text-amber-400 font-semibold px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 whitespace-nowrap">
           <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
           <span>Closed β</span>
         </a>
-        <a href="#features" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Algorithm & Science</a>
-        <a href="#cloppy" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors flex items-center gap-1.5 text-amber-800 dark:text-amber-300 font-semibold px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-800">
-          <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
-          <span>Cloppy (Win/Android)</span>
-        </a>
-        <a href="#xcleanbot" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors flex items-center gap-1.5 text-sky-700 dark:text-sky-400 font-semibold px-2.5 py-1 rounded-full bg-sky-50 dark:bg-sky-950/60 border border-sky-200 dark:border-sky-800">
-          <span class="w-2 h-2 rounded-full bg-sky-500 animate-ping"></span>
-          <span>X Clean Bot (Win)</span>
-        </a>
-        <a href="#hikikomo" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-emerald-700 dark:text-emerald-400 font-semibold px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-          <span>HikikomoSwitch (Win)</span>
-        </a>
-        <a href="#projects" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Projects</a>
-        <a href="#techstack" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Tech Stack</a>
+
+        <!-- Featured Apps Dropdown -->
+        <div class="relative group" id="featuredAppsDropdown">
+          <button type="button" class="flex items-center gap-1.5 py-1.5 px-3 rounded-lg text-slate-700 dark:text-slate-200 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-colors font-medium whitespace-nowrap">
+            <span>注目アプリ</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"></i>
+          </button>
+          
+          <!-- Dropdown Popover -->
+          <div class="absolute left-0 top-full pt-2 w-72 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
+            <div class="p-2 rounded-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-slate-200/90 dark:border-slate-800 shadow-xl shadow-slate-900/10 space-y-1">
+              <a href="#cloppy" class="flex items-center gap-3 p-2 rounded-xl hover:bg-amber-50/80 dark:hover:bg-amber-950/40 transition group/item">
+                <img src="assets/images/cloppy_icon.png" class="w-8 h-8 rounded-lg object-cover border border-amber-200 dark:border-amber-800 flex-shrink-0" alt="Cloppy" />
+                <div class="min-w-0">
+                  <div class="text-xs font-bold text-slate-900 dark:text-slate-100 group-hover/item:text-amber-600 dark:group-hover/item:text-amber-400 flex items-center gap-1.5">
+                    <span>Cloppy</span>
+                    <span class="text-[10px] px-1.5 py-0.2 rounded bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-300 font-mono">Win/Android</span>
+                  </div>
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400 truncate">画像クロップ＆リサイズ</div>
+                </div>
+              </a>
+              
+              <a href="#hikikomo" class="flex items-center gap-3 p-2 rounded-xl hover:bg-emerald-50/80 dark:hover:bg-emerald-950/40 transition group/item">
+                <img src="assets/images/hikikomo_icon.png" class="w-8 h-8 rounded-lg object-cover border border-emerald-200 dark:border-emerald-800 flex-shrink-0" alt="HikikomoSwitch" />
+                <div class="min-w-0">
+                  <div class="text-xs font-bold text-slate-900 dark:text-slate-100 group-hover/item:text-emerald-600 dark:group-hover/item:text-emerald-400 flex items-center gap-1.5">
+                    <span>HikikomoSwitch</span>
+                    <span class="text-[10px] px-1.5 py-0.2 rounded bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-mono">Win</span>
+                  </div>
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400 truncate">鉄壁回線＆ポートスイッチャー</div>
+                </div>
+              </a>
+
+              <a href="#xcleanbot" class="flex items-center gap-3 p-2 rounded-xl hover:bg-sky-50/80 dark:hover:bg-sky-950/40 transition group/item">
+                <img src="assets/images/xcleanbot_icon.png" class="w-8 h-8 rounded-lg object-cover border border-sky-200 dark:border-sky-800 flex-shrink-0" alt="X Clean Bot" />
+                <div class="min-w-0">
+                  <div class="text-xs font-bold text-slate-900 dark:text-slate-100 group-hover/item:text-sky-600 dark:group-hover/item:text-sky-400 flex items-center gap-1.5">
+                    <span>X Clean Bot</span>
+                    <span class="text-[10px] px-1.5 py-0.2 rounded bg-sky-100 dark:bg-sky-950/60 text-sky-800 dark:text-sky-300 font-mono">Win</span>
+                  </div>
+                  <div class="text-[11px] text-slate-500 dark:text-slate-400 truncate">過去ログ整理＆BAN防止ガード</div>
+                </div>
+              </a>
+
+              <div class="pt-1 mt-1 border-t border-slate-100 dark:border-slate-800/80">
+                <a href="#projects" class="flex items-center justify-between p-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition">
+                  <span>全制作アプリ一覧</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#features" class="py-1.5 px-3 rounded-lg hover:text-amber-600 dark:hover:text-amber-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-colors whitespace-nowrap">Algorithm & Science</a>
+        <a href="#projects" class="py-1.5 px-3 rounded-lg hover:text-sky-600 dark:hover:text-sky-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-colors whitespace-nowrap">Projects</a>
+        <a href="#techstack" class="py-1.5 px-3 rounded-lg hover:text-sky-600 dark:hover:text-sky-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-colors whitespace-nowrap">Tech Stack</a>
       </nav>
 
-      <div class="flex items-center gap-2.5 sm:gap-3">
+      <!-- Right Controls -->
+      <div class="flex items-center gap-2 sm:gap-2.5 flex-shrink-0">
         <!-- Theme Toggle Button (Light / Slate Dark Switcher) -->
         <button 
           id="themeToggleBtn" 
@@ -113,17 +160,92 @@
           </span>
         </button>
 
-        <a href="#beta" class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold text-xs flex items-center gap-1.5 shadow-md shadow-amber-500/20 transition transform hover:scale-105">
+        <a href="#beta" class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold text-xs flex items-center gap-1.5 shadow-md shadow-amber-500/20 transition transform hover:scale-105 whitespace-nowrap">
           <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
           <span>βテスト参加</span>
         </a>
-        <a href="https://github.com/obenkyorobo-ops/portfolio" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-xs font-semibold border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 flex items-center gap-1.5 transition shadow-sm">
+
+        <a href="https://github.com/obenkyorobo-ops/portfolio" target="_blank" rel="noopener noreferrer" class="p-2 sm:px-3 sm:py-1.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-xs font-semibold border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 flex items-center gap-1.5 transition shadow-sm whitespace-nowrap">
           <i data-lucide="github" class="w-4 h-4"></i>
           <span class="hidden sm:inline">GitHub</span>
         </a>
+
+        <!-- Mobile Menu Toggle Button (lg:hidden) -->
+        <button 
+          id="mobileMenuBtn" 
+          type="button" 
+          aria-label="メニュー開閉" 
+          class="lg:hidden p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition flex items-center justify-center focus:outline-none"
+        >
+          <i data-lucide="menu" id="menuOpenIcon" class="w-5 h-5 block"></i>
+          <i data-lucide="x" id="menuCloseIcon" class="w-5 h-5 hidden"></i>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobileMenuDrawer" class="hidden lg:hidden fixed inset-x-0 top-16 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-2xl z-30 max-h-[calc(100vh-4rem)] overflow-y-auto">
+    <div class="max-w-7xl mx-auto px-4 py-5 space-y-4">
+      <div class="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider px-1">
+        メインメニュー
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <a href="#beta" class="mobile-nav-link flex items-center gap-2.5 p-3 rounded-xl bg-amber-50/80 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 font-semibold border border-amber-200 dark:border-amber-800">
+          <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
+          <span>Google Play Closed β</span>
+        </a>
+
+        <a href="#features" class="mobile-nav-link flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 font-medium">
+          <i data-lucide="sparkles" class="w-4 h-4 text-amber-500"></i>
+          <span>Algorithm & Science</span>
+        </a>
+      </div>
+
+      <div class="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider px-1 pt-2">
+        注目アプリ（実機DL対応）
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+        <a href="#cloppy" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 hover:bg-amber-50 dark:hover:bg-amber-950/30 border border-slate-200/80 dark:border-slate-800 transition">
+          <img src="assets/images/cloppy_icon.png" class="w-8 h-8 rounded-lg object-cover border border-amber-200 dark:border-amber-800 flex-shrink-0" alt="" />
+          <div>
+            <div class="text-xs font-bold text-slate-900 dark:text-slate-100">Cloppy</div>
+            <div class="text-[10px] text-slate-500 dark:text-slate-400">画像クロップ＆リサイズ (Win/Android)</div>
+          </div>
+        </a>
+
+        <a href="#hikikomo" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 border border-slate-200/80 dark:border-slate-800 transition">
+          <img src="assets/images/hikikomo_icon.png" class="w-8 h-8 rounded-lg object-cover border border-emerald-200 dark:border-emerald-800 flex-shrink-0" alt="" />
+          <div>
+            <div class="text-xs font-bold text-slate-900 dark:text-slate-100">HikikomoSwitch</div>
+            <div class="text-[10px] text-slate-500 dark:text-slate-400">回線＆ポート遮断 (Win)</div>
+          </div>
+        </a>
+
+        <a href="#xcleanbot" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 hover:bg-sky-50 dark:hover:bg-sky-950/30 border border-slate-200/80 dark:border-slate-800 transition">
+          <img src="assets/images/xcleanbot_icon.png" class="w-8 h-8 rounded-lg object-cover border border-sky-200 dark:border-sky-800 flex-shrink-0" alt="" />
+          <div>
+            <div class="text-xs font-bold text-slate-900 dark:text-slate-100">X Clean Bot</div>
+            <div class="text-[10px] text-slate-500 dark:text-slate-400">過去ログ整理＆BAN防止 (Win)</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-2 text-xs font-medium">
+        <a href="#projects" class="mobile-nav-link px-3 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200">
+          全制作アプリ一覧 (Projects)
+        </a>
+        <a href="#techstack" class="mobile-nav-link px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300">
+          Tech Stack
+        </a>
+        <a href="privacy.html" class="mobile-nav-link px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300">
+          プライバシーポリシー
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -846,7 +968,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="assets/js/projects.js?v=20261105_slate_dark"></script>
-  <script src="assets/js/main.js?v=20261105_slate_dark"></script>
+  <script src="assets/js/projects.js?v=20261109_nav_clean"></script>
+  <script src="assets/js/main.js?v=20261109_nav_clean"></script>
 </body>
 </html>

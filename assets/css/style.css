@@ -171,3 +171,19 @@ p {
   transform: scale(1) translateY(0);
   opacity: 1;
 }
+
+/* Featured Apps Dropdown toggle state (for touch/click) */
+#featuredAppsDropdown.is-open > div:last-child {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+#featuredAppsDropdown.is-open [data-lucide="chevron-down"] {
+  transform: rotate(180deg);
+}
+
+/* Mobile drawer animation */
+#mobileMenuDrawer {
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+

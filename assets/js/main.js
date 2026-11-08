@@ -27,6 +27,69 @@ window.toggleTheme = function() {
   }
 };
 
+// Mobile Navigation Drawer Helper
+function initMobileMenu() {
+  const menuBtn = document.getElementById("mobileMenuBtn");
+  const drawer = document.getElementById("mobileMenuDrawer");
+  const openIcon = document.getElementById("menuOpenIcon");
+  const closeIcon = document.getElementById("menuCloseIcon");
+
+  if (!menuBtn || !drawer) return;
+
+  function toggleMenu(show) {
+    const isCurrentlyOpen = !drawer.classList.contains("hidden");
+    const willOpen = show !== undefined ? show : !isCurrentlyOpen;
+
+    if (willOpen) {
+      drawer.classList.remove("hidden");
+      if (openIcon) openIcon.classList.add("hidden");
+      if (closeIcon) closeIcon.classList.remove("hidden");
+    } else {
+      drawer.classList.add("hidden");
+      if (openIcon) openIcon.classList.remove("hidden");
+      if (closeIcon) closeIcon.classList.add("hidden");
+    }
+  }
+
+  menuBtn.addEventListener("click", () => toggleMenu());
+
+  // Close when clicking any link in drawer
+  document.querySelectorAll(".mobile-nav-link").forEach(link => {
+    link.addEventListener("click", () => toggleMenu(false));
+  });
+
+  // Close on Escape key
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") toggleMenu(false);
+  });
+}
+
+// Featured Apps Dropdown Helper (Touch & Click Support)
+function initFeaturedDropdown() {
+  const dropdown = document.getElementById("featuredAppsDropdown");
+  if (!dropdown) return;
+  const btn = dropdown.querySelector("button");
+
+  if (!btn) return;
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle("is-open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove("is-open");
+    }
+  });
+
+  dropdown.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => {
+      dropdown.classList.remove("is-open");
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Initialize Icons
   if (window.lucide) {
@@ -35,6 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 2. Initialize Theme Toggle
   initTheme();
+
+  // 3. Initialize Mobile Menu & Dropdowns
+  initMobileMenu();
+  initFeaturedDropdown();
 
   // 3. Render Projects Grid
   const gridContainer = document.getElementById("projectsGrid");
