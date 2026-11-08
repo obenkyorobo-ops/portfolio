@@ -7,7 +7,7 @@ const projectsData = [
   {
     id: "cloppy",
     title: "Cloppy",
-    subtitle: "「元フォルダーに別名保存」— ドラッグ＆ドロップで一瞬クロップ・リサイズ、Windows ＆ Android両対応の画像加工ツール",
+    subtitle: "「元フォルダーに別名保存」— ドラッグ＆ドロップで一瞬クロップ・リサイズ、複数枚の一括処理に対応したスマート画像加工ツール",
     category: "utility",
     categoryLabel: "Windows ＆ Android / 画像加工ツール",
     status: "Windows ＆ Android版 公開中 (無料DL)",
@@ -62,6 +62,7 @@ const projectsData = [
 
       <h4 class="text-slate-900 dark:text-slate-100 font-bold mb-2">✨ 主な機能 ＆ 快適な編集体験</h4>
       <ul class="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-300 mb-4 text-xs sm:text-sm">
+        <li><strong>複数画像の一括処理（まとめクロップ＆リサイズ）:</strong> 複数の画像ファイルをまとめてD&Dまたは選択。同一のクロップ枠（相対比率または中央クロップ）やパーセント縮小を一括適用し、全画像をそれぞれの元フォルダーへ高速自動保存。</li>
         <li><strong>直感的なドラッグ＆ドロップ ＆ クリップボード貼り付け:</strong> 画像ファイルをドラッグ＆ドロップするか、Ctrl+Vで即座に読み込み（Androidでは共有メニューやカメラから直接起動可能）。</li>
         <li><strong>多彩なアスペクト比クロップ:</strong> 自由比率、1:1（正方形・SNSアイコン用）、16:9（動画サムネイル用）、4:3、3:2 など定番比率にワンタップで固定可能。</li>
         <li><strong>劣化なしの高品質リサイズ:</strong> 25%, 50%, 75%, 100%のプリセットボタン、またはピクセル直接入力で縦横比を維持しながらきれいに縮小・拡大。</li>
@@ -75,8 +76,9 @@ const projectsData = [
     demoLabel: "インストーラー DL",
     metrics: [
       { label: "対応OS", value: "Windows 10 / 11 ＆ Android" },
+      { label: "一括処理", value: "複数画像まとめクロップ＆リサイズ対応" },
       { label: "保存仕様", value: "元フォルダ自動連番別名保存" },
-      { label: "エクスプローラー連携", value: "保存フォルダー一発オープン" }
+      { label: "フォルダー連携", value: "保存フォルダー一発オープン" }
     ],
     screenshots: [
       {
