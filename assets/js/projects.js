@@ -5,6 +5,98 @@
  */
 const projectsData = [
   {
+    id: "xcleanbot",
+    title: "X Clean Bot",
+    subtitle: "「公式アーカイブ活用 ＆ BAN防止ガード搭載」— X（旧Twitter）過去投稿一括削除・整理ツール",
+    category: "utility",
+    categoryLabel: "Windows ＆ Android / X整理ツール",
+    status: "Windows版 公開中 (無料DL)",
+    statusType: "release",
+    featured: true,
+    accentColor: "from-sky-600 via-cyan-500 to-blue-600",
+    badgeColor: "bg-sky-50 text-sky-800 border-sky-200 dark:bg-sky-950/60 dark:text-sky-300 dark:border-sky-800",
+    icon: "assets/images/xcleanbot_icon.png",
+    previewImage: "assets/images/xcleanbot_main.png",
+    installerUrl: "assets/downloads/XCleanBot_Installer.zip",
+    rawExeUrl: "assets/downloads/XCleanBot_Setup.exe",
+    portableUrl: "assets/downloads/XCleanBot_Portable.zip",
+    summary: "X公式アーカイブ（ZIP）を活用して通信規制（Rate Limit）を受けずに全投稿を抽出。人間の操作を模したランダム遅延や定期休憩、1日安全上限など多重のBAN防止物理ガードレールを搭載した、安全第一の過去ポスト一括クリーンツール。",
+    description: `
+      <div class="p-4 rounded-xl bg-gradient-to-r from-sky-50 via-white to-cyan-50 dark:from-sky-950/40 dark:via-slate-900 dark:to-cyan-950/40 border border-sky-300 dark:border-sky-700/60 mb-6 text-slate-800 dark:text-slate-200">
+        <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+          <div class="flex items-center gap-2 text-sky-700 dark:text-sky-400 font-bold text-sm">
+            <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-ping"></span>
+            <span>🛡️ Windows 10 / 11 対応（追加ランタイム不要・完全無料）</span>
+          </div>
+          <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-sky-100 dark:bg-sky-900/60 text-sky-800 dark:text-sky-300 border border-sky-300 dark:border-sky-700 font-mono">v1.0.0 Official Release</span>
+        </div>
+        <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+          「就活や転職、アカウント整理のために過去のポストを一括削除したいけれど、ツールを使ってアカウントが凍結（BAN）されるのが怖い」「APIの制限で数十件しか消せない」——そんな不安を徹底的に解消するために開発された、<strong>アカウント保護最優先の過去ログ整理ツール</strong>です。
+        </p>
+        <div class="p-2.5 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-700/50 text-[11px] text-slate-700 dark:text-slate-300 mb-3">
+          💡 <strong>SmartScreen（青い保護画面）を回避する方法：</strong><br>
+          下の<strong>「推奨インストーラーパック (.zip)」</strong>を解凍し、中の <code>1_インストール開始 (SmartScreen回避).bat</code> を実行すると保護画面なしでそのまま起動します（単体 <code>.exe</code> を直接開いた場合は<strong>［詳細情報］➜［実行］</strong>をクリックしてください）。
+        </div>
+        <div class="flex flex-wrap gap-2.5">
+          <a href="assets/downloads/XCleanBot_Installer.zip" download class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 text-white font-extrabold text-xs flex items-center gap-2 shadow-md shadow-sky-600/20 transition transform hover:scale-105">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            <span>推奨インストーラーパック (.zip)</span>
+          </a>
+          <a href="assets/downloads/XCleanBot_Setup.exe" download class="px-3.5 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-sky-700 dark:text-sky-400 font-semibold text-xs border border-slate-300 dark:border-slate-700 flex items-center gap-1.5 transition shadow-sm">
+            <span>単体インストーラー (.exe)</span>
+          </a>
+          <a href="assets/downloads/XCleanBot_Portable.zip" download class="px-3.5 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 flex items-center gap-1.5 transition shadow-sm">
+            <span>ポータブル版 (.zip)</span>
+          </a>
+        </div>
+      </div>
+
+      <h4 class="text-slate-900 dark:text-slate-100 font-bold mb-2">🧹 コンセプト：「公式アーカイブ活用 ＆ 物理リミッターで絶対にBANさせない安全整理」</h4>
+      <p class="mb-4 text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+        X（旧Twitter）上で削除ツールを使う最大のリスクは、機械的な高速アクセスや急激な大量削除によってスパム検知AIに引っかかることです。<strong>X Clean Bot</strong> は、公式アーカイブからローカルで投稿を解析して無駄な通信を完全排除し、人間の操作を模したランダム待機時間と定期休憩、そして危険な数値を入力させない「安全物理ガードレール」でアカウントを鉄壁に守ります。
+      </p>
+
+      <h4 class="text-slate-900 dark:text-slate-100 font-bold mb-2">✨ 主な機能 ＆ 安全ガードレール設計</h4>
+      <ul class="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-300 mb-4 text-xs sm:text-sm">
+        <li><strong>公式アーカイブ（ZIP）のオフライン高速解析:</strong> Xのタイムライン取得APIを叩かないため、API制限（Rate Limit）を受けずに何万件もの全履歴から即座に対象を抽出できます。</li>
+        <li><strong>BAN防止物理ガードレール（安全リミッター）:</strong>
+          <ol class="list-decimal list-inside ml-4 mt-1 space-y-1 text-slate-500 dark:text-slate-400 text-xs">
+            <li><strong>ランダム待機時間:</strong> 1件ごとに 4.0〜10.0秒の不規則な遅延を挟み、機械的アクセスを完全偽装（安全のため 4.0秒未満は設定不可）。</li>
+            <li><strong>定期休憩（クールダウン）:</strong> 25件（最大50件）ごとに 120秒（2分）以上の休憩を挟み、セッション監視を落ち着かせます。</li>
+            <li><strong>1日安全上限数:</strong> アカウント挙動の急変を防ぐため、1日最大300件に制限（無制限設定は物理的に禁止）。</li>
+            <li><strong>429エラー即時停止:</strong> 万が一のレート制限検知時も無理に再試行せず即座に自動停止してアカウントを保護。</li>
+          </ol>
+        </li>
+        <li><strong>柔軟な抽出・除外フィルター ＆ ソート機能:</strong> 日付指定、いいね数指定、メディア（画像・動画）保護、指定キーワード除外、投稿個別チェック、新しい順・古い順・いいね順の並び替えに対応。</li>
+        <li><strong>削除前の安全バックアップ（CSV / JSON エクスポート）:</strong> 一度削除した投稿は復元できないため、Excel対応（BOM付き）CSVやJSON形式で手元に大切に残しておけます。</li>
+        <li><strong>誤操作を防ぐ最終確認ダイアログ:</strong> 削除開始前に、削除件数・推定所要時間・注意事項を明記したフェイルセーフを挟み、誤クリックを防止します。</li>
+      </ul>
+    `,
+    tags: ["Windows 10/11", "X過去投稿一括削除", "BAN防止ガード", "アーカイブ解析", "CSV/JSONバックアップ", "無料インストーラー配布"],
+    githubUrl: "https://github.com/obenkyorobo-ops/portfolio",
+    demoUrl: "assets/downloads/XCleanBot_Setup.exe",
+    demoLabel: "インストーラー DL",
+    metrics: [
+      { label: "対応OS", value: "Windows 10 / 11 (64bit) ＆ Android" },
+      { label: "安全設計", value: "BAN防止物理ガードレール搭載" },
+      { label: "データ保護", value: "削除前バックアップ (CSV/JSON)" }
+    ],
+    screenshots: [
+      {
+        title: "削除対象リストの確認 ＆ 並び替え画面",
+        tag: "メイン確認画面",
+        src: "assets/images/xcleanbot_main.png",
+        caption: "抽出された過去投稿を一覧表示。いいね数や日付、本文プレビューを確認しながら、残したい投稿を1タップで保護切り替え。新しい順・古い順・いいね順のソートにも対応。"
+      },
+      {
+        title: "条件設定 ＆ BAN防止ガードレール設定画面",
+        tag: "条件・安全設定",
+        src: "assets/images/xcleanbot_sub.png",
+        caption: "いいね数・期間・メディア保護の抽出条件と、BANを防ぐ安全設定（ランダム待機時間・定期クールダウン・1日上限）を直感的に設定可能。"
+      }
+    ]
+  },
+  {
     id: "hikikomoswitch",
     title: "HikikomoSwitch",
     subtitle: "「回線を止めれば、PCつけっぱなしでも絶対に侵入されない」— 画面端に潜む半透明ポート＆回線ロックダウンスイッチャー",
