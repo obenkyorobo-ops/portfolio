@@ -5,6 +5,95 @@
  */
 const projectsData = [
   {
+    id: "cloppy",
+    title: "Cloppy",
+    subtitle: "「元フォルダーに別名保存」— ドラッグ＆ドロップで一瞬クロップ・リサイズ、Windows ＆ Android両対応の画像加工ツール",
+    category: "utility",
+    categoryLabel: "Windows ＆ Android / 画像加工ツール",
+    status: "Windows ＆ Android版 公開中 (無料DL)",
+    statusType: "release",
+    featured: true,
+    accentColor: "from-amber-600 via-orange-500 to-amber-700",
+    badgeColor: "bg-amber-50 text-amber-900 border-amber-200 dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-800",
+    icon: "assets/images/cloppy_icon.png",
+    previewImage: "assets/images/cloppy_main.png",
+    installerUrl: "assets/downloads/Cloppy_Installer.zip",
+    rawExeUrl: "assets/downloads/Cloppy_Setup.exe",
+    portableUrl: "assets/downloads/Cloppy_Portable.zip",
+    summary: "撮影した写真や拾った画像を最も手軽に切り抜き＆リサイズ。面倒な保存先選びは不要、元画像と同じフォルダーへ自動連番で別名保存。保存完了ダイアログからワンクリックでフォルダーを開くエクスプローラー連携機能も搭載。",
+    description: `
+      <div class="p-4 rounded-xl bg-gradient-to-r from-amber-50 via-white to-orange-50 dark:from-amber-950/40 dark:via-slate-900 dark:to-orange-950/40 border border-amber-300 dark:border-amber-700/60 mb-6 text-slate-800 dark:text-slate-200">
+        <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+          <div class="flex items-center gap-2 text-amber-700 dark:text-amber-400 font-bold text-sm">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-ping"></span>
+            <span>✂️ Windows 10 / 11 ＆ Android 対応（完全無料）</span>
+          </div>
+          <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700 font-mono">v1.0.0 Official Release</span>
+        </div>
+        <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+          「スクショや写真をサクッと切り抜きたいだけなのに、保存先を毎回聞かれて面倒」「誤って元画像を上書きしてしまった」「カメラで撮った元画像がどこに行ったかわからない」——そんな日々の写真編集の小さなストレスをすべて解消するために生まれた、<strong>超軽量スマート画像切り抜き・リサイズツール</strong>です。
+        </p>
+        <div class="p-2.5 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-700/50 text-[11px] text-slate-700 dark:text-slate-300 mb-3">
+          💡 <strong>WindowsでSmartScreen（青い保護画面）を回避する方法：</strong><br>
+          下の<strong>「推奨インストーラーパック (.zip)」</strong>を解凍し、中の <code>1_インストール開始 (SmartScreen回避).bat</code> を実行すると保護画面なしでそのまま起動します（単体 <code>.exe</code> を直接開いた場合は<strong>［詳細情報］➜［実行］</strong>をクリックしてください）。
+        </div>
+        <div class="flex flex-wrap gap-2.5">
+          <a href="assets/downloads/Cloppy_Installer.zip" download class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-extrabold text-xs flex items-center gap-2 shadow-md shadow-amber-600/20 transition transform hover:scale-105">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            <span>推奨インストーラーパック (.zip)</span>
+          </a>
+          <a href="assets/downloads/Cloppy_Setup.exe" download class="px-3.5 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-amber-700 dark:text-amber-400 font-semibold text-xs border border-slate-300 dark:border-slate-700 flex items-center gap-1.5 transition shadow-sm">
+            <span>単体インストーラー (.exe)</span>
+          </a>
+          <a href="assets/downloads/Cloppy_Portable.zip" download class="px-3.5 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 flex items-center gap-1.5 transition shadow-sm">
+            <span>ポータブル版 (.zip)</span>
+          </a>
+          <a href="assets/downloads/Cloppy_Android.apk" download class="px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-semibold text-xs flex items-center gap-1.5 transition shadow-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            <span>Android APK (.apk)</span>
+          </a>
+        </div>
+      </div>
+
+      <h4 class="text-slate-900 dark:text-slate-100 font-bold mb-2">✂️ コンセプト：「迷わず元フォルダーに別名保存。作業を1秒も止めない。」</h4>
+      <p class="mb-4 text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+        一般的な画像編集アプリは保存のたびにファイルダイアログが開き、フォルダーを選び直す必要があります。<strong>Cloppy（クロッピー）</strong>は「元画像と同じフォルダーへ自動連番で別名保存（例: <code>photo_cropped.jpg</code>）」を一貫して採用。上書きの心配なく、ワンタップで高速に編集作業を完結できます。
+      </p>
+
+      <h4 class="text-slate-900 dark:text-slate-100 font-bold mb-2">✨ 主な機能 ＆ 快適な編集体験</h4>
+      <ul class="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-300 mb-4 text-xs sm:text-sm">
+        <li><strong>直感的なドラッグ＆ドロップ ＆ クリップボード貼り付け:</strong> 画像ファイルをドラッグ＆ドロップするか、Ctrl+Vで即座に読み込み（Androidでは共有メニューやカメラから直接起動可能）。</li>
+        <li><strong>多彩なアスペクト比クロップ:</strong> 自由比率、1:1（正方形・SNSアイコン用）、16:9（動画サムネイル用）、4:3、3:2 など定番比率にワンタップで固定可能。</li>
+        <li><strong>劣化なしの高品質リサイズ:</strong> 25%, 50%, 75%, 100%のプリセットボタン、またはピクセル直接入力で縦横比を維持しながらきれいに縮小・拡大。</li>
+        <li><strong>元フォルダー自動連番保存 ＆ 一発フォルダー表示:</strong> 保存先を選ぶ手間なく元フォルダーに安全保存。保存完了ダイアログから「フォルダーを開く」ボタンでエクスプローラーやファイルアプリが即座に起動します。</li>
+        <li><strong>カメラ撮影時の元画像安全退避:</strong> カメラで撮影した写真も一時キャッシュに放置せず、端末のピクチャフォルダーへ安全に実体保存してからクロップ画面へ引き渡します。</li>
+      </ul>
+    `,
+    tags: ["Windows 10/11", "Android", "Flutter", "画像クロップ", "画像リサイズ", "元フォルダ別名保存", "無料インストーラー配布"],
+    githubUrl: "https://github.com/obenkyorobo-ops/portfolio",
+    demoUrl: "assets/downloads/Cloppy_Setup.exe",
+    demoLabel: "インストーラー DL",
+    metrics: [
+      { label: "対応OS", value: "Windows 10 / 11 ＆ Android" },
+      { label: "保存仕様", value: "元フォルダ自動連番別名保存" },
+      { label: "エクスプローラー連携", value: "保存フォルダー一発オープン" }
+    ],
+    screenshots: [
+      {
+        title: "クロップ ＆ リサイズ 編集画面",
+        tag: "メイン画面",
+        src: "assets/images/cloppy_main.png",
+        caption: "直感的な枠操作によるアスペクト比クロップとパーセント・ピクセルリサイズ。ドラッグ＆ドロップやクリップボード貼り付けにも対応。"
+      },
+      {
+        title: "保存完了 ＆ フォルダー連携画面",
+        tag: "完了ダイアログ",
+        src: "assets/images/cloppy_sub.png",
+        caption: "元フォルダーへの別名保存完了後、ワンクリックで保存フォルダーを開くエクスプローラー連携や画像プレビュー、共有に対応。"
+      }
+    ]
+  },
+  {
     id: "xcleanbot",
     title: "X Clean Bot",
     subtitle: "「公式アーカイブ活用 ＆ BAN防止ガード搭載」— X（旧Twitter）過去投稿一括削除・整理ツール",
