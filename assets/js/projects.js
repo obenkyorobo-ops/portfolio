@@ -10,7 +10,7 @@ const projectsData = [
     subtitle: "「元フォルダーに別名保存」— ドラッグ＆ドロップで一瞬クロップ・リサイズ、複数枚の一括処理に対応したスマート画像加工ツール",
     category: "utility",
     categoryLabel: "Windows ＆ Android / 画像加工ツール",
-    status: "Windows ＆ Android版 公開中 (無料DL)",
+    status: "Win公開中 ＆ Android βテスト中",
     statusType: "release",
     featured: true,
     accentColor: "from-amber-600 via-orange-500 to-amber-700",
@@ -20,13 +20,20 @@ const projectsData = [
     installerUrl: "assets/downloads/Cloppy_Installer.zip",
     rawExeUrl: "assets/downloads/Cloppy_Setup.exe",
     portableUrl: "assets/downloads/Cloppy_Portable.zip",
+    betaInfo: {
+      isRecruiting: true,
+      badgeText: "📱 Android版 Google Play クローズドβテスト実施中",
+      groupUrl: "https://groups.google.com/u/3/g/study-app-tester",
+      testingUrl: "https://play.google.com/apps/testing/jp.obenkyorobo.cloppy",
+      playStoreUrl: "https://play.google.com/store/apps/details?id=jp.obenkyorobo.cloppy",
+    },
     summary: "撮影した写真や拾った画像を最も手軽に切り抜き＆リサイズ。面倒な保存先選びは不要、元画像と同じフォルダーへ自動連番で別名保存。保存完了ダイアログからワンクリックでフォルダーを開くエクスプローラー連携機能も搭載。",
     description: `
       <div class="p-4 rounded-xl bg-gradient-to-r from-amber-50 via-white to-orange-50 dark:from-amber-950/40 dark:via-slate-900 dark:to-orange-950/40 border border-amber-300 dark:border-amber-700/60 mb-6 text-slate-800 dark:text-slate-200">
         <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
           <div class="flex items-center gap-2 text-amber-700 dark:text-amber-400 font-bold text-sm">
             <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-ping"></span>
-            <span>✂️ Windows 10 / 11 ＆ Android 対応（完全無料）</span>
+            <span>✂️ Windows 公開中 ＆ Android Play βテスト中（完全無料）</span>
           </div>
           <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700 font-mono">v1.0.0 Official Release</span>
         </div>
@@ -53,6 +60,20 @@ const projectsData = [
             <span>Android APK (.apk)</span>
           </a>
         </div>
+        <div class="mt-3 pt-3 border-t border-amber-200/70 dark:border-amber-800/50">
+          <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+            <span class="text-xs font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              📱 Android版 Google Play クローズドβテスト実施中
+            </span>
+            <span class="text-[10px] font-mono text-slate-500 dark:text-slate-400">jp.obenkyorobo.cloppy</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-[11px] font-semibold border border-slate-300 dark:border-slate-700 transition">① Googleグループ参加</a>
+            <a href="https://play.google.com/apps/testing/jp.obenkyorobo.cloppy" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-50 dark:bg-amber-950/60 hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-800 dark:text-amber-300 text-[11px] font-semibold border border-amber-300 dark:border-amber-700 transition">② Webでテスター承認</a>
+            <a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.cloppy" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white text-[11px] font-bold shadow-sm transition">③ Google Playで見る ↗</a>
+          </div>
+        </div>
       </div>
 
       <h4 class="text-slate-900 dark:text-slate-100 font-bold mb-2">✂️ コンセプト：「迷わず元フォルダーに別名保存。作業を1秒も止めない。」</h4>
@@ -70,7 +91,7 @@ const projectsData = [
         <li><strong>カメラ撮影時の元画像安全退避:</strong> カメラで撮影した写真も一時キャッシュに放置せず、端末のピクチャフォルダーへ安全に実体保存してからクロップ画面へ引き渡します。</li>
       </ul>
     `,
-    tags: ["Windows 10/11", "Android", "Flutter", "画像クロップ", "画像リサイズ", "元フォルダ別名保存", "無料インストーラー配布"],
+    tags: ["Windows 10/11", "Android", "Google Play β配信中", "Flutter", "画像クロップ", "画像リサイズ", "元フォルダ別名保存", "無料インストーラー配布"],
     githubUrl: "https://github.com/obenkyorobo-ops/portfolio",
     demoUrl: "assets/downloads/Cloppy_Setup.exe",
     demoLabel: "インストーラー DL",
@@ -101,7 +122,7 @@ const projectsData = [
     subtitle: "「公式アーカイブ活用 ＆ BAN防止ガード搭載」— X（旧Twitter）過去投稿一括削除・整理ツール",
     category: "utility",
     categoryLabel: "Windows ＆ Android / X整理ツール",
-    status: "Windows版 公開中 (無料DL)",
+    status: "Win公開中 ＆ Android βテスト中",
     statusType: "release",
     featured: true,
     accentColor: "from-sky-600 via-cyan-500 to-blue-600",
@@ -111,13 +132,20 @@ const projectsData = [
     installerUrl: "assets/downloads/XCleanBot_Installer.zip",
     rawExeUrl: "assets/downloads/XCleanBot_Setup.exe",
     portableUrl: "assets/downloads/XCleanBot_Portable.zip",
+    betaInfo: {
+      isRecruiting: true,
+      badgeText: "📱 Android版 Google Play クローズドβテスト実施中",
+      groupUrl: "https://groups.google.com/u/3/g/study-app-tester",
+      testingUrl: "https://play.google.com/apps/testing/jp.obenkyorobo.xcleanbot",
+      playStoreUrl: "https://play.google.com/store/apps/details?id=jp.obenkyorobo.xcleanbot",
+    },
     summary: "X公式アーカイブ（ZIP）を活用して通信規制（Rate Limit）を受けずに全投稿を抽出。人間の操作を模したランダム遅延や定期休憩、1日安全上限など多重のBAN防止物理ガードレールを搭載した、安全第一の過去ポスト一括クリーンツール。",
     description: `
       <div class="p-4 rounded-xl bg-gradient-to-r from-sky-50 via-white to-cyan-50 dark:from-sky-950/40 dark:via-slate-900 dark:to-cyan-950/40 border border-sky-300 dark:border-sky-700/60 mb-6 text-slate-800 dark:text-slate-200">
         <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
           <div class="flex items-center gap-2 text-sky-700 dark:text-sky-400 font-bold text-sm">
             <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-ping"></span>
-            <span>🛡️ Windows 10 / 11 対応（追加ランタイム不要・完全無料）</span>
+            <span>🛡️ Windows 公開中 ＆ Android Play βテスト中（完全無料）</span>
           </div>
           <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-sky-100 dark:bg-sky-900/60 text-sky-800 dark:text-sky-300 border border-sky-300 dark:border-sky-700 font-mono">v1.0.0 Official Release</span>
         </div>
@@ -139,6 +167,20 @@ const projectsData = [
           <a href="assets/downloads/XCleanBot_Portable.zip" download class="px-3.5 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 flex items-center gap-1.5 transition shadow-sm">
             <span>ポータブル版 (.zip)</span>
           </a>
+        </div>
+        <div class="mt-3 pt-3 border-t border-sky-200/70 dark:border-sky-800/50">
+          <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+            <span class="text-xs font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              📱 Android版 Google Play クローズドβテスト実施中
+            </span>
+            <span class="text-[10px] font-mono text-slate-500 dark:text-slate-400">jp.obenkyorobo.xcleanbot</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://groups.google.com/u/3/g/study-app-tester" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-[11px] font-semibold border border-slate-300 dark:border-slate-700 transition">① Googleグループ参加</a>
+            <a href="https://play.google.com/apps/testing/jp.obenkyorobo.xcleanbot" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sky-50 dark:bg-sky-950/60 hover:bg-sky-100 dark:hover:bg-sky-900/60 text-sky-800 dark:text-sky-300 text-[11px] font-semibold border border-sky-300 dark:border-sky-700 transition">② Webでテスター承認</a>
+            <a href="https://play.google.com/store/apps/details?id=jp.obenkyorobo.xcleanbot" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white text-[11px] font-bold shadow-sm transition">③ Google Playで見る ↗</a>
+          </div>
         </div>
       </div>
 
@@ -163,7 +205,7 @@ const projectsData = [
         <li><strong>誤操作を防ぐ最終確認ダイアログ:</strong> 削除開始前に、削除件数・推定所要時間・注意事項を明記したフェイルセーフを挟み、誤クリックを防止します。</li>
       </ul>
     `,
-    tags: ["Windows 10/11", "X過去投稿一括削除", "BAN防止ガード", "アーカイブ解析", "CSV/JSONバックアップ", "無料インストーラー配布"],
+    tags: ["Windows 10/11", "Android", "Google Play β配信中", "X過去投稿一括削除", "BAN防止ガード", "アーカイブ解析", "CSV/JSONバックアップ", "無料インストーラー配布"],
     githubUrl: "https://github.com/obenkyorobo-ops/portfolio",
     demoUrl: "assets/downloads/XCleanBot_Setup.exe",
     demoLabel: "インストーラー DL",
